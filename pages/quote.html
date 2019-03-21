@@ -1,23 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../css/quotes.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Cotizar - Hostal las paisas</title>
 </head>
+
 <body>
     <nav>
         <!-- nav bar section -->
     </nav>
     <section>
-        <!-- page hero or header -->
-    </section>
-    <section>
-        <!-- quoting tool interface -->
+        <form action="" class="form">
+            <!-- QUOTE -->
+            <h1 class="form_title">Cotizar</h1>
+            <hr />
+            <p class="paragraph_form"> Cotiza todo lo que te gustaría incluir en tu estadía, para que tengas la mejor experiencia.
+            </p>
+            <div class="div_quote">
+                <input type="text" class="input_form">
+                <label for="" class="label_form">Nombre</label>
+                <input type="email" class="input_form">
+                <label for="" class="label_form">E-mail</label>
+                <input type="text" class="input_form">
+                <label for="" class="label_form">Teléfono</label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Apruebo el uso de mis datos con fines informativos...
+                    bla.. bla.. bla...
+                </label>
+            </div>
+            <!-- DETAILS -->
+            <h3 class="form_subtitles">Detalles</h3>
+            <hr id="hr_h3" />
+            <input type="text" class="input_form">
+            <label for="" id="lbl_numPerson" class="label_form">Número de personas</label>
+            <input type="text" class="input_form">
+            <label for="" class="label_form">Número de noches</label>
+
+
+            <!-- CHOOSE OPTIONS -->
+            <div class="div_options">
+                <h5 class="form_subtitles">Transporte</h5>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Medellín-Necoclí
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Necoclí-Capurganá
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Capurganá-Necoclí
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Necoclí-Medellín
+                </label>
+            </div>
+            <div class="div_options">
+                <h5 class="form_subtitles">Alimentación</h5>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Desayuno
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Almuerzo
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Cena
+                </label>
+            </div>
+            <div class="div_options">
+                <h5 class="form_subtitles">Tours</h5>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Tour 1
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Tour 2
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Tour 3
+                </label>
+                <label class="checkbox_container">
+                    <input type="checkbox" class="checkbox_dataUse">
+                    <span class="checkmark"></span>
+                    Tour 4
+                </label>
+            </div>
+
+
+        </form>
+
     </section>
     <footer>
         <!-- footer section -->
     </footer>
+    <script src="./../js/quote_tool.js"></script>
 </body>
+
 </html>
