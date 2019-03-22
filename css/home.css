@@ -4,7 +4,7 @@
 /* We should use a mobile first approach having out breack point at 768px */
 
 
-.homepage-hero {
+.homepage_hero {
     position: absolute;
     top: 0;
     right: 0;
@@ -12,15 +12,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    font-family: roboto, sans-serif;
-    background: url("../assets/h-bg.jpg") no-repeat center;
+    font-family: 'roboto', sans-serif;
+    background: url("../assets/frente1.JPG") no-repeat center;
     background-size: cover;
 }
 
-.homepage_hero_layer {
+.homepage_hero__layer {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.5);
 }
 
 .homepage_hero__article {
@@ -29,7 +29,7 @@
     width: 100%;
 }
 
-.homepage-hero-headline {
+.homepage_hero__headline {
     margin-right: 5%;
     margin-bottom: 5px;
     margin-left: 5%;
@@ -38,17 +38,18 @@
     font-weight: bold;
 }
 
-.homepage-hero-divider {
+.homepage_hero__divider {
     width: 90px;
     height: 1px;
     margin-right: 5%;
+    margin-bottom: 5px;
     margin-left: 5%;
     background-color: #73e8ff;
 }
 
-.homepage-hero-promotext {
-    margin-left: 5%;
+.homepage_hero__promotext {
     margin-right: 5%;
+    margin-left: 5%;
     color: white;
     font-size: 12px;
     font-weight: regular;
