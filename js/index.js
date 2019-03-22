@@ -5,7 +5,10 @@
 
 /*  Commodities section
     from line 7 to 43 is about the Commodities image on the main page **/
-    let image = ['../img/cat1.jpg', '../img/cat2.png', '../img/cat3.jpeg', '../img/momia.jpeg'],
+let image = ['assets/img/cat1.jpg',
+             'assets/img/cat2.png', 
+             'assets/img/cat3.jpeg',
+             'assets/img/momia.jpeg'],
     cont = 0;
 
 function carrousel(container){
@@ -39,4 +42,5 @@ function carrousel(container){
 }
 
 let container = document.querySelector('.container');
+console.log(container);
 carrousel(container);
