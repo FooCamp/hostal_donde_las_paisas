@@ -1,4 +1,5 @@
-// Qouting tool logic should be placed here.
+//  this is a validation of labels; if in the inputs there are one or more characters,
+// the label should stay in the position assigned by the class "fix_tex".
 const inputs = document.getElementsByClassName('input_form');
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('keyup', function() {
