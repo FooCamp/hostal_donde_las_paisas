@@ -1,4 +1,6 @@
 // Qouting tool logic should be placed here.
+//they contain the cost of the night and the cost of transportation by boat and bus.
+
 const PRICENIGTH = 55000;
 const BUSTRANS = 75000;
 const BOATTRANS = 75000;
@@ -14,9 +16,13 @@ const HIKEP = 30000;
 const HIKECO = 5000;
 // guide hike la coquerita
 const HIKEGUI = 10000;
+//Mandatory insurance cost per night per person.
 const INSURANCE = 3500;
 
-function quote(){
+/*calculateCost calculates the value of the package that the user prefers 
+*by giving a value of each one of the options selected by the user
+*/
+function calculateCost(){
     let total = 0;
     let peopleAndNigth;
     if (form.numberOfPeople > 0){
@@ -31,10 +37,10 @@ function quote(){
     if (form.transport.necCap){
         total = total + (BOATTRANS * form.numberOfPeople);
     }
-    if (form.target.capNec){
+    if (form.transport.capNec){
         total = total + (BOATTRANS * form.numberOfPeople);
     }
-    if (form.target.necMed){
+    if (form.transport.necMed){
         totla = total + (BUSTRANS * form.numberOfPeople);
     }
     if (form.tour.aguacatePlayasoledad){
@@ -55,4 +61,6 @@ function quote(){
     else{
         total = total + (HIKECO);
     }
-    total = total + (INSURANCE * peopleAndNigth);
+     total = total + (INSURANCE * peopleAndNigth);
+     return total;
+}
