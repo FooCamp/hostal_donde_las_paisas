@@ -3,14 +3,16 @@
 /* We should use a mobile first approach having out breack point at 768px */
 
 .button {
-	width: 75px;
-	height: 30px;
-	color: #000000;
-	background-color: #29b6f6;
 	font-family: roboto, sans-serif;
-	font-size: 12px;
 	font-weight: 500;
 	border-radius: 2px;
+	overflow: hidden;
+}
+
+.button--small {
+	width: 75px;
+	height: 30px;
+	font-size: 12px;
 }
 
 .button--medium {
@@ -29,13 +31,17 @@
 	width: 100%;
 }
 
+.button--primary {
+	background-color: #29b6f6;
+}
+
 .button--primary-light {
 	background-color: #73e8ff;
 }
 
 .button--primary-dark {
 	background-color: #0086c3;
-}
+}	
 
 .button--secondary {
 	color: #ffffff;
