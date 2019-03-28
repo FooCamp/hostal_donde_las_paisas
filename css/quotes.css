@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
 }
@@ -10,27 +6,26 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     max-width: 90%;
+    font-family: 'Roboto', sans-serif;
 }
 
-.form_title {
+.form__title {
     font-size: 22px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
     text-align: justify;
     margin-top: 50px;
     margin-bottom: 10px;
     color: rgba(0, 0, 0, 0.7)
 }
 
-.form_subtitles {
+.form__subtitles {
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
     text-align: justify;
     margin-bottom: 18px;
     color: rgba(0, 0, 0, 0.7)
 }
 
-hr {
+.hr__quote {
     border: 0;
     margin-left: 0%;
     margin-right: 50%;
@@ -39,12 +34,11 @@ hr {
     background-color: #0086c3;
 }
 
-#hr_h3 {
+.hr__details {
     margin-bottom: 36px;
 }
 
-.paragraph_form {
-    font-family: 'Roboto', sans-serif;
+.form__paragraph {
     font-size: 12px;
     font-weight: lighter;
     margin-left: 5%;
@@ -53,20 +47,31 @@ hr {
     margin-bottom: 40px;
 }
 
-.input_form:focus {
+
+/*
+*In this code, i assign properties like border and color to the focused element.
+*/
+
+.form__input:focus {
     outline: 1px rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #0086c3;
 }
 
-.input_form:focus+.label_form {
+
+/*
+*In this code, i assign properties to the element that is after to the class "form__input",
+*in this case the class "form__label".
+*Note: the order is established in the html.
+*/
+
+.form__input:focus+.form__label {
     margin-top: -86px;
     color: #0086c3;
 }
 
-.input_form {
+.form__input {
     border: 0;
     border-bottom: 1px solid #9E9E9E;
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: lighter;
     margin-right: 5%;
@@ -78,8 +83,7 @@ hr {
     width: 90%;
 }
 
-.label_form {
-    font-family: 'Roboto', sans-serif;
+.form__label {
     font-size: 11px;
     font-weight: lighter;
     padding-left: 15px;
@@ -93,34 +97,33 @@ hr {
     cursor: pointer;
 }
 
-.fix_text {
+.fix-label {
     margin-top: -86px;
 }
 
-.div_options {
+.div__options {
     margin-top: 40px;
 }
 
-.div_quote {
+.div__quote {
     margin-bottom: 50px;
 }
 
-.checkbox_container input {
+.checkbox__container input {
     display: none;
 }
 
-.checkbox_container {
+.checkbox__container {
     display: block;
     padding-left: 26px;
     position: relative;
     cursor: pointer;
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     user-select: none;
     margin-bottom: 9px;
 }
 
-.checkbox_container .checkmark {
+.checkbox__container .checkmark {
     display: inline-block;
     width: 17px;
     height: 17px;
@@ -131,11 +134,23 @@ hr {
     border-radius: 2px;
 }
 
-.checkbox_container input:checked+.checkmark {
+
+/*
+*In this code i assign the background color to class 
+*checkbox__container inputs that are selected.
+*/
+
+.checkbox__container input:checked+.checkmark {
     background-color: #0086c3;
 }
 
-.checkbox_container input:checked+.checkmark:after {
+
+/*
+*In this code insert the figure "✓" after that a checkbox is selected; the figure is created 
+*assigning attributes and properties to the content.
+*/
+
+.checkbox__container input:checked+.checkmark:after {
     content: "";
     position: absolute;
     height: 3.5px;
@@ -147,8 +162,7 @@ hr {
     transform: translate(-50%, -50%) rotate(-48deg);
 }
 
-.btn_calculate {
-    font-family: 'Roboto', sans-serif;
+.btn__calculate {
     font-size: 12px;
     color: white;
     margin-right: auto;
@@ -163,15 +177,14 @@ hr {
     display: block;
 }
 
-.lbl_result {
-    font-family: 'Roboto', sans-serif;
+.lbl__result {
     font-size: 12px;
     font-weight: lighter;
     padding-left: 50px;
     color: #1565c0;
 }
 
-.input_result {
+.input__result {
     margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
