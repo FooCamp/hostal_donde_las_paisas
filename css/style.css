@@ -1,5 +1,57 @@
 /* General page styles */
 
-
 /* We should use a mobile first approach having out breack point at 768px */
 
+.button {
+	width: 75px;
+	height: 30px;
+	color: #000000;
+	background-color: #29b6f6;
+	font-family: roboto, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	border-radius: 2px;
+}
+
+.button--medium {
+	width: 120px;
+	height: 45px;
+	font-size: 18px;
+}
+
+.button--large {
+	width: 160px;
+	height: 60px;
+	font-size: 22px;
+}
+
+.button--full {
+	width: 100%;
+}
+
+.button--primary-light {
+	background-color: #73e8ff;
+}
+
+.button--primary-dark {
+	background-color: #0086c3;
+}
+
+.button--secondary {
+	color: #ffffff;
+	background-color: #1565c0;
+}
+
+.button--secondary-light {
+	background-color: #5e92f3;
+}
+
+.button--secondary-dark {
+	color: #ffffff;
+	background-color: #003c8f;
+}
+
+.button--danger {
+	color: #ffffff;
+	background-color: #ce4141;
+}
