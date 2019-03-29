@@ -49,7 +49,7 @@ body {
 
 
 /*
-*In this code, i assign properties like border and color to the focused element.
+* In this code, i assign properties like border and color to the focused element.
 */
 
 .form__input:focus {
@@ -59,9 +59,9 @@ body {
 
 
 /*
-*In this code, i assign properties to the element that is after to the class "form__input",
-*in this case the class "form__label".
-*Note: the order is established in the html.
+* In this code, i assign properties to the element that is after to the class "form__input",
+* in this case the class "form__label".
+* Note: the order is established in the html.
 */
 
 .form__input:focus+.form__label {
@@ -136,8 +136,8 @@ body {
 
 
 /*
-*In this code i assign the background color to class 
-*checkbox__container inputs that are selected.
+* In this code i assign the background color to class
+* checkbox__container inputs that are selected.
 */
 
 .checkbox__container input:checked+.checkmark {
@@ -146,8 +146,8 @@ body {
 
 
 /*
-*In this code insert the figure "✓" after that a checkbox is selected; the figure is created 
-*assigning attributes and properties to the content.
+* In this code insert the figure "✓" after that a checkbox is selected; the figure is created
+* assigning attributes and properties to the content.
 */
 
 .checkbox__container input:checked+.checkmark:after {
