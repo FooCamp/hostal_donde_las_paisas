@@ -1,3 +1,7 @@
+/* General page styles */
+
+
+/* We should use a mobile first approach having out breack point at 768px */
 html{
     font-family: 'Roboto', sans-serif;
     margin: 5%;
