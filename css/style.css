@@ -4,12 +4,9 @@ html{
 img{
 	width: 100%;
     height: 100%;
-<<<<<<< HEAD
     max-height: 400px;
-=======
     max-height: 500px;
 	opacity: 50;
->>>>>>> be13919491113d971a4b6a05b700609d209f6182
 }
 .container{
     width: 95%;
@@ -39,28 +36,31 @@ img{
     width: 16%;
     height: 24px;
     border-radius: 50%;
-    background-color: #970a0a;
     text-align: center;
     font-weight: bold;
     position: relative;
-    color: #fff;
 }
 .gallery__bottom:hover{
 	cursor: pointer;
 	transform: scale(1.2, 1.2);
 }
 .back{
-	margin-top: 13%;
+	margin-top: 25%;
     left: 13%;
-    background-color: #f1ecec;
+    color: #fefefe;
 }
 .ahead{
-	margin-top: 13%;
+	margin-top: 25%;
     right: 15%;
-    background-color: #212121;
+    color: #fefefe;
 }
 .space-button{
     padding: 30%;
+}
+.pointer{
+    border-radius: 50%;
+    display: flex;
+    padding-left: 42%;
 }
 .button-gallery{
     position: absolute;
@@ -70,4 +70,9 @@ img{
     color: #fefefe;
     background-color: #039be5;
     border: 0;
+}
+.pointer > li{
+    padding-left: 0%;
+    margin-left: 6%;
+    border-radius: 50%;
 }

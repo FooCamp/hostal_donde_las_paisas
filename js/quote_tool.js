@@ -1,1 +1,0 @@
-// Qouting tool logic should be placed here.

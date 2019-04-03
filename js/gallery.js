@@ -1,1 +1,0 @@
-// Gallery page logic should be placed here.
