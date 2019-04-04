@@ -1,31 +1,32 @@
-.footer {
+/* Home page specific styles */
+
+.footer-box {
     background: #22418a;
     color: white;
-}
-.flex-box {
+    margin: auto;
+ }
+.inner-box {
 background: #1986c2;
 color:white;
 padding-top:20px;
-
-}
+ }
 .horizontal{
   display: inline-block;
   margin:0;
   padding:15px;
-}
+ }
 .horizontal li{
   display:block;
   float:left;
   padding:15px;
-}
+ }
 .white {
     color: white;
-  }
-  .drop-down {
+ }
+.drop-down {
     font-size: 60px;
-  }
-  .page {
+ }
+.page {
     font-size: 21px
-
-  }
+ }
 }
