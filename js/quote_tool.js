@@ -37,7 +37,7 @@
 function calculateCost(){
     let total = 0;
     // PeopleAndNigth It contains the number of people multiplied the number of 
-    //nights and then multiply the result by the heat of each night.
+    // nights and then multiply the result by the heat of each night.
     let peopleAndNigth;
     
     peopleAndNigth =  (form.numberOfPeople * form.numberOfNigth); 
