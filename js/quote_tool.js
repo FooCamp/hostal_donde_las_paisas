@@ -53,7 +53,7 @@ function calculateCost(form){
     
     total += form.hike.elCieloEltrebol ? (HIKEECET * form.numberOfPeople) : 0;
     total += form.hike.elParaiso ? (HIKEP * form.numberOfPeople) : 0;
-      if (from.hike.laCoquerita.hike){
+    if (from.hike.laCoquerita.hike){
       total += HIKECO * form.numberOfPeople;
       if (form.hike.laCoquerita.guide){
           total +=  HIKEGUI * form.numberOfPeople;
