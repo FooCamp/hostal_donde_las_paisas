@@ -1,4 +1,31 @@
-/* Home page specific styles */
+.footer {
+    background: #22418a;
+    color: white;
+}
+.flex-box {
+background: #1986c2;
+color:white;
+padding-top:20px;
 
+}
+.horizontal{
+  display: inline-block;
+  margin:0;
+  padding:15px;
+}
+.horizontal li{
+  display:block;
+  float:left;
+  padding:15px;
+}
+.white {
+    color: white;
+  }
+  .drop-down {
+    font-size: 40px;
+  }
+  .page {
+    font-size: 21px
 
-/* We should use a mobile first approach having out breack point at 768px */
+  }
+}
