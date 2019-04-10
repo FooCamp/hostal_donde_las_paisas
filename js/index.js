@@ -2,13 +2,13 @@
    Any page or component specific logic should be placed in its own page/component js file.
 **/
 let image = [
-    "assets/img/cat1.jpg",
-    "assets/img/cat2.png",
-    "assets/img/cat3.jpeg",
-    "assets/img/momia.jpeg"
+    "assets/img/IMG_8056.jpg",
+    "assets/img/IMG_8453.jpg",
+    "assets/img/IMG_7977.jpg",
+    "assets/img/IMG_7968.jpg"
   ],
   currentPosition = 0;
-
+  
 function carrousel(carrouselContainer) {
   carrouselContainer.addEventListener("click", e => {
     let back = carrouselContainer.querySelector(".back"),

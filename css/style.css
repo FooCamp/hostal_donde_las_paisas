@@ -3,96 +3,14 @@
 /* We should use a mobile first approach having out breack point at 768px */
 html {
   font-family: "Roboto", sans-serif;
-  margin: 5%;
+  margin: 20px;
 }
-@media (min-width: 426px) {
+@media (max-width: 768px) {
   img {
-    width: 95%;
-    height: 100%;
-    max-height: 330px;
-    max-width: 679px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .carrouselContainer {
-    width: 95%;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  .title-gallery {
-    width: 25px bold;
-  }
-  .line {
-    width: 90px;
-    height: 1px;
-    margin-left: 0;
-    background-color: #63ccff;
-    border: 0;
-  }
-  .gallery {
-    padding-top: 4%;
     width: 100%;
-    display: flex;
-    box-sizing: border-box;
-  }
-  .gallery__bottom {
-    font-size: 50px;
-    width: 16%;
-    height: 24px;
-    font-weight: bold;
-    position: relative;
-  }
-  .gallery__bottom:hover {
-    cursor: pointer;
-    transform: scale(1.2, 1.2);
-  }
-  .back {
-    margin-top: 140px;
-    left: 18%;
-    color: #fefefe;
-  }
-  .ahead {
-    margin-top: 140px;
-    right: 41px;
-    color: #fefefe;
-  }
-  .pointer {
-    border-radius: 50%;
-    display: flex;
-    padding-left: 42%;
-    margin: 10px;
-    list-style-position: initial;
-    list-style-type: disc;
-  }
-  .pointer__point {
-    border-radius: 50%;
-    padding-left: 0%;
-    margin-left: 6%;
-  }
-  .pointer:hover {
-    cursor: pointer;
-    transform: scale(1.2, 1.2);
-  }
-  .button-gallery {
-    position: absolute;
-    border-radius: 5%;
-    left: 45%;
-    height: 30px;
-    color: #fefefe;
-    background-color: #039be5;
-    border: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (max-width: 425px) {
-  img {
-    width: 95%;
     height: 100%;
     max-height: 233px;
     max-width: 367px;
-    margin-left: -4%;
   }
   .carrouselContainer {
     width: 95%;
@@ -128,12 +46,13 @@ html {
     transform: scale(1.2, 1.2);
   }
   .back {
-    margin-top: 89px;
-    left: 13%;
+    margin-top: 74.1px;
+    left: 17%;
     color: #fefefe;
+    position: relative;
   }
   .ahead {
-    margin-top: 89px;
+    margin-top: 74.1px;
     right: 41px;
     color: #fefefe;
   }
@@ -160,6 +79,8 @@ html {
     left: 40%;
     height: 30px;
     color: #fefefe;
+    margin-top: 5%;
+    margin-bottom: 10%;
     background-color: #039be5;
     border: 0;
     margin-left: auto;
