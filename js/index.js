@@ -2,10 +2,10 @@
    Any page or component specific logic should be placed in its own page/component js file.
 **/
 let image = [
-  "assets/img/IMG_8056.jpg",
-  "assets/img/IMG_8453.jpg",
-  "assets/img/IMG_7977.jpg",
-  "assets/img/IMG_7968.jpg"
+  "assets/images/IMG_8056.jpg",
+  "assets/images/IMG_8453.jpg",
+  "assets/images/IMG_7977.jpg",
+  "assets/images/IMG_7968.jpg"
 ],
 currentPosition = 0;
 
