@@ -13,7 +13,7 @@ function carrousel(carrouselContainer) {
 carrouselContainer.addEventListener("click", e => {
   let back = carrouselContainer.querySelector(".back"),
     ahead = carrouselContainer.querySelector(".ahead"),
-    img = carrouselContainer.querySelector("img"),
+    img = carrouselContainer.querySelector(".carousel-image"),
     target = e.target;
 
   if (target == back) {
