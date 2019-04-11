@@ -2,10 +2,10 @@
    Any page or component specific logic should be placed in its own page/component js file.
 **/
 let image = [
-  "assets/images/IMG_8056.jpg",
-  "assets/images/IMG_8453.jpg",
-  "assets/images/IMG_7977.jpg",
-  "assets/images/IMG_7968.jpg"
+  "assets/images/IMG_8056.JPG",
+  "assets/images/IMG_8453.JPG",
+  "assets/images/IMG_7977.JPG",
+  "assets/images/IMG_7968.JPG"
 ],
 currentPosition = 0;
 
@@ -13,7 +13,7 @@ function carrousel(carrouselContainer) {
 carrouselContainer.addEventListener("click", e => {
   let back = carrouselContainer.querySelector(".back"),
     ahead = carrouselContainer.querySelector(".ahead"),
-    img = carrouselContainer.querySelector(".carousel-image"),
+    img = carrouselContainer.querySelector(".gallery__img"),
     target = e.target;
 
   if (target == back) {
@@ -35,5 +35,5 @@ carrouselContainer.addEventListener("click", e => {
   }
 });
 }
-let carrouselContainer = document.querySelector(".carrouselContainer");
+let carrouselContainer = document.querySelector("#carrouselContainer");
 carrousel(carrouselContainer);
