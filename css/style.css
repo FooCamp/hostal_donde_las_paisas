@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Home page specific styles */
 
 .footer-box {
@@ -30,3 +31,68 @@ padding-top:20px;
     font-size: 21px
  }
 }
+=======
+/* General page styles */
+
+/* We should use a mobile first approach having out breack point at 768px */
+
+.button {
+	font-family: roboto, sans-serif;
+	font-weight: 500;
+	border-radius: 2px;
+	overflow: hidden;
+}
+
+.button--small {
+	width: 75px;
+	height: 30px;
+	font-size: 12px;
+}
+
+.button--medium {
+	width: 120px;
+	height: 45px;
+	font-size: 18px;
+}
+
+.button--large {
+	width: 160px;
+	height: 60px;
+	font-size: 22px;
+}
+
+.button--full {
+	width: 100%;
+}
+
+.button--primary {
+	background-color: #29b6f6;
+}
+
+.button--primary-light {
+	background-color: #73e8ff;
+}
+
+.button--primary-dark {
+	background-color: #0086c3;
+}	
+
+.button--secondary {
+	color: #ffffff;
+	background-color: #1565c0;
+}
+
+.button--secondary-light {
+	background-color: #5e92f3;
+}
+
+.button--secondary-dark {
+	color: #ffffff;
+	background-color: #003c8f;
+}
+
+.button--danger {
+	color: #ffffff;
+	background-color: #ce4141;
+}
+>>>>>>> daa623d3fd9db1964e0cf1b9c7cdee028eb12b98
