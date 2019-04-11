@@ -16,7 +16,7 @@
       <!-- nav bar section -->
     </nav>
     <section>
-      <form action="" class="form">
+      <form action="" class="form" id="form">
         <!-- QUOTE -->
         <h1 class="form__title">Cotizar</h1>
         <hr class="hr__quote" />
@@ -41,32 +41,32 @@
         <!-- DETAILS -->
         <h3 class="form__subtitles">Detalles</h3>
         <hr class="hr__details" />
-        <input type="text" class="form__input" />
+        <input type="text" class="form__input" id="txtNumPeople" />
         <label for="" id="lbl_numPerson" class="form__label"
           >Número de personas</label
         >
-        <input type="text" class="form__input" />
+        <input type="text" class="form__input" id="txtNumNigth" />
         <label for="" class="form__label">Número de noches</label>
         <!-- CHOOSE OPTIONS -->
         <div class="div__options">
           <h5 class="form__subtitles">Transporte</h5>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use" id="chcMedNec" />
             <span class="checkmark"></span>
             Medellín-Necoclí
           </label>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use" id="chcNecCap" />
             <span class="checkmark"></span>
             Necoclí-Capurganá
           </label>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use" id="chcCapNec" />
             <span class="checkmark"></span>
             Capurganá-Necoclí
           </label>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use" id="chcNecMed" />
             <span class="checkmark"></span>
             Necoclí-Medellín
           </label>
@@ -74,17 +74,17 @@
         <div class="div__options">
           <h5 class="form_subtitles">Alimentación</h5>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use" id="chcBreakfast" />
             <span class="checkmark"></span>
             Desayuno
           </label>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use" id="chcLunch" />
             <span class="checkmark"></span>
             Almuerzo
           </label>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use" id="chcDinner" />
             <span class="checkmark"></span>
             Cena
           </label>
@@ -92,7 +92,7 @@
         <div class="div__options">
           <h5 class="form__subtitles">Tours</h5>
           <label class="checkbox__container">
-            <input type="checkbox" class="checkbox__data - use" />
+            <input type="checkbox" class="checkbox__data - use"  />
             <span class="checkmark"></span>
             Tour 1
           </label>
@@ -114,12 +114,14 @@
         </div>
         <button class="btn__calculate">Calcular</button>
         <label for="" class="lbl__result">Total:</label>
-        <input type="text" class="input__result" />
+        <input type="text" class="input__result" id="txtResult" />
       </form>
     </section>
     <footer>
       <!-- footer section -->
     </footer>
     <script src="./../js/quote_tool.js"></script>
+    <!-- Call the consts.js-->
+    <script src="./../js/consts.js"></script>
   </body>
 </html>

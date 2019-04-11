@@ -16,5 +16,8 @@ const HIKEP = 30000;
 const HIKECO = 5000;
 // guide hike la coquerita
 const HIKEGUI = 10000;
-//Mandatory insurance cost per night per person.
+// Mandatory insurance cost per night per person.
 const INSURANCE = 3500;
+// Feeding
+const BREAKFAST = 10000;
+const DINNER = 20000;

@@ -11,6 +11,7 @@
  *  numberOfNigth: integer,
  *  trasnport: object, 
  *  tour: object,
+ *  feeding: object
  *  hike: object,
  * } 
  * 
@@ -19,6 +20,10 @@
  *  necCap: boolean,
  *  capNec: boolean,
  *  necMed: boolean,
+ * }
+ * feeding{
+ *   breakfast: boolean;
+ *   dinner: boolean;
  * }
  * tour: {
  *  aguacatePlayasoledad: boolean,
@@ -48,6 +53,9 @@ function calculateCost(form){
     total += form.transport.capNec ? (BOATTRANS * form.numberOfPeople) : 0;
     total += form.transport.necMed ? (BUSTRANS * form.numberOfPeople) : 0;
     
+    total += form.feeding.breakFast ? (BREAKFAST * peopleAndNigth) : 0;
+    total += form.feeding.dinner ? (DINNER * peopleAndNigth) : 0;
+
     total += form.tour.aguacatePlayasoledad ? (TOURAPS * form.numberOfPeople) : 0;
     total += form.tour.sapzurroLamiel ? (TOURSLM * form.numberOfPeople) : 0;
     
@@ -80,3 +88,28 @@ const fixLabel = inputs => {
   }
 };
 fixLabel(inputs);
+
+/* call the elements of from */
+function sumitData (){
+  let form = {};
+  form.transport = {};
+  form.feeding = {};
+  form.tour = {};
+  form.hike = {};
+
+  form.numberOfPeople = document.getElementById('txtNumPeople').value;
+  form.numberOfPeople = document.getElementById('txtNumNigth').value;
+  
+  form.transport.medNec = document.getElementById('chcMedNec').cheked;
+  form.transport.necCap = document.getElementById('chcNecCap').cheked;
+  form.transport.capNec = document.getElementById('chcCapNec').cheked;
+  form.transport.necMed = document.getElementById('chcNecMed').cheked;
+
+  form.feeding.breakFast = document.getElementById('chcLunch').cheked;
+  form.feeding.dinner = document.getElementById('chcDinner').cheked;
+
+  // Sends the collected data to the calculateCost funtion
+  let finalPrice = calculateCost (form);
+  // Print the information whit the total cost
+  document.getElementById('txtResult').innerHTML = finalPrice; 
+}
