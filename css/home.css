@@ -1,44 +1,39 @@
 /* Home page specific styles */
-/* General page styles */
-
-<<<<<<< HEAD
-.footer-box {
-  background: #22418a;
-  color: white;
-  margin: auto;
-  text-align: center;
-  width: auto;
-  height: auto;
- }
-.inner-box {
-  width: auto;
-  height: auto;
-  border: 5px;
-  background: #1986c2;
-  color:white;
-  padding-top:20px;
- }
-.horizontal{
-  display: inline-block;
-  margin:auto;
-  padding:15px;
- }
-.horizontal li{
-  display:block;
-  float:left;
-  padding:15px;
- }
-.white {
-  color: white;
- }
-.drop-down {
-  font-size: 60px;
- }
-.page {
-  font-size: 21px;
- }
+.footer--rectangle {
+  padding: 15px;
+  background-color: #003c8f;
+  width: 1366px
+  heigth: 270px
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
-=======
+
+.footer--text {
+  word-break: break-word;
+  text-align: center;
+  font-size: 16px;
+  color:white;
+  font-family: Roboto;
+}
+
+.footer--icons{
+  display: inline-block;
+  margin:0 37px;
+  padding:37px;
+
+}
+
+.footer--hover{
+  color:white;
+}
+
+.footer--icon-element{
+  display: inline-block;
+  margin-right: 37px;
+  padding:0px;
+}
+
 .homepage-hero {
   position: absolute;
   top: 0;
@@ -89,4 +84,4 @@
   font-size: 12px;
   font-weight: regular;
 }
->>>>>>> daa623d3fd9db1964e0cf1b9c7cdee028eb12b98
+}
