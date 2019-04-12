@@ -1,121 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="./../css/quotes.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Cotizar - Hostal donde las paisas</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./../css/quotes.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>Cotizar - Hostal las paisas</title>
-</head>
-
-<body>
+  <body>
     <nav>
-        <!-- nav bar section -->
+      <!-- nav bar section -->
     </nav>
     <section>
-        <form action="" class="form">
-            <!-- QUOTE -->
-            <h1 class="form__title">Cotizar</h1>
-            <hr class="hr__quote" />
-            <p class="form__paragraph"> Cotiza todo lo que te gustaría incluir en tu estadía, para que tengas la mejor experiencia.
-            </p>
-            <div class="div__quote">
-                <input type="text" class="form__input">
-                <label for="" class="form__label">Nombre</label>
-                <input type="email" class="form__input">
-                <label for="" class="form__label">E-mail</label>
-                <input type="text" class="form__input">
-                <label for="" class="form__label">Teléfono</label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data-use">
-          <span class="checkmark"></span>
-          Apruebo el uso de mis datos con fines informativos...
-          bla.. bla.. bla...
-        </label>
-            </div>
-            <!-- DETAILS -->
-            <h3 class="form__subtitles">Detalles</h3>
-            <hr class="hr__details" />
-            <input type="text" class="form__input">
-            <label for="" id="lbl_numPerson" class="form__label">Número de personas</label>
-            <input type="text" class="form__input">
-            <label for="" class="form__label">Número de noches</label>
-            <!-- CHOOSE OPTIONS -->
-            <div class="div__options">
-                <h5 class="form__subtitles">Transporte</h5>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Medellín-Necoclí
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Necoclí-Capurganá
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Capurganá-Necoclí
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Necoclí-Medellín
-        </label>
-            </div>
-            <div class="div__options">
-                <h5 class="form_subtitles">Alimentación</h5>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Desayuno
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Almuerzo
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Cena
-        </label>
-            </div>
-            <div class="div__options">
-                <h5 class="form__subtitles">Tours</h5>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Tour 1
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Tour 2
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Tour 3
-        </label>
-                <label class="checkbox__container">
-          <input type="checkbox" class="checkbox__data - use">
-          <span class="checkmark"></span>
-          Tour 4
-        </label>
-            </div>
-            <button class="btn__calculate">Calcular</button>
-            <label for="" class="lbl__result">Total:</label>
-            <input type="text" class="input__result">
-        </form>
+      <form action="" class="form">
+        <!-- quote-->
+        <h1 class="form__title">Cotizar</h1>
+        <p class="form__paragraph">
+          Cotiza todo lo que te gustaría incluir en tu estadía, para que tengas
+          la mejor experiencia.
+        </p>
+        <div class="div__quote">
+          <!--div__field-->
+          <div class="div__field">
+            <input
+              type="text"
+              id="input-name"
+              class="form__input"
+              onblur="validationName(this)"
+            />
+            <label for="" class="form__label">Nombre</label>
+            <div id="name-error" class="error__description"></div>
+          </div>
+          <div class="div__field">
+            <input
+              type="email"
+              id="input-email"
+              class="form__input"
+              onblur="validationEmail(this)"
+            />
+            <label for="" class="form__label">E-mail</label>
+            <div id="email-error" class="error__description"></div>
+          </div>
+          <div class="div__field">
+            <input
+              type="text"
+              id="input-phone"
+              class="form__input"
+              onblur="validationPhone(this)"
+            />
+            <label for="" class="form__label">Teléfono</label>
+            <div id="phone-error" class="error__description"></div>
+          </div>
+          <!--div__field-END-->
+          <label class="checkbox__container">
+            <input type="checkbox" class="checkbox__user-data-use" />
+            <span class="checkmark"></span>
+            Apruebo el uso de mis datos con fines informativos.
+          </label>
+        </div>
+        <!-- details -->
+        <div class="div__details">
+          <h3 class="details">Detalles</h3>
+          <input
+            type="text"
+            id="txtNumPeople"
+            class="form__input"
+            onblur="validationNumPerson(this)"
+          />
+          <div class="div__field">
+            <label for="" class="form__label">Número de huéspedes</label>
+            <div id="personsNumber-error" class="error__description"></div>
+          </div>
+          <input
+            type="text"
+            id="txtNumNigth"
+            class="input__calendar form__input"
+          />
+          <label for="" class="form__label">Número de noches</label>
+        </div>
+        <!--details-END-->
+        <!--options__transport-->
+        <div class="div__options">
+          <h5 class="form__subtitles">Transporte</h5>
+          <div class="div_checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__transport-options"
+                id="chcMedNec"
+              />
+              <span class="checkmark"></span>
+              Medellín-Necoclí
+            </label>
+          </div>
+          <div class="div__chackbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__transport-options"
+                id="chcNecCap"
+              />
+              <span class="checkmark"></span>
+              Necoclí-Capurganá
+            </label>
+          </div>
+          <div class="div_checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__transport-options"
+                id="chcCapNec"
+              />
+              <span class="checkmark"></span>
+              Capurganá-Necoclí
+            </label>
+          </div>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__transport-options"
+                id="chcNecMed"
+              />
+              <span class="checkmark"></span>
+              Necoclí-Medellín
+            </label>
+          </div>
+        </div>
+        <!--options__transport-END-->
+        <!--options_food-->
+        <div class="div__options-food">
+          <h5 class="form__subtitles">Alimentación</h5>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__food-options"
+                id="chcBreackfast"
+              />
+              <span class="checkmark"></span>
+              Desayuno
+            </label>
+          </div>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__food-options"
+                id="chcDinner"
+              />
+              <span class="checkmark"></span>
+              Cena
+            </label>
+          </div>
+        </div>
+        <!--options__food-END-->
+        <!--options__tours-->
+        <div class="div__options">
+          <h5 class="form__subtitles">Tours</h5>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__tours-options"
+                id="chcTourSapLamiel"
+              />
+              <span class="checkmark"></span>
+              Tour Sapzurro y La Miel (Panamá).
+            </label>
+          </div>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__tours-options"
+                id="chcTourAguPlaSol"
+              />
+              <span class="checkmark"></span>
+              Tour Aguacate y Playa Soledad.
+            </label>
+          </div>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__tours-options"
+                id="chcHikeElCiEltre"
+              />
+              <span class="checkmark"></span>
+              Caminata ecológica El cielo y El trébol.
+            </label>
+          </div>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                class="checkbox__tours-options"
+                id="chcHikeElParaiso"
+              />
+              <span class="checkmark"></span>
+              Caminata ecológica El paraíso.
+            </label>
+          </div>
+          <div class="div__checkbox">
+            <label class="checkbox__container">
+              <input
+                type="checkbox"
+                id="chcHikeLaCoquerita"
+                class="checkbox__tours-options"
+                onclick="guideOptionValidation()"
+              />
+              <span class="checkmark"></span>
+              Caminata ecológica La Coquerita.
+            </label>
+          </div>
+          <div class="div__checkbox">
+            <label id="chcGuide" class="sub-option checkbox__container">
+              <input type="checkbox" class="checkbox__guide-option" />
+              <span class="checkmark"></span>
+              Incluir guía para esta caminata.
+            </label>
+          </div>
+          <!--option__tours-END-->
+          <p class="form__paragraph-note">
+            Nota: los tours y las caminatas con excepción de la Coquerita
+            incluyen almuerzo.
+          </p>
+        </div>
+        <button
+          id="btnCalculate"
+          class="button__calculate button__calculate-text"
+        >
+          Solicitar
+        </button>
+      </form>
     </section>
+    <!--quote-END-->
     <footer>
-        <!-- footer section -->
+      <!-- footer section -->
     </footer>
-    <script src="./../js/quote_tool.js"></script>
-</body>
-
+    <!--  flatpickr  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../js/quote_tool.js"></script>
+    <script src="../js/consts.js"></script>
+  </body>
 </html>
