@@ -1,6 +1,7 @@
 /* Home page specific styles */
 .footer--rectangle {
-  padding: 15px;
+  padding: 10px;
+  padding-bottom: 4px;
   background-color: #003c8f;
   width: 1366px
   heigth: 270px
@@ -15,12 +16,13 @@
   font-size: 16px;
   color:white;
   font-family: Roboto;
+
 }
 
 .footer--icons{
   display: inline-block;
   margin-left: 45px;
-  padding:37px;
+  padding:34px;
 
 }
 
