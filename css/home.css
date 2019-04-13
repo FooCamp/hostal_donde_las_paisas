@@ -11,7 +11,7 @@
   position: relative;
 }
 
-.footer--text {
+.footer__text {
   word-break: break-word;
   text-align: center;
   font-size: 16px;
@@ -19,17 +19,17 @@
   font-family: Roboto;
 }
 
-.footer-icons:nth-last-child(1) {
+.footer__icons:nth-last-child(1) {
   margin: 0;
   display: inline-block;
   padding:34px;
 }
 
-.footer--hover{
+.footer__hover{
   color:white;
 }
 
-.footer--icon-element{
+.footer__icon__element{
   display: inline-block;
   margin-right: 37px;
   padding:0px;
@@ -98,7 +98,7 @@
     position: relative;
   }
 
-  .footer--text {
+  .footer__text {
     word-break: break-word;
     text-align: center;
     font-size: 16px;
@@ -106,17 +106,17 @@
     font-family: Roboto;
   }
 
-  .footer-icons:nth-last-child(1) {
+  .footer__icons:nth-last-child(1) {
     margin: 0;
     display: inline-block;
     padding:34px;
   }
 
-  .footer--hover{
+  .footer__hover{
     color:white;
   }
 
-  .footer--icon-element{
+  .footer__icon__element{
     display: inline-block;
     margin-right: 17px;
     padding:0px;
