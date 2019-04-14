@@ -4,6 +4,9 @@
 /*Comodities */
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.carrousel-section {
   margin: 20px;
 }
 .carrousel-container {
@@ -11,47 +14,47 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
 }
-.title-gallery {
+.carrousel-title {
   width: 25px bold;
 }
-.line {
+.carrousel-line {
   width: 90px;
   height: 1px;
   margin-left: 0;
   background-color: #63ccff;
   border: 0;
 }
-.gallery {
-  padding-top: 10%;
+.carrousel-container__carrousel {
+  padding-top: 18px;
   width: 100%;
   display: flex;
   box-sizing: border-box;
 }
-.gallery__img{
-  height: 100%;
-  max-height: 233px;
-  max-width: 367px;
+.carrousel__img{
+  max-width: 100%;
+  height: auto;
+  width: auto; 
 }
-.gallery__bottom {
+.carrousel__bottom {
   font-size: 50px;
   width: 16%;
   height: 24px;
   font-weight: bold;
   position: relative;
 }
-.gallery__bottom:hover {
+.carrousel__bottom:hover {
   cursor: pointer;
   transform: scale(1.2, 1.2);
 }
 .back {
-  margin-top: 74.1px;
-  left: 17%;
+  margin-top: 25%;
+  left: 30px;
   color: #fefefe;
   position: relative;
 }
 .ahead {
-  margin-top: 74.1px;
-  right: 41px;
+  margin-top: 25%;
+  right: 30px;
   color: #fefefe;
 }
 .pointer {
