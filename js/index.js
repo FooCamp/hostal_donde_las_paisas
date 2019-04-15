@@ -10,30 +10,30 @@ let image = [
 currentPosition = 0;
 
 function carrousel(carrouselContainer) {
-carrouselContainer.addEventListener("click", e => {
-  let back = carrouselContainer.querySelector(".back"),
-    ahead = carrouselContainer.querySelector(".ahead"),
-    img = carrouselContainer.querySelector(".carrousel__img"),
-    target = e.target;
+  carrouselContainer.addEventListener("click", e => {
+    let back = carrouselContainer.querySelector(".back"),
+      ahead = carrouselContainer.querySelector(".ahead"),
+      img = carrouselContainer.querySelector(".carrousel__img"),
+      target = e.target;
 
-  if (target == back) {
-    if (currentPosition > 0) {
-      img.src = image[currentPosition - 1];
-      currentPosition--;
-    } else {
-      img.src = image[image.length - 1];
-      currentPosition = image.length - 1;
+    if (target == back) {
+      if (currentPosition > 0) {
+        img.src = image[currentPosition - 1];
+        currentPosition--;
+      } else {
+        img.src = image[image.length - 1];
+        currentPosition = image.length - 1;
+      }
+    } else if (target == ahead) {
+      if (currentPosition < image.length - 1) {
+        img.src = image[currentPosition + 1];
+        currentPosition++;
+      } else {
+        img.src = image[0];
+        currentPosition = 0;
+      }
     }
-  } else if (target == ahead) {
-    if (currentPosition < image.length - 1) {
-      img.src = image[currentPosition + 1];
-      currentPosition++;
-    } else {
-      img.src = image[0];
-      currentPosition = 0;
-    }
-  }
-});
+  });
 }
 let carrouselContainer = document.querySelector("#carrouselContainer");
 carrousel(carrouselContainer);

@@ -33,7 +33,7 @@ body {
 .carrousel__img{
   max-width: 100%;
   height: auto;
-  width: auto; 
+  width: auto;
 }
 .carrousel__bottom {
   font-size: 50px;
@@ -71,18 +71,6 @@ body {
   margin-left: 6%;
 }
 .pointer:hover {
-  cursor: pointer;
-  transform: scale(1.2, 1.2);
-}
-.button__gallery {
-  position: absolute;
-  left: 40%;
-  height: 30px;
-  color: #fefefe;
-  border: 0;
-  margin: 5% auto 10%;
-}
-.button__gallery:hover{
   cursor: pointer;
   transform: scale(1.2, 1.2);
 }
