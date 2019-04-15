@@ -6,17 +6,21 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
+
 .carrousel-section {
   margin: 20px;
 }
+
 .carrousel-container {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
+
 .carrousel-title {
   width: 25px bold;
 }
+
 .carrousel-line {
   width: 90px;
   height: 1px;
@@ -24,17 +28,20 @@ body {
   background-color: #63ccff;
   border: 0;
 }
+
 .carrousel-container__carrousel {
   padding-top: 18px;
   width: 100%;
   display: flex;
   box-sizing: border-box;
 }
+
 .carrousel__img{
   max-width: 100%;
   height: auto;
   width: auto;
 }
+
 .carrousel__bottom {
   font-size: 50px;
   width: 16%;
@@ -42,21 +49,25 @@ body {
   font-weight: bold;
   position: relative;
 }
+
 .carrousel__bottom:hover {
   cursor: pointer;
   transform: scale(1.2, 1.2);
 }
+
 .back {
   margin-top: 25%;
   left: 30px;
   color: #fefefe;
   position: relative;
 }
+
 .ahead {
   margin-top: 25%;
   right: 30px;
   color: #fefefe;
 }
+
 .pointer {
   border-radius: 50%;
   display: flex;
@@ -65,11 +76,13 @@ body {
   list-style-position: initial;
   list-style-type: disc;
 }
+
 .pointer__point {
   border-radius: 50%;
   padding-left: 0%;
   margin-left: 6%;
 }
+
 .pointer:hover {
   cursor: pointer;
   transform: scale(1.2, 1.2);
