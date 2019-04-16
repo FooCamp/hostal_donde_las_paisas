@@ -1,39 +1,39 @@
 /* Logic for page animations and simple interactions should be placed here
    Any page or component specific logic should be placed in its own page/component js file.
 **/
-let image = [
+function carrousel() {
+  switch (this.dataset.direction) {
+    case "back":
+      if (currentPosition > 0) {
+        carrouselImage.src = image[currentPosition - 1];
+        currentPosition--;
+      } else {
+        carrouselImage.src = image[image.length - 1];
+        currentPosition = image.length - 1;
+      }
+      break;
+    case "ahead":
+      if (currentPosition < image.length - 1) {
+        carrouselImage.src = image[currentPosition + 1];
+        currentPosition++;
+      } else {
+        carrouselImage.src = image[0];
+        currentPosition = 0;
+      }
+      break;
+    default:
+      break;
+  }
+}
+const image = [
   "assets/images/IMG_8056.JPG",
   "assets/images/IMG_8453.JPG",
   "assets/images/IMG_7977.JPG",
   "assets/images/IMG_7968.JPG"
-],
-currentPosition = 0;
-
-function carrousel(carrouselContainer) {
-  carrouselContainer.addEventListener("click", e => {
-    let back = carrouselContainer.querySelector(".back"),
-      ahead = carrouselContainer.querySelector(".ahead"),
-      img = carrouselContainer.querySelector(".carrousel__img"),
-      target = e.target;
-
-    if (target == back) {
-      if (currentPosition > 0) {
-        img.src = image[currentPosition - 1];
-        currentPosition--;
-      } else {
-        img.src = image[image.length - 1];
-        currentPosition = image.length - 1;
-      }
-    } else if (target == ahead) {
-      if (currentPosition < image.length - 1) {
-        img.src = image[currentPosition + 1];
-        currentPosition++;
-      } else {
-        img.src = image[0];
-        currentPosition = 0;
-      }
-    }
-  });
-}
-let carrouselContainer = document.querySelector("#carrouselContainer");
-carrousel(carrouselContainer);
+  ];
+let currentPosition = 0;
+const carrouselArrows = document.querySelectorAll(".carrousel__arrow");
+const carrouselImage = carrouselContainer.querySelector(".carrousel__img");
+carrouselArrows.forEach(function(element) {
+  element.addEventListener("click", carrousel);
+});

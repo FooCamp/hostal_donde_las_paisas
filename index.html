@@ -28,25 +28,27 @@
 	</section>
 	<section class="carrousel-section">
     <!-- comodities section -->
-    <h1 class="carrousel-title">Galeria</h1>
-    <hr class="carrousel-line">
-      <p>
+    <div class="info">
+    <h1 class="info-title">Galeria</h1>
+    <hr class="info-line">
+      <p class="info-description">
         Nuestro hostal te ofrece todas las comodidades para que tengas la
         mejor experiencia, observa todo lo que tenemos para ti y lo
         majestuoso de Capurganá 
       </p>
+    </div>
     <div id="carrouselContainer" class="carrousel-container">
-      <div class="carrousel-container__carrousel">
-        <img src="assets/icons/arrowleft(1).svg" class="back carrousel__bottom">
-        <img src="assets/images/IMG_8056.JPG" class="carrousel__img" />
-        <img src="assets/icons/arrowleft.svg" class="ahead carrousel__bottom">
+      <div class="carrousel">
+        <img src="assets/icons/arrow.svg" class="carrousel__arrow carrousel__arrow--left" data-direction="back"/>
+        <img src="assets/images/IMG_8056.JPG" class="carrousel__img"/>
+        <img src="assets/icons/arrow.svg" class="carrousel__arrow carrousel__arrow--right" data-direction="ahead"/>
       </div>
-      <ol class="pointer">
-        <li  data-target="ahead" class="pointer__point " data-slide-to="0"></li>
-        <li  data-target="back" class="pointer__point " data-slide-to="1"></li>
-        <li  data-target="ahead" class="pointer__point " data-slide-to="2"></li>
+      <ol class="pointer-list">
+        <li class="pointer-list__point"></li>
+        <li class="pointer-list__point"></li>
+        <li class="pointer-list__point"></li>
       </ol>
-      <button class="button button--medium button--secondary">Ver galeria</button>
+      <button href="#" class="button button--medium button--secondary">Ver galeria</button>
     </div>
 	</section>
 	<footer>

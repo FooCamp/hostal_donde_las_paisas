@@ -15,13 +15,14 @@ body {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  text-align: center;
 }
 
-.carrousel-title {
+.info-title {
   width: 25px bold;
 }
 
-.carrousel-line {
+.info-line {
   width: 90px;
   height: 1px;
   margin-left: 0;
@@ -29,7 +30,7 @@ body {
   border: 0;
 }
 
-.carrousel-container__carrousel {
+.carrousel {
   padding-top: 18px;
   width: 100%;
   display: flex;
@@ -37,38 +38,32 @@ body {
 }
 
 .carrousel__img{
-  max-width: 100%;
-  height: auto;
-  width: auto;
+  width: 91%;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 56vh;
 }
 
-.carrousel__bottom {
+.carrousel__arrow {
   font-size: 50px;
+  margin-top: 24vh;
   width: 16%;
   height: 24px;
   font-weight: bold;
   position: relative;
-}
-
-.carrousel__bottom:hover {
-  cursor: pointer;
-  transform: scale(1.2, 1.2);
-}
-
-.back {
-  margin-top: 25%;
-  left: 30px;
   color: #fefefe;
-  position: relative;
 }
 
-.ahead {
-  margin-top: 25%;
+.carrousel__arrow--right{
+  transform: rotateY(180deg);
   right: 30px;
-  color: #fefefe;
 }
 
-.pointer {
+.carrousel__arrow--left{
+  left: 30px;
+}
+
+.pointer-list {
   border-radius: 50%;
   display: flex;
   padding-left: 42%;
@@ -77,15 +72,10 @@ body {
   list-style-type: disc;
 }
 
-.pointer__point {
+.pointer-list__point {
   border-radius: 50%;
   padding-left: 0%;
   margin-left: 6%;
-}
-
-.pointer:hover {
-  cursor: pointer;
-  transform: scale(1.2, 1.2);
 }
 
 /*end comodities*/
