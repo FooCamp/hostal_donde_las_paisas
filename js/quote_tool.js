@@ -90,7 +90,7 @@ const fixLabel = inputs => {
 fixLabel(inputs);
 
 /* call the elements of from */
-function sumitData (){
+function sumbitData (){
   let form = {};
   form.transport = {};
   form.feeding = {};
@@ -98,18 +98,30 @@ function sumitData (){
   form.hike = {};
 
   form.numberOfPeople = document.getElementById('txtNumPeople').value;
-  form.numberOfPeople = document.getElementById('txtNumNigth').value;
+  form.numberOfNigth = document.getElementById('txtNumNigth').value;
   
   form.transport.medNec = document.getElementById('chcMedNec').cheked;
   form.transport.necCap = document.getElementById('chcNecCap').cheked;
   form.transport.capNec = document.getElementById('chcCapNec').cheked;
   form.transport.necMed = document.getElementById('chcNecMed').cheked;
 
-  form.feeding.breakFast = document.getElementById('chcLunch').cheked;
+  form.feeding.breakFast = document.getElementById('chcBreackfast').cheked;
   form.feeding.dinner = document.getElementById('chcDinner').cheked;
+
+  form.tour.TOURSLM = document.getElementById('chcTourSapLamiel').cheked;
+  form.tour.TOURAPS = document.getElementById('chcTourAguPlaSol').cheked;
+
+  form.hike.HIKEECET = document.getElementById('chcHikeElCieEltre').cheked;
+  form.hike.HIKEP = document.getElementById('chcHikeElParaiso').cheked;
+  form.hike.HIKECO = document.getElementById('chcHikeLaCoquerita').cheked;
+  form.hike.HIKEGUI = document.getElementById('chcGuide').cheked;
 
   // Sends the collected data to the calculateCost funtion
   let finalPrice = calculateCost (form);
   // Print the information whit the total cost
   document.getElementById('txtResult').innerHTML = finalPrice; 
 }
+
+//when you give the button to quote calls the function to fill the data
+var btncalculate = document.getElementById('btnCalculate');
+btncalculate.addEventListener('click', sumbitData);
