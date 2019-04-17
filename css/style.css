@@ -18,6 +18,10 @@ body {
   text-align: center;
 }
 
+.info {
+  margin-bottom: 18px;
+}
+
 .info-title {
   width: 25px bold;
 }
@@ -31,36 +35,35 @@ body {
 }
 
 .carrousel {
-  padding-top: 18px;
   width: 100%;
-  display: flex;
+  position: relative;
   box-sizing: border-box;
 }
 
 .carrousel__img{
-  width: 91%;
-  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
-  height: 56vh;
 }
 
 .carrousel__arrow {
   font-size: 50px;
-  margin-top: 24vh;
-  width: 16%;
-  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 32px;
   font-weight: bold;
-  position: relative;
   color: #fefefe;
 }
 
 .carrousel__arrow--right{
   transform: rotateY(180deg);
-  right: 30px;
+  right: 10px;
 }
 
 .carrousel__arrow--left{
-  left: 30px;
+  left: 10px;
 }
 
 .pointer-list {
