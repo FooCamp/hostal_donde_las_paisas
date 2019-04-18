@@ -108,19 +108,67 @@ function sumbitData (){
   form.feeding.breakFast = document.getElementById('chcBreackfast').cheked;
   form.feeding.dinner = document.getElementById('chcDinner').cheked;
 
-  form.tour.TOURSLM = document.getElementById('chcTourSapLamiel').cheked;
-  form.tour.TOURAPS = document.getElementById('chcTourAguPlaSol').cheked;
+  form.tour.sapzurroLamiel = document.getElementById('chcTourSapLamiel').cheked;
+  form.tour.aguacatePlayasoledad = document.getElementById('chcTourAguPlaSol').cheked;
 
-  form.hike.HIKEECET = document.getElementById('chcHikeElCieEltre').cheked;
-  form.hike.HIKEP = document.getElementById('chcHikeElParaiso').cheked;
-  form.hike.HIKECO = document.getElementById('chcHikeLaCoquerita').cheked;
-  form.hike.HIKEGUI = document.getElementById('chcGuide').cheked;
+  form.hike.elCieloEltrebol = document.getElementById('chcHikeElCieEltre').cheked;
+  form.hike.elParaiso = document.getElementById('chcHikeElParaiso').cheked;
+  form.hike.laCoquerita = document.getElementById('chcHikeLaCoquerita').cheked;
+  form.hike.guide = document.getElementById('chcGuide').cheked;
 
+  //calcular errores
+  var errorList = validateData(form);
   // Sends the collected data to the calculateCost funtion
   let finalPrice = calculateCost (form);
   // Print the information whit the total cost
   document.getElementById('txtResult').innerHTML = finalPrice; 
+  if (errorList) {
+    document.getElementById('txtResult').appendChild(errorList);
+  }
 }
+
+function validateData(form){
+  
+  var errors =[];
+  if (numberOfNigth<getTrues(form.hike)){
+    errors.push('No te alcansan los dias para las caminatas, cada caminata toma un dia.');
+  }
+  if(numberOfNigth<getTrues(form.tour)){
+    errors.push('el numero seleccionado de dias es poco para los tours, cada tours toma un dia.');
+  }
+  if (errors.length > 0 ) {
+    
+  
+
+  var errorsContainer = [];
+  var divErrors = document.createElement("div");
+  divErrors.classList.add("lista-de-errores");
+  var ulErrors = document.createElement("ul");
+  for (const error of errors) {
+    var liErrors =document.createElement('li');
+    var textLi = document.createTextNode(errors);
+    liErrors.appendChild(textLi);
+    ulErrors.appendChild(liErrors);
+    
+  }
+
+  divErrors.appendChild(ulErrors);
+} else {
+  divErrors = false;
+}
+  return divErrors;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //when you give the button to quote calls the function to fill the data
 var btncalculate = document.getElementById('btnCalculate');
