@@ -96,6 +96,7 @@ function sumbitData (){
   form.feeding = {};
   form.tour = {};
   form.hike = {};
+  form.laCoquerita = {};
 
   form.numberOfPeople = document.getElementById('txtNumPeople').value;
   form.numberOfNigth = document.getElementById('txtNumNigth').value;
@@ -113,10 +114,10 @@ function sumbitData (){
 
   form.hike.elCieloEltrebol = document.getElementById('chcHikeElCieEltre').cheked;
   form.hike.elParaiso = document.getElementById('chcHikeElParaiso').cheked;
-  form.hike.laCoquerita = document.getElementById('chcHikeLaCoquerita').cheked;
-  form.hike.guide = document.getElementById('chcGuide').cheked;
+  form.laCoquerita.hike = document.getElementById('chcHikeLaCoquerita').cheked;
+  form.laCoquerita.guide = document.getElementById('chcGuide').cheked;
 
-  //calcular errores
+  //calculate error
   var errorList = validateData(form);
   // Sends the collected data to the calculateCost funtion
   let finalPrice = calculateCost (form);
@@ -159,7 +160,20 @@ function validateData(form){
   return divErrors;
 }
 
-
+get trues (list){
+  const listValues = Object.value(list);
+  let count = 0;
+  for (const item of listValues){
+    if (typeof(item) == 'object'){
+      item = item.hike;
+      item = item.tour;
+    }
+    if (item = true){
+      count += 1;
+    }
+  }
+  return count
+}
 
 
 
