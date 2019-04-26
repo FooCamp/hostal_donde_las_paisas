@@ -41,7 +41,7 @@ We can find an introductory Hero to the page, also a carrousel with a diversity 
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 ## About Us :school:
-we are a division that hunger for knowledge Incorporates the habit of development in a way that the knowledge that some share in sessions and talks so that they can be infused into others in order to gain real experience to include in the CV along with the habit of innovation in work for the sake of freedom (Abraham Lincoln)
+we are a division that hunger for knowledge Incorporates the habit of development in a way that the knowledge that some share in sessions and talks so that they can be infused into others in order to gain real experience to include in the CV along with the habit of innovation.
 
 ## license 📄
 
