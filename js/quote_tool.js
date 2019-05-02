@@ -128,26 +128,25 @@ function sumbitData (){
   }
 }
 
+// validate the opted data to verify the number of tours and nights.
 function validateData(form){
   
   var errors =[];
-  if (numberOfNigth<getTrues(form.hike)){
+  if (form.numberOfNigth<getTrues(form.hike)){
     errors.push('No te alcansan los dias para las caminatas, cada caminata toma un dia.');
   }
-  if(numberOfNigth<getTrues(form.tour)){
+  if(form.numberOfNigth<getTrues(form.tour)){
     errors.push('el numero seleccionado de dias es poco para los tours, cada tours toma un dia.');
   }
   if (errors.length > 0 ) {
-    
-  
 
   var errorsContainer = [];
   var divErrors = document.createElement("div");
-  divErrors.classList.add("lista-de-errores");
+  divErrors.classList.add("list-of-errors");
   var ulErrors = document.createElement("ul");
   for (const error of errors) {
     var liErrors =document.createElement('li');
-    var textLi = document.createTextNode(errors);
+    var textLi = document.createTextNode(error);
     liErrors.appendChild(textLi);
     ulErrors.appendChild(liErrors);
     
@@ -160,7 +159,7 @@ function validateData(form){
   return divErrors;
 }
 
-get trues (list){
+getTrues (list){
   const listValues = Object.value(list);
   let count = 0;
   for (const item of listValues){
