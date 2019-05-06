@@ -23,15 +23,40 @@ then execute the index.html, it will open in your default browser
 
 Have a web browser (preferably Google Chrome)
 
-## Deployment 📦
-
-We can find an introductory Hero to the page, also a carrousel with a diversity of images and a footer with references for contact
-
 ## Build with 🛠️
 
 * Js
 * HTML
 * CSS
+
+## Workflow :memo:
+
+Our general DEV workflow should be the next:
+
+1 - Find a task that has a score and you feel confortable developing.<br />
+2 - Make sure all the info you need to develop it is available to you, if not ask the team.<br />
+3 - assign the task to yourself and set it on the "To do" or "Doing" columns depending on when you will actually start.<br />
+4 - create a new branch from the 'develop' branch named this way:<br />
+&nbsp;  'feature/description' for additions <br />
+&nbsp;  'bugfix/description' for bugfixes <br />
+&nbsp;  'enhancement/description' for improvements <br />
+&nbsp;  'issue/description' <br />
+5 - code :D<br />
+6 - commit your changes.<br />
+7 - if your task is ready submit a pull request on Github.
+
+**Pull request should always:**
+- Have pictures or screenshots if it has visuals in it.
+- Have a link to the trello task related to it.
+
+**Notes:**
+- All PRs should be named like their branch
+**- All code should be properly documented, refer to the documentation and comments sections of the style guides.**
+- all PRs need at-least 2 approvals from the team to be merged to develop.
+- Your submissions should have commits that are clear and have intent, don't  add a commit if it is not needed, but avoid vague commits.
+- If you feel your code needs more than one commit to keep it clear and organized, please do it.
+- If someone ask questions on your PR, that doesn't mean they think you are wrong or are attacking you.
+- Ask ALL the questions you need through out the process, the team is here for you.
 
 ## Colaborators ✒️
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
