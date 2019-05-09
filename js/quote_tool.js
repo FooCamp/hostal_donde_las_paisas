@@ -15,7 +15,6 @@ const fixLabel = inputs => {
   }
 };
 fixLabel(inputs);
-
 /**
  * This code validate the "input-name"; this validation is
  * done throught a regular expression that allow enter only letters and
