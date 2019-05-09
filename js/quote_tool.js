@@ -39,7 +39,7 @@
  *  guide: boolean,
  * }
  */
-function calculateCost(form) {
+const calculateCost = (form) =>{
   let total = 0;
   // PeopleAndNigth It contains the number of people multiplied the number of
   // nights and then multiply the result by the heat of each night.
@@ -90,7 +90,7 @@ const fixLabel = inputs => {
 fixLabel(inputs);
 
 /* call the elements of from */
-function sumbitData() {
+const sumbitData = () => {
   let form = {};
   form.transport = {};
   form.feeding = {};
@@ -149,7 +149,7 @@ function sumbitData() {
 }
 
 // validate the opted data to verify the number of tours and nights.
-function validateData(form) {
+const validateData = (form) => {
   var errors = [];
   if (form.numberOfNigth < getTrues(form.hike)) {
     errors.push(
@@ -190,7 +190,7 @@ function validateData(form) {
   return divErrors;
 }
 
-function getTrues(list) {
+const getTrues = (list) => {
   console.log("get trues");
   const listValues = Object.values(list);
   console.log(listValues);
