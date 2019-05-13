@@ -41,7 +41,7 @@ body {
   width: 91%;
   max-width: 960px;
   margin: 0 auto;
-  height: 56vh;
+  height: 81vh;
 }
 
 .carrousel__arrow {
@@ -61,21 +61,6 @@ body {
 
 .carrousel__arrow--left{
   left: 30px;
-}
-
-.pointer-list {
-  border-radius: 50%;
-  display: flex;
-  padding-left: 42%;
-  margin: 10px;
-  list-style-position: initial;
-  list-style-type: disc;
-}
-
-.pointer-list__point {
-  border-radius: 50%;
-  padding-left: 0%;
-  margin-left: 6%;
 }
 
 /*end comodities*/
