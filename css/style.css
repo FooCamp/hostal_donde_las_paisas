@@ -1,5 +1,4 @@
 /* General page styles */
-
 /* We should use a mobile first approach having out breack point at 768px */
 /*Comodities */
 body {
@@ -68,6 +67,7 @@ body {
 
 /*end comodities*/
 
+/* We should use a mobile first approach having out breack point at 768px */
 .button {
 	font-family: roboto, sans-serif;
 	font-weight: 500;
