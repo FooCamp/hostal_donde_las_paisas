@@ -11,6 +11,10 @@ function carrousel() {
       if (currentPosition > 0) {
         carrouselImage.src = image[currentPosition - 1];
         currentPosition--;
+        var l ;
+        l = olDiv[contOl + 1 ];
+        olDiv[contOl].classList.add('oval-black');
+        contOl--;
       } else {
         carrouselImage.src = image[image.length - 1];
         currentPosition = image.length - 1;
@@ -24,6 +28,19 @@ function carrousel() {
         carrouselImage.src = image[0];
         currentPosition = 0;
       }
+      /*if (currentPosition == 0 ){
+        div1.classList.add('oval-black');
+        div2.classList.add('oval-gray');
+        div3.classList.add('oval-gray');
+      }else if (currentPosition == 1 ){
+        div2.classList.add('oval-black');
+        div1.classList.add('oval-gray');
+        div3.classList.add('oval-gray');
+      }else if (currentPosition == 2){
+        div3.classList.add('oval-black');
+        div2.classList.add('oval-gray');
+        div1.classList.add('oval-gray');
+      }*/
       break;
     default:
       break;
@@ -46,3 +63,11 @@ const carrouselImage = document.querySelector(".carrousel__img");
 carrouselArrows.forEach(function(element) {
   element.addEventListener("click", carrousel);
 });
+/*Array ol*/
+var contOl = 0;
+var olDiv = document.getElementById('oldiv').objet;
+var div1 = document.getElementById('divBtn1');
+var div2 = document.getElementById('divBtn2');
+var div3 = document.getElementById('divBtn3');
+
+
