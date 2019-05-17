@@ -2,13 +2,19 @@
 /* We should use a mobile first approach having out breack point at 768px */
 
 /* START GENERAL STYLES */
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
 }
 
 img,
@@ -144,58 +150,3 @@ video {
 	color: #ffffff;
 	background-color: #ce4141;
 }
-
-
-/* START SERVICES */
-
-.services-container {
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.service {
-  align-items: center;
-  display: flex;
-  flex-flow: column nowrap;
-  max-width: 315px;
-  width: 100%;
-}
-
-.service:not(:first-child) {
-  margin-top: 20px;
-}
-
-.service__icon {
-  max-width: 150px;
-}
-
-.service__description {
-  height: 46px;
-  margin: 30px 0 0;
-  max-width: 218px;
-  text-align: center;
-  width: 100%;
-}
-
-/* END SERVICES */
-
-
-/* MEDIA QUERIES */
-
-@media only screen and (min-width: 361px) {
-    .container {
-      max-width: 960px;
-      padding: 88px 0;
-    }
-
-    .services-container {
-      flex-flow: row nowrap;
-      justify-content: space-between;
-    }
-
-    .service:not(:first-child) {
-      margin-top: 0;
-    }
-  }
