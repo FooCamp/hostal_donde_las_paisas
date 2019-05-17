@@ -80,28 +80,21 @@ body {
   margin-left: 6%;
 
 }
-.oval-gray{
+.oval{
   width: 14px;
   height: 14px;
+}
+.oval-gray{
   background-color: rgba(51, 51, 51, 0.3);
 }
 .oval-black{
-  width: 14px;
-  height: 14px;
   background-color: #333333;
 }
 @media screen and (max-width: 960px){
-  .oval-gray{
+  .oval{
     width: 10px;
     height: 10px;
-    background-color: rgba(51, 51, 51, 0.3);
   }
-    .oval-black{
-      width: 10px;
-      height: 10px;
-      background-color: #333333;
-    }
-
 }
 
  /*end comodities*/

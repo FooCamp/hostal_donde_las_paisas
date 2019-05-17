@@ -15,8 +15,8 @@ function carrousel() {
         carrouselImage.src = image[image.length - 1];
         currentPosition = image.length - 1;
         }
-        ovalBlackback();
-        ovalBlackBack1();
+        ovalBlack();
+        clearInterval(seg);
       break;
     case "ahead":
       if (currentPosition < image.length - 1) {
@@ -26,9 +26,9 @@ function carrousel() {
       } else {
         carrouselImage.src = image[0];
         currentPosition = 0;
-      }
 
-      ovalBlack1();
+      }
+      clearInterval(seg);
       ovalBlack();
       break;
     default:
@@ -49,98 +49,37 @@ const carrouselArrows = document.querySelectorAll(".carrousel__arrow");
 /* Take actual image from document */
 const carrouselImage = document.querySelector(".carrousel__img");
 
-/*call the div's*/
-var div1 = document.getElementById('divBtn1');
-var div2 = document.getElementById('divBtn2');
-var div3 = document.getElementById('divBtn3');
-// the automatic function changes the images of slider every 3 seconds and the color of the divs.
  function automatic() {
   if (currentPosition < image.length - 1) {
     carrouselImage.src = image[currentPosition + 1];
     currentPosition++;
-    ovalBlack();
   } else {
     carrouselImage.src = image[0];
     currentPosition = 0;
-    ovalBlack1();
   }
+  ovalBlack
+  ovalBlack();
 };
 /*when the active page loads the interval function and sends the data and the activation
  to the automatic function*/
 var seg;
 window.onload = function interval() {
    seg = setInterval(automatic,3000);
+   divCont[0].classList.add('oval-black');
 }
-//change the color of div's to black
-function ovalBlack1(){
-  if (currentPosition == 0 ){
-    div1.classList.add('oval-black');
-    div2.classList.remove('oval-black');
-    div3.classList.remove('oval-black');
-  }
-};
+
+
+
 // changes the color of the div's to black or gray
 function ovalBlack(){
-  if (currentPosition == 1 ){
-    div2.classList.add('oval-black');
-    div1.classList.remove('oval-black');
-    div1.classList.add('oval-gray');
-    div3.classList.remove('oval-black');
-  }else if (currentPosition == 2){
-    div3.classList.add('oval-black');
-    div2.classList.remove('oval-black');
-    div1.classList.add('oval-gray');
-  }
-};
-//changes the color of the div's to black or gray when it goes back
-function ovalBlackBack1(){
-  if (currentPosition == 0 ){
-    div1.classList.add('oval-black');
-    div2.classList.remove('oval-black');
-    div3.classList.remove('oval-black');
-  }
-};
-
-function ovalBlackback(){
-  if (currentPosition == 1 ){
-    div2.classList.add('oval-black');
-    div1.classList.remove('oval-black');
-    div1.classList.add('oval-gray');
-    div3.classList.remove('oval-black');
-  }else if (currentPosition == 2){
-    div3.classList.add('oval-black');
-    div2.classList.remove('oval-black');
-    div1.classList.remove('oval-black');
-    div1.classList.add('oval-gray');
-  }
-};
-
-
-//change the image when selected div1
-function changeImage(){
-
-  if ( div1.onclick ){
-    carrouselImage.src = image[0];
-    currentPosition = 0;
-    ovalBlack1();
-    ovalBlack();
-  }
-};
-//change the image when selected div2
-function changeImage2(){
-  if ( div2.onclick ){
-    carrouselImage.src = image[1];
-    currentPosition = 1;
-    ovalBlack();
-  }
-};
-//change the image when selected div3
-function changeImage3(){
-  if ( div3.onclick ){
-    carrouselImage.src = image[2];
-    currentPosition = 2;
-    ovalBlack();
+  for (let i = 0; i < divCont.length; i++){
+    if (divCont[i] != divCont[currentPosition]){
+      divCont[i].classList.remove('oval-black');
+    }else{
+      divCont[currentPosition].classList.add('oval-black');
     }
+
+  }
 };
 /*In all elements of document, take all carrousel__arrow to send the function carrousel */
 //addEventListener("click", changeImage);
@@ -148,6 +87,7 @@ carrouselArrows.forEach(function(element) {
   element.addEventListener("click", carrousel);
 });
 
+var divCont = document.getElementById('divBtn').children;
 
 
 
