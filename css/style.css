@@ -67,8 +67,7 @@ body {
 
 .pointer-list {
   border-radius: 50%;
-  display: flex;
-  padding-left: 42%;
+  display: block;
   margin: 10px;
   list-style-position: initial;
   list-style-type: disc;
@@ -77,7 +76,9 @@ body {
 .pointer-list__point {
   border-radius: 50%;
   padding-left: 0%;
-  margin-left: 6%;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: inline-block;
 
 }
 .oval{

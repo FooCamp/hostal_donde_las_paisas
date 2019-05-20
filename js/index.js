@@ -15,8 +15,9 @@ function carrousel() {
         carrouselImage.src = image[image.length - 1];
         currentPosition = image.length - 1;
         }
-        ovalBlack();
-        clearInterval(seg);
+      clearInterval(seg);
+      ovalBlack();
+      seg = setInterval(automatic,3000);
       break;
     case "ahead":
       if (currentPosition < image.length - 1) {
@@ -28,8 +29,9 @@ function carrousel() {
         currentPosition = 0;
 
       }
-      clearInterval(seg);
-      ovalBlack();
+    clearInterval(seg);
+    ovalBlack();
+    seg = setInterval(automatic,3000);
       break;
     default:
       break;
@@ -86,8 +88,33 @@ function ovalBlack(){
 carrouselArrows.forEach(function(element) {
   element.addEventListener("click", carrousel);
 });
-
+function selectOval(){
+  if( action >= 0){
+   carrouselImage.src = image[action];
+   currentPosition = action;
+   clearInterval(seg);
+   ovalBlack();
+   seg = setInterval(automatic,3000);
+  }
+ };
 var divCont = document.getElementById('divBtn').children;
+var action;
+var div1 = document.getElementById('divBtn1').addEventListener('click',function (){
+  action = 0;
+  selectOval();
+  });
+var div2 = document.getElementById('divBtn2').addEventListener('click',function (){
+  action = 1;
+  selectOval();
+});
+var div3 = document.getElementById('divBtn3').addEventListener('click',function (){
+  action = 2;
+  selectOval();
+});
+var div4 = document.getElementById('divBtn4').addEventListener('click',function (){
+  action = 3;
+  selectOval();
+});
 
 
 
