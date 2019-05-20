@@ -65,6 +65,7 @@ body {
   left: 10px;
 }
 
+<<<<<<< HEAD
 .pointer-list {
   border-radius: 50%;
   display: block;
@@ -98,6 +99,9 @@ body {
 }
 
  /*end comodities*/
+=======
+/*end comodities*/
+>>>>>>> 9df165543d09fde25af09887262acff2f354ff67
 
 /* We should use a mobile first approach having out breack point at 768px */
 .button {
