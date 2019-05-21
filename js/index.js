@@ -62,8 +62,10 @@ const carrouselImage = document.querySelector(".carrousel__img");
   ovalBlack
   ovalBlack();
 };
-/*when the active page loads the interval function and sends the data and the activation
- to the automatic function*/
+/**
+* when the active page loads the interval function and sends the data and the activation
+* to the automatic function
+ */
 var seg;
 window.onload = function interval() {
    seg = setInterval(automatic,3000);
@@ -71,9 +73,10 @@ window.onload = function interval() {
 }
 
 
-
-// changes the color of the div's to black or gray
-function ovalBlack(){
+/**
+ *changes the color of the div's to black or gray
+*/
+ function ovalBlack(){
   for (let i = 0; i < divCont.length; i++){
     if (divCont[i] != divCont[currentPosition]){
       divCont[i].classList.remove('oval-black');
@@ -97,6 +100,9 @@ function selectOval(){
    seg = setInterval(automatic,3000);
   }
  };
+ /**
+  * call the html elements
+  */
 var divCont = document.getElementById('divBtn').children;
 var action;
 var div1 = document.getElementById('divBtn1').addEventListener('click',function (){
