@@ -1,8 +1,5 @@
 /* Home page specific styles */
 
-
-
-
 .footer {
   background-color: #003c8f;
   color: white;
@@ -38,10 +35,12 @@
 }
 
 .footer__icons-container {
-  margin: 30px 5px;
+  margin: 10px 5px;
 }
 .footer__icon {
+  display: inline-block;
   margin: 7px;
+  max-width: 50px;
 }
 
 .homepage-hero {
@@ -134,11 +133,6 @@
 /* START MEDIA QUERIES */
 
 @media only screen and (min-width: 960px) {
-  .container {
-    max-width: 960px;
-    padding: 88px 0;
-  }
-
   .services-container {
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -148,9 +142,6 @@
     margin-top: 0;
   }
 
-  .footer__icon {
-    margin: 19px;
-  }
 }
 
 /* END MEDIA QUERIES */

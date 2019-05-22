@@ -150,3 +150,17 @@ video {
 	color: #ffffff;
 	background-color: #ce4141;
 }
+
+/* START MEDIA QUERIES */
+@media only screen and (min-width: 960px) {
+  .container {
+    max-width: 960px;
+    padding: 88px 0;
+  }
+
+  .footer__icon {
+    margin: 19px;
+  }
+
+}
+  /* END MEDIA QUERIES */
