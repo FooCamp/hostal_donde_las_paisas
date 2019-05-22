@@ -76,8 +76,8 @@ body {
 .pointer-list__point {
   border-radius: 50%;
   padding-left: 0%;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 29px;
+  margin-right: 29px;
   display: inline-block;
 }
 .oval{
@@ -94,6 +94,10 @@ body {
   .oval{
     width: 10px;
     height: 10px;
+  }
+  .pointer-list__point{
+    margin-left: 22px;
+    margin-right: 22px;
   }
 }
 
