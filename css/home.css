@@ -70,20 +70,28 @@ body {
 
 .homepage-hero__article {
   margin-right: 5%;
-  margin-left: 5%;
+  margin-left: 50px;
   position: absolute;
-  bottom: 10%;
+  bottom: 38%;
+}
+.homepage-hero__lookdown{
+  margin-left: 45%;
+  position: absolute;
+  bottom: 1px;
 }
 
 .homepage-hero__headline {
-  margin-bottom: 5px;
+  width: 247px;
+  height: 140px;
+  object-fit: contain;
+  /*margin-bottom: 5px;
   color: #ffffff;
   font-size: 36px;
-  font-weight: bold;
+  font-weight: bold;*/
 }
 
 .homepage-hero__headline h1 {
-  margin: 0;
+  margin-right: 5%;
 }
 
 .homepage-hero__divider {

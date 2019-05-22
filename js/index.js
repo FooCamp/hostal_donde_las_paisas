@@ -46,3 +46,10 @@ const carrouselImage = document.querySelector(".carrousel__img");
 carrouselArrows.forEach(function(element) {
   element.addEventListener("click", carrousel);
 });
+/* Function about the arrow down or drop down wherever you want
+*Dixie Land forever!!
+*/
+function goDown(){
+  var lookdown = document.getElementById('carrousel-section');//take the destini to scroll
+  lookdown.scrollIntoView({block: "start", behavior: "smooth"});// end: go down and behavior is to go smooth
+}
