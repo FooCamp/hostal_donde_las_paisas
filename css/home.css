@@ -69,15 +69,16 @@ body {
 }
 
 .homepage-hero__article {
-  margin-right: 5%;
-  margin-left: 50px;
+  margin-right: 57px;
+  margin-left: 57px;
   position: absolute;
-  bottom: 38%;
+  bottom: 250px;
+  top: 250px;
 }
 .homepage-hero__lookdown{
   margin-left: 45%;
   position: absolute;
-  bottom: 1px;
+  bottom: 20px;
 }
 
 .homepage-hero__headline {
