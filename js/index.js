@@ -47,7 +47,6 @@ carrouselArrows.forEach(function(element) {
   element.addEventListener("click", carrousel);
 });
 /* Function about the arrow down or drop down wherever you want
-*Dixie Land forever!!
 */
 function goDown(){
   var lookdown = document.getElementById('carrousel-section');//take the destini to scroll
