@@ -16,8 +16,8 @@ function carrousel() {
         currentPosition = image.length - 1;
         }
       clearInterval(seg);
-      ovalBlack();
-      seg = setInterval(automatic,3000);
+      activeOval();
+      seg = setInterval(automaticSlider,3000);
       break;
     case "ahead":
       if (currentPosition < image.length - 1) {
@@ -30,8 +30,8 @@ function carrousel() {
 
       }
     clearInterval(seg);
-    ovalBlack();
-    seg = setInterval(automatic,3000);
+    activeOval();
+    seg = setInterval(automaticSlider,3000);
       break;
     default:
       break;
@@ -51,7 +51,7 @@ const carrouselArrows = document.querySelectorAll(".carrousel__arrow");
 /* Take actual image from document */
 const carrouselImage = document.querySelector(".carrousel__img");
 
- function automatic() {
+ function automaticSlider() {
   if (currentPosition < image.length - 1) {
     carrouselImage.src = image[currentPosition + 1];
     currentPosition++;
@@ -59,8 +59,7 @@ const carrouselImage = document.querySelector(".carrousel__img");
     carrouselImage.src = image[0];
     currentPosition = 0;
   }
-  ovalBlack
-  ovalBlack();
+  activeOval();
 };
 /**
 * when the active page loads the interval function and sends the data and the activation
@@ -68,20 +67,20 @@ const carrouselImage = document.querySelector(".carrousel__img");
  */
 var seg;
 window.onload = function interval() {
-   seg = setInterval(automatic,3000);
-   divCont[0].classList.add('oval-black');
+   seg = setInterval(automaticSlider,3000);
+   divCont[0].classList.add('pointer-list__oval--black');
 }
 
 
 /**
  *changes the color of the div's to black or gray
 */
- function ovalBlack(){
+ function activeOval(){
   for (let i = 0; i < divCont.length; i++){
     if (divCont[i] != divCont[currentPosition]){
-      divCont[i].classList.remove('oval-black');
+      divCont[i].classList.remove('pointer-list__oval--black');
     }else{
-      divCont[currentPosition].classList.add('oval-black');
+      divCont[currentPosition].classList.add('pointer-list__oval--black');
     }
 
   }
@@ -96,8 +95,8 @@ function selectOval(){
    carrouselImage.src = image[action];
    currentPosition = action;
    clearInterval(seg);
-   ovalBlack();
-   seg = setInterval(automatic,3000);
+   activeOval();
+   seg = setInterval(automaticSlider,3000);
   }
  };
  /**

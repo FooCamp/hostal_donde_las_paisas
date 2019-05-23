@@ -73,31 +73,27 @@ body {
   list-style-type: disc;
 }
 
-.pointer-list__point {
+.pointer-list__oval {
   border-radius: 50%;
   padding-left: 0%;
   margin-left: 14.5px;
   margin-right: 14.5px;
   display: inline-block;
-}
-.oval{
   width: 14px;
   height: 14px;
 }
-.oval-gray{
+.pointer-list__oval--gray{
   background-color: rgba(51, 51, 51, 0.3);
 }
-.oval-black{
+.pointer-list__oval--black{
   background-color: #333333;
 }
 @media screen and (max-width: 960px){
-  .oval{
-    width: 10px;
-    height: 10px;
-  }
-  .pointer-list__point{
+  .pointer-list__oval{
     margin-left: 11px;
     margin-right: 11px;
+    width: 10px;
+    height: 10px;
   }
 }
 
