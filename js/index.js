@@ -102,21 +102,21 @@ function selectOval(){
  /**
   * call the html elements
   */
-let divCont = document.getElementById('divBtn').children;
+const divCont = document.getElementById('divBtn').children;
 let action;
-let div1 = document.getElementById('divBtn1').addEventListener('click',function (){
+document.getElementById('divBtn1').addEventListener('click',function (){
   action = 0;
   selectOval();
   });
-let div2 = document.getElementById('divBtn2').addEventListener('click',function (){
+document.getElementById('divBtn2').addEventListener('click',function (){
   action = 1;
   selectOval();
 });
-let div3 = document.getElementById('divBtn3').addEventListener('click',function (){
+document.getElementById('divBtn3').addEventListener('click',function (){
   action = 2;
   selectOval();
 });
-let div4 = document.getElementById('divBtn4').addEventListener('click',function (){
+document.getElementById('divBtn4').addEventListener('click',function (){
   action = 3;
   selectOval();
 });
