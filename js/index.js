@@ -65,7 +65,7 @@ const carrouselImage = document.querySelector(".carrousel__img");
 * when the active page loads the interval function and sends the data and the activation
 * to the automatic function
  */
-var seg;
+let seg;
 window.onload = function interval() {
    seg = setInterval(automaticSlider,3000);
    divCont[0].classList.add('pointer-list__oval--black');
@@ -102,21 +102,21 @@ function selectOval(){
  /**
   * call the html elements
   */
-var divCont = document.getElementById('divBtn').children;
-var action;
-var div1 = document.getElementById('divBtn1').addEventListener('click',function (){
+let divCont = document.getElementById('divBtn').children;
+let action;
+let div1 = document.getElementById('divBtn1').addEventListener('click',function (){
   action = 0;
   selectOval();
   });
-var div2 = document.getElementById('divBtn2').addEventListener('click',function (){
+let div2 = document.getElementById('divBtn2').addEventListener('click',function (){
   action = 1;
   selectOval();
 });
-var div3 = document.getElementById('divBtn3').addEventListener('click',function (){
+let div3 = document.getElementById('divBtn3').addEventListener('click',function (){
   action = 2;
   selectOval();
 });
-var div4 = document.getElementById('divBtn4').addEventListener('click',function (){
+let div4 = document.getElementById('divBtn4').addEventListener('click',function (){
   action = 3;
   selectOval();
 });
