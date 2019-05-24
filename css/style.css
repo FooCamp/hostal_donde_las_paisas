@@ -1,11 +1,36 @@
 /* General page styles */
 /* We should use a mobile first approach having out breack point at 768px */
-/*Comodities */
+
+/* START GENERAL STYLES */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 70px 20px;
+  width: 100%;
+}
+
+/* END GENERAL STYLES */
+
+/*Comodities */
 .carrousel-section {
   margin: 20px;
 }
@@ -13,7 +38,6 @@ body {
 .carrousel-container {
   width: 100%;
   margin: 0 auto;
-  box-sizing: border-box;
   text-align: center;
 }
 
@@ -36,7 +60,6 @@ body {
 .carrousel {
   width: 100%;
   position: relative;
-  box-sizing: border-box;
 }
 
 .carrousel__img{
@@ -127,3 +150,17 @@ body {
 	color: #ffffff;
 	background-color: #ce4141;
 }
+
+/* START MEDIA QUERIES */
+@media only screen and (min-width: 960px) {
+  .container {
+    max-width: 960px;
+    padding: 88px 0;
+  }
+
+  .footer__icon {
+    margin: 19px;
+  }
+
+}
+  /* END MEDIA QUERIES */
