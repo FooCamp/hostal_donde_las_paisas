@@ -1,7 +1,7 @@
 /* Home page specific styles */
 
 .homepage-hero {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -22,7 +22,7 @@
 .homepage-hero__article {
   margin-right: 5%;
   margin-left: 5%;
-  position: absolute;
+  position: relative;
   bottom: 10%;
   width: 100%;
 }
