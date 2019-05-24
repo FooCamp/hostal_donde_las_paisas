@@ -33,27 +33,27 @@
   font-size: 22px;
 }
 
-.color--primary {
+.button--color--primary {
   background-color: #29b6f6;
 }
 
-.color--primary-light {
+.button--color--primary-light {
   background-color: #73e8ff;
 }
 
-.color--primary-dark {
+.button--color--primary-dark {
   background-color: #0086c3;
 }
 
-.color--secondary {
+.button--color--secondary {
   background-color: #1565c0;
 }
 
-.color--secondary-light {
+.button--color--secondary-light {
   background-color: #5e92f3;
 }
 
-.color--secondary-dark {
+.button--color--secondary-dark {
   background-color: #003c8f;
 }
 
@@ -62,40 +62,30 @@
   .button {
     min-width: 320px;
     height: 60px;
-    font-size: 22px;
-    font-family: Roboto-Regular, sans-serif;
-    font-weight: normal;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 100%;
-    display: inline-block;
-    border-radius: 4px;
-    overflow: hidden;
-    color: white;
-    border: 0;
+    font-size: 22px;                                  
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
   }
-  .color--primary:hover {
+  .button--color--primary:hover {
     background-color: #0086c3;
   }
-  .color--primary-dark:hover {
+  .button--color--primary-dark:hover {
     background-color: #29b6f6;
   }
 
-  .color--secondary:hover {
+  .button--color--secondary:hover {
     background-color: #003c8f;
   }
 
-  .color--secondary-dark:hover {
+  .button--color--secondary-dark:hover {
     background-color: #1565c0;
   }
 
-  .color--primary-light:hover{
+  .button--color--primary-light:hover {
     background-color: #5e92f3;
   }
 
-  .color--secondary-light:hover{
+  .button--color--secondary-light:hover {
     background-color: #73e8ff;;
   }
 }
