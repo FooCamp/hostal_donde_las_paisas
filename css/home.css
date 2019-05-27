@@ -47,6 +47,7 @@ body {
 .footer__icons-container {
   margin: 30px 5px;
 }
+
 .footer__icon {
   margin: 7px;
 }
@@ -69,29 +70,31 @@ body {
 }
 
 .homepage-hero__article {
-  margin-right: 57px;
-  margin-left: 57px;
+  margin: auto;
+}
+
+.homepage-hero__hdlp-logo{
   position: absolute;
   bottom: 250px;
-  top: 250px;
+  margin-left: -125px;
+  width: 247px;
+  height: 140px;
+  object-fit: contain;
 }
+
 .homepage-hero__lookdown{
-  margin-left: 45%;
+  margin-left: 50%;
   position: absolute;
   bottom: 20px;
 }
 
-.homepage-hero__headline {
-  width: 247px;
-  height: 140px;
-  object-fit: contain;
-  /*margin-bottom: 5px;
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: bold;*/
+.homepage-hero__hdlp{
+  margin-left: 50%;
+  position: absolute;
+  bottom: 20px;
 }
 
-.homepage-hero__headline h1 {
+.homepage-hero__hdlp-logo h1 {
   margin-right: 5%;
 }
 
