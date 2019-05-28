@@ -106,9 +106,10 @@ video {
   width: 14px;
   height: 14px;
 }
-.pointer-list__oval--gray{
+.pointer-list__oval--gray {
   background-color: rgba(51, 51, 51, 0.3);
 }
+
 .pointer-list__oval--black{
   background-color: #333333;
 }
@@ -119,7 +120,8 @@ video {
   justify-items: center;
 }
 @media screen and (max-width: 960px){
-  .pointer-list__oval{
+
+  .pointer-list__oval {
     margin-left: 11px;
     margin-right: 11px;
     width: 10px;
@@ -192,6 +194,7 @@ video {
 
 /* START MEDIA QUERIES */
 @media only screen and (min-width: 960px) {
+
   .container {
     max-width: 960px;
     padding: 88px 0;
