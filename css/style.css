@@ -1,5 +1,5 @@
 /* General page styles */
-/* We should use a mobile first approach having out breack point at 768px */
+/* We should use a mobile first approach having out breack point at 960px */
 
 /* START GENERAL STYLES */
 *,
@@ -63,7 +63,7 @@ video {
   position: relative;
 }
 
-.carrousel__img{
+.carrousel__img {
   width: 100%;
   margin: 0 auto;
 }
@@ -80,12 +80,12 @@ video {
   color: #fefefe;
 }
 
-.carrousel__arrow--right{
+.carrousel__arrow--right {
   transform: rotateY(180deg);
   right: 10px;
 }
 
-.carrousel__arrow--left{
+.carrousel__arrow--left {
   left: 10px;
 }
 
@@ -110,7 +110,7 @@ video {
   background-color: rgba(51, 51, 51, 0.3);
 }
 
-.pointer-list__oval--black{
+.pointer-list__oval--black {
   background-color: #333333;
 }
 
