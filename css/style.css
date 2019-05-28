@@ -1,4 +1,9 @@
+
+/* General page styles */
+/* We should use a mobile first approach having out breack point at 960px */
+
 /* For mobile phones: */
+
 
 *,
 *::after,
@@ -85,6 +90,7 @@ video {
 }
 
 /* Carrousel */
+
 .carrousel-section {
   margin: 20px;
 }
@@ -162,9 +168,26 @@ video {
 .pointer-list__oval--gray {
   background-color: rgba(51, 51, 51, 0.3);
 }
+
 .pointer-list__oval--black {
   background-color: #333333;
 }
+
+.pointer-section {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+@media screen and (max-width: 960px){
+
+  .pointer-list__oval {
+    margin-left: 11px;
+    margin-right: 11px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
 
 /* End carrousel*/
 
@@ -199,6 +222,15 @@ video {
     background-color: #5e92f3;
   }
 
+
+/* START MEDIA QUERIES */
+@media only screen and (min-width: 960px) {
+
+  .container {
+    max-width: 960px;
+    padding: 88px 0;
+  }
+
   .button--secondary-light:hover {
     background-color: #73e8ff;
   }
@@ -215,5 +247,3 @@ video {
     margin: 19px;
   }
 }
-
-
