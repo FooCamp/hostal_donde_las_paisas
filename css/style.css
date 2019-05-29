@@ -1,9 +1,7 @@
-
 /* General page styles */
 /* We should use a mobile first approach having out breack point at 960px */
 
 /* For mobile phones: */
-
 
 *,
 *::after,
@@ -88,6 +86,48 @@ video {
 .button--secondary-dark {
   background-color: #003c8f;
 }
+
+/* Small hero */
+.small-hero__image--quote {
+  background: url("../assets/images/IMG_8453.JPG") no-repeat center;
+}
+.small-hero__image--contact {
+  background: url("../assets/images/IMG_8412.JPG") no-repeat center;
+}
+.small-hero__image--gallery {
+  background: url("../assets/images/IMG_8056.JPG") no-repeat center;
+}
+
+.small-hero {
+  height: 200px;
+  background-size: cover; 
+  position: relative; 
+  padding: 0 20px;
+}
+
+.small-hero__layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 60, 143, 0.5);
+  top: 0px;
+  left: 0;
+}
+
+.small-hero__layer--darker {      
+  background-color: rgba(0, 0, 0, 0.3);  
+}
+
+.small-hero__title {
+  font-weight: bold;  
+  position: absolute;  
+  font-size: 40px;
+  color: white; 
+  bottom: 50px;
+  margin-bottom: 0;
+}
+
+/* End small hero */
 
 /* Carrousel */
 
@@ -178,22 +218,10 @@ video {
   align-items: center;
   justify-items: center;
 }
-@media screen and (max-width: 960px){
-
-  .pointer-list__oval {
-    margin-left: 11px;
-    margin-right: 11px;
-    width: 10px;
-    height: 10px;
-  }
-}
-
-
 /* End carrousel*/
 
 /* For desktop */
 @media only screen and (min-width: 960px) {
-  
   .button {
     min-width: 320px;
     height: 60px;
@@ -205,7 +233,7 @@ video {
   .button--primary:hover {
     background-color: #0086c3;
   }
-  
+
   .button--primary-dark:hover {
     background-color: #29b6f6;
   }
@@ -222,28 +250,35 @@ video {
     background-color: #5e92f3;
   }
 
+  /* Small hero */
+  .small-hero__title {
+    font-size: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
 
-/* START MEDIA QUERIES */
-@media only screen and (min-width: 960px) {
+  .small-hero {
+    height: 300px;
+  }
+  /* End small hero */
 
+  /* desktop carrousel */
   .container {
     max-width: 960px;
     padding: 88px 0;
   }
 
-  .button--secondary-light:hover {
-    background-color: #73e8ff;
-  }
-
-  /* Carrousel */
   .pointer-list__oval {
     margin-left: 11px;
     margin-right: 11px;
     width: 10px;
     height: 10px;
   }
-   /* Footer */
+
+  /* Footer */
   .footer__icon {
     margin: 19px;
   }
-}}
+}
