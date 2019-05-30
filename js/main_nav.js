@@ -6,21 +6,10 @@ let overlayMenu = document.getElementById("main-nav__menu-items");
 
 navBurguer.addEventListener("click", function () {
 	this.classList.toggle("burguer-animation");
-});
-
-navBurguer.addEventListener("click", function () {
-	overlay.classList.toggle("main-nav-overlay__animation");
-});
-
-navBurguer.addEventListener("click", function () {
-	overlayMenu.classList.toggle("main-nav__menu-items__animation");
+	overlay.classList.toggle("main-nav--overlay");
+	overlayMenu.classList.toggle("main-nav__menu-items-animation");
 });
 
 window.addEventListener("scroll", function () {
-	if (window.scrollY >= 80) {
-		overlay.classList.add("colored__main-nav");
-	}
-	else {
-		overlay.classList.remove("colored__main-nav");
-	}
+	window.scrollY >= 80 ? overlay.classList.add("main-nav--colored") : overlay.classList.remove("main-nav--colored");
 });
