@@ -64,7 +64,7 @@
 .homepage-hero__article {
   margin-right: 5%;
   margin-left: 5%;
-  position: relative;
+  position: absolute;
   bottom: 10%;
 }
 
