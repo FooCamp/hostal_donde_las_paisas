@@ -1,5 +1,4 @@
-
-
+/*class for the section of gallery*/
 .info-gallery {
     width: 635px;
     height: 88px;
@@ -29,7 +28,9 @@
  .container-images :nth-child(8){
     margin-right: 0px;
  }
-.container-images__image {
+.container-images__item {
+    background-position: center;
+    background-size: cover;
     position: relative;
     width: 227px;
     height: 227px;
@@ -39,18 +40,25 @@
     overflow: hidden;
 }
 
-.image-images {
-    position: absolute;
+.item__images {
     width: 100%;
     height: 100%;
+    background-size: cover;
     transition: 0.1s;
-    /*object-fit: cover;*/
+    -webkit-transition:all .1s ease;
+    -moz-transition:all .9s ease; /* Firefox */
+    -o-transition:all .9s ease; /* IE 9 */
+    -ms-transition:all .9s ease; /* Opera */
 }
-.container-images__image:hover .image-images{
+.container-images__item:hover .item__images{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
     transform:scale(1.25);
 }
 /* overlay gray for the images */
-.overlay {
+.item__overlay {
     position: absolute; 
     bottom: 0%;
     left: 0%;
@@ -60,14 +68,14 @@
     overflow: hidden;
     vertical-align: middle;
 }
-.overlay-image {
+.item__overlay--image {
     display: block;
     width: 50px;
     height: 50px;
     margin: auto;
     margin-top: 89px;
 }
-.container-images__image:hover .overlay {
+.container-images__item:hover .item__overlay {
     width: 227px;
     height: 227px;
     cursor: pointer;
@@ -81,23 +89,22 @@
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 38px;
-
     }
     .container-images {
         max-width: 960px;
         margin-right: 10px;
         margin-left: 10px;
     }
-    .container-images__image {
+    .container-images__item {
         width: 150px;
         height: 150px;
         margin-right: 10px;
         margin-bottom: 10px;
     }
-    .overlay{
+    .item__overlay{
         display: none;
     }
-    .overlay-image{
+    .item__overlay--image{
         display: none;
     }
     .container-images :nth-child(4){
