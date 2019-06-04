@@ -78,7 +78,7 @@ body {
   bottom: 250px;
   margin-left: -125px;
   width: 247px;
-  height: 140px;
+  height: 30vh;
   object-fit: contain;
 }
 
@@ -92,10 +92,6 @@ body {
   margin-left: 50%;
   position: absolute;
   bottom: 20px;
-}
-
-.homepage-hero__hdlp-logo h1 {
-  margin-right: 5%;
 }
 
 .homepage-hero__divider {
@@ -114,5 +110,16 @@ body {
 @media only screen and (min-width: 960px) {
   .footer__icon {
     margin: 19px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .homepage-hero__hdlp-logo{
+    position: absolute;
+    bottom: 250px;
+    margin-left: -125px;
+    width: 350px;
+    height: 30vh;
+    object-fit: contain;
   }
 }
