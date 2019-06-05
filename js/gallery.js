@@ -3,14 +3,14 @@
 window.onload = function chargeImages()
 {
 const images = [
-    "./../assets/images/1.jpg",
-    "./../assets/images/2.jpg",
-    "./../assets/images/3.jpg",
-    "./../assets/images/4.jpg",
-    "./../assets/images/5.jpg",
-    "./../assets/images/6.jpg",
-    "./../assets/images/7.jpg",
-    "./../assets/images/8.jpg"
+    "./../assets/images/gallery/1.jpg",
+    "./../assets/images/gallery/2.jpg",
+    "./../assets/images/gallery/3.jpg",
+    "./../assets/images/gallery/4.jpg",
+    "./../assets/images/gallery/5.jpg",
+    "./../assets/images/gallery/6.jpg",
+    "./../assets/images/gallery/7.jpg",
+    "./../assets/images/gallery/8.jpg"
 ]
 let div1 = document.getElementById('divImagesContainer').children;
 for (let i = 0; i < div1.length; i++){
