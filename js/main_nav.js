@@ -1,3 +1,5 @@
+let body = document.body;
+
 let overlay = document.getElementById("main-nav");
 
 let navBurguer = document.getElementById("main-nav__burguer");
@@ -8,6 +10,7 @@ navBurguer.addEventListener("click", function () {
   this.classList.toggle("burguer-animation");
   overlay.classList.toggle("main-nav--overlay");
   overlayMenu.classList.toggle("main-nav__menu-items-animation");
+  body.classList.toggle("non-scroll");
 
   if (window.scrollY === 0) {
     overlay.classList.toggle("main-nav--colored");
