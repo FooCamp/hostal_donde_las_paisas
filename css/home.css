@@ -91,7 +91,6 @@
   font-weight: regular;
 }
 
-
 /* START SERVICES */
 
 .services-container {
@@ -99,6 +98,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 70px 20px;
 }
 
 .service {
@@ -141,7 +141,6 @@
   .service:not(:first-child) {
     margin-top: 0;
   }
-
 }
 
 /* END MEDIA QUERIES */

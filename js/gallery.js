@@ -2,7 +2,7 @@
 /*charge the images with backgroundImage */
 window.onload = function chargeImages()
 {
-const images = [
+const imagesGallery = [
     "./../assets/images/gallery/1.jpg",
     "./../assets/images/gallery/2.jpg",
     "./../assets/images/gallery/3.jpg",
@@ -14,6 +14,6 @@ const images = [
 ]
 let div1 = document.getElementById('divImagesContainer').children;
 for (let i = 0; i < div1.length; i++){
-    div1[i].firstChild.style.backgroundImage = `url('${images[i]}')`;  
+    div1[i].firstChild.style.backgroundImage = `url('${imagesGallery[i]}')`;  
 }
 }
