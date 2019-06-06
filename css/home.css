@@ -92,7 +92,6 @@
   font-weight: regular;
 }
 
-
 /* START SERVICES */
 
 .services-container {
@@ -143,7 +142,6 @@
   .service:not(:first-child) {
     margin-top: 0;
   }
-
 }
 
 /* END MEDIA QUERIES */
