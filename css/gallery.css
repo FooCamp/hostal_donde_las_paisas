@@ -24,6 +24,7 @@
  .container-images{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
  }
  .container-images :nth-child(4), .container-images :nth-child(8) {
     margin-right: 0px;
@@ -94,7 +95,6 @@
         max-width: 960px;
         margin-right: 10px;
         margin-left: 10px;
-        justify-content: center;
     }
     .container-images__item {
         width: 150px;
