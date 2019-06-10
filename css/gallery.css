@@ -68,7 +68,7 @@
     overflow: hidden;
     vertical-align: middle;
 }
-.item__overlay--image {
+.overlay__image {
     display: block;
     width: 50px;
     height: 50px;
@@ -94,6 +94,7 @@
         max-width: 960px;
         margin-right: 10px;
         margin-left: 10px;
+        justify-content: center;
     }
     .container-images__item {
         width: 150px;
@@ -102,9 +103,6 @@
         margin-bottom: 10px;
     }
     .item__overlay{
-        display: none;
-    }
-    .item__overlay--image{
         display: none;
     }
     .container-images :nth-child(4), .container-images :nth-child(8) {
