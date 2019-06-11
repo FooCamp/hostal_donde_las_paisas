@@ -1,111 +1,110 @@
 /*class for the section of gallery*/
 .container-componet {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 .info-gallery {
-    width: 635px;
-    height: 88px;
-    font-family: Roboto;
-    font-size: 16px;
-    color: black;   
+  width: 635px;
+  height: 88px;
+  font-family: Roboto;
+  font-size: 16px;
+  color: black;   
 }
 .info-gallery__text {
-    top: 0;
-    left: 0;
-    margin-right: 150px;
-    margin-left: 150px;
-    margin-bottom: 17px;
+  top: 0;
+  left: 0;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-bottom: 17px;
 }
 .text-p {
-    padding-bottom: 17PX;
-    margin-block-start: 0PX;
-    margin-block-end: 0PX;
+  padding-bottom: 17PX;
+  margin-block-start: 0PX;
+  margin-block-end: 0PX;
 }
- .container-images{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
- }
- .container-images :nth-child(4), .container-images :nth-child(8) {
-    margin-right: 0px;
- }
+.container-images{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.container-images :nth-child(4), .container-images :nth-child(8) {
+  margin-right: 0px;
+}
 .container-images__item {
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    width: 227px;
-    height: 227px;
-    margin-right: 17px;
-    margin-bottom: 17px;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .75);
-    overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 227px;
+  height: 227px;
+  margin-right: 17px;
+  margin-bottom: 17px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .75);
+  overflow: hidden;
 }
-
 .item__images {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    transition: 0.1s;
-    -webkit-transition:all .1s ease;
-    -moz-transition:all .9s ease; /* Firefox */
-    -o-transition:all .9s ease; /* IE 9 */
-    -ms-transition:all .9s ease; /* Opera */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: 0.1s;
+  -webkit-transition:all .1s ease;
+  -moz-transition:all .9s ease; /* Firefox */
+  -o-transition:all .9s ease; /* IE 9 */
+  -ms-transition:all .9s ease; /* Opera */
 }
 .container-images__item:hover .item__images{
-    -webkit-transform:scale(1.25);
-    -moz-transform:scale(1.25);
-    -ms-transform:scale(1.25);
-    -o-transform:scale(1.25);
-    transform:scale(1.25);
+  -webkit-transform:scale(1.25);
+  -moz-transform:scale(1.25);
+  -ms-transform:scale(1.25);
+  -o-transform:scale(1.25);
+  transform:scale(1.25);
 }
 /* overlay gray for the images */
-.item__overlay {
-    position: absolute; 
-    bottom: 0%;
-    left: 0%;
-    width: 0%;
-    height: 0%;
-    background-color: rgba(0, 0, 0, 0.541);
-    overflow: hidden;
-    vertical-align: middle;
+.item--overlay {
+  position: absolute; 
+  bottom: 0%;
+  left: 0%;
+  width: 0%;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0.541);
+  overflow: hidden;
+  vertical-align: middle;
 }
-.overlay__image {
-    display: block;
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    margin-top: 89px;
+.overlay {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: 89px;
 }
-.container-images__item:hover .item__overlay {
-    width: 227px;
-    height: 227px;
-    cursor: pointer;
+.container-images__item:hover .item--overlay {
+  width: 227px;
+  height: 227px;
+  cursor: pointer;
 }
 /* start media queries */
 
-@media screen and (max-width: 960px){
-    .info-gallery__text{
-        display: flex;
-        flex-flow: row wrap;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 38px;
+@media screen and (max-width: 960px) {
+  .info-gallery__text {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 38px;
     }
     .container-images {
-        max-width: 960px;
-        margin-right: 10px;
-        margin-left: 10px;
+      max-width: 960px;
+      margin-right: 10px;
+      margin-left: 10px;
     }
     .container-images__item {
-        width: 150px;
-        height: 150px;
-        margin-right: 10px;
-        margin-bottom: 10px;
+      width: 150px;
+      height: 150px;
+      margin-right: 10px;
+      margin-bottom: 10px;
     }
-    .item__overlay{
-        display: none;
+    .item--overlay {
+      display: none;
     }
     .container-images :nth-child(4), .container-images :nth-child(8) {
-        margin-right: 10px;
+      margin-right: 10px;
      }
   }
