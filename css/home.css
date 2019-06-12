@@ -66,8 +66,8 @@
   left: 0;
 }
 
-.homepage-hero__layer--darker {      
-  background-color: rgba(0, 0, 0, 0.3);  
+.homepage-hero__layer--darker {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .homepage-hero__article {
@@ -92,12 +92,6 @@
   width: 33px;
   position: absolute;
   margin: auto;
-}
-
-.homepage-hero__hdlp {
-  margin-left: 50%;
-  position: absolute;
-  bottom: 20px;
 }
 
 .homepage-hero__divider {
