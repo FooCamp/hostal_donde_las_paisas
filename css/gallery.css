@@ -2,14 +2,14 @@
 .container-componet {
   padding: 60px 0;
 }
-.info-gallery {
+.gallery {
   width: 635px;
   height: 88px;
   font-family: Roboto;
   font-size: 16px;
   color: black;   
 }
-.info-gallery__text {
+.gallery__info {
   top: 0;
   left: 0;
   margin-right: 150px;
@@ -21,15 +21,15 @@
   margin-block-start: 0PX;
   margin-block-end: 0PX;
 }
-.container-images{
+.gallery__items {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-.container-images :nth-child(4), .container-images :nth-child(8) {
+.gallery__items :nth-child(4), .gallery__items :nth-child(8) {
   margin-right: 0px;
 }
-.container-images__item {
+.gallery-item {
   background-position: center;
   background-size: cover;
   position: relative;
@@ -40,7 +40,8 @@
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .75);
   overflow: hidden;
 }
-.item__images {
+
+.gallery-item__images {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -50,7 +51,7 @@
   -o-transition:all .9s ease; /* IE 9 */
   -ms-transition:all .9s ease; /* Opera */
 }
-.container-images__item:hover .item__images{
+.gallery-item:hover .gallery-item__images{
   -webkit-transform:scale(1.25);
   -moz-transform:scale(1.25);
   -ms-transform:scale(1.25);
@@ -58,7 +59,7 @@
   transform:scale(1.25);
 }
 /* overlay gray for the images */
-.item--overlay {
+.gallery-item__overlay {
   position: absolute; 
   bottom: 0%;
   left: 0%;
@@ -68,43 +69,43 @@
   overflow: hidden;
   vertical-align: middle;
 }
-.overlay {
+.overlay__image {
   display: block;
   width: 50px;
   height: 50px;
   margin: auto;
   margin-top: 89px;
 }
-.container-images__item:hover .item--overlay {
+.gallery-item:hover .gallery-item__overlay {
   width: 227px;
   height: 227px;
   cursor: pointer;
 }
 /* start media queries */
 
-@media screen and (max-width: 960px) {
-  .info-gallery__text {
+@media screen and (max-width: 960px){
+  .gallery__info {
     display: flex;
     flex-flow: row wrap;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 38px;
-    }
-    .container-images {
-      max-width: 960px;
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-    .container-images__item {
-      width: 150px;
-      height: 150px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-    .item--overlay {
-      display: none;
-    }
-    .container-images :nth-child(4), .container-images :nth-child(8) {
-      margin-right: 10px;
-     }
   }
+  .gallery__items {
+    max-width: 960px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .gallery-item {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .gallery-item__overlay {
+    display: none;
+  }
+  .gallery__items :nth-child(4), .gallery__items :nth-child(8) {
+    margin-right: 10px;
+  }
+}
