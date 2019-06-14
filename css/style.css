@@ -350,8 +350,8 @@ video {
   margin-left: 14.5px;
   margin-right: 14.5px;
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
 }
 .pointer-list__oval--gray {
   background-color: rgba(51, 51, 51, 0.3);
@@ -421,8 +421,8 @@ video {
   .pointer-list__oval {
     margin-left: 11px;
     margin-right: 11px;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
   }
 
   /* Footer */
