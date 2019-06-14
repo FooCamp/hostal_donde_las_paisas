@@ -1,4 +1,5 @@
 /* General page styles */
+
 /* We should use a mobile first approach having out breack point at 960px */
 
 /* For mobile phones: */
@@ -12,6 +13,7 @@
 html,
 body {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -24,11 +26,157 @@ video {
 }
 
 .container {
-  margin: 0 auto;
+	position: relative;
+	margin: 0 auto;
   max-width: 960px;
   width: 100%;
 }
 
+.main-nav__container {
+  height: 100%;
+}
+
+/* =========== MAIN-NAV MOBILE ============ */
+.main-nav {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 75px;
+	overflow-x: hidden;
+	transition: all 0.5s;
+}
+
+.main-nav--colored {
+	background-color: rgba(0, 60, 143, 0.8);
+}
+
+.main-nav__logo {
+	position: absolute;
+	top: 11px;
+	left: 20px;
+}
+
+.main-nav__logo__image {
+	width: 89px;
+}
+
+.main-nav__burguer {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.main-nav__burguer-bar {
+	width: 40px;
+	height: 6px;
+  background-color: white;
+  border-radius: 1px;
+	transition: 0.5s;
+}
+
+.burguer__bar-1,
+.burguer__bar-2 {
+	margin-bottom: 8px;
+}
+
+.burguer-animation .burguer__bar-1 {
+	transform: translate(0px, 6px) rotate(-45deg);
+	transform-origin: center center;
+	margin: 0;
+}
+
+.burguer-animation .burguer__bar-2 {
+	opacity: 0;
+}
+
+.burguer-animation .burguer__bar-3 {
+	transform: translate(0px, -14px) rotate(45deg);
+	transform-origin: center center;
+}
+
+.main-nav__menu-items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.main-nav__menu-link {
+	color: white;
+	font-size: 30px;
+	line-height: 2;
+	text-decoration: none;
+}
+
+.main-nav--overlay {
+  height: 100%;
+  background-color: rgba(0, 60, 143, 0.8);
+}
+
+.main-nav__menu-items-animation {
+	height: 100vh;
+	opacity: 1;
+}
+
+/* =========== MAIN-NAV DESKTOP ============ */
+@media screen and (min-width: 960px) {
+	.main-nav {
+		height: 80px;
+  }
+
+  .main-nav .container {
+    padding: 0;
+  }
+
+	.main-nav__burguer {
+		display: none;
+	}
+
+	.main-nav__menu {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin-left: 100px;
+	}
+
+	.main-nav__menu-items {
+		flex-direction: row;
+		justify-content: flex-end;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0px 182px 0px 0px;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		list-style-type: none;
+		overflow: hidden;
+	}
+
+	.main-nav__menu-link {
+		margin: 0px 30px;
+		font-size: 22px;
+		line-height: 1;
+	}
+}
+
+.non-scroll {
+  overflow: hidden;
+}
+
+/* For mobile phones: */
 .button {
   font-family: Roboto-Regular, sans-serif;
   font-weight: normal;
@@ -100,8 +248,8 @@ video {
 
 .small-hero {
   height: 200px;
-  background-size: cover; 
-  position: relative; 
+  background-size: cover;
+  position: relative;
   padding: 0 20px;
 }
 
@@ -114,15 +262,15 @@ video {
   left: 0;
 }
 
-.small-hero__layer--darker {      
-  background-color: rgba(0, 0, 0, 0.3);  
+.small-hero__layer--darker {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .small-hero__title {
-  font-weight: bold;  
-  position: absolute;  
+  font-weight: bold;
+  position: absolute;
   font-size: 40px;
-  color: white; 
+  color: white;
   bottom: 50px;
   margin-bottom: 0;
 }
@@ -132,7 +280,8 @@ video {
 /* Carrousel */
 
 .carrousel-section {
-  margin: 20px;
+  margin: 0 0 70px;
+  padding: 0 20px;
 }
 
 .carrousel-container {
@@ -146,7 +295,7 @@ video {
 }
 
 .info-title {
-  width: 25px bold;
+  font-weight: bold;
 }
 
 .info-line {
@@ -198,12 +347,11 @@ video {
 
 .pointer-list__oval {
   border-radius: 50%;
-  padding-left: 0%;
-  margin-left: 14.5px;
-  margin-right: 14.5px;
+  margin-left: 11px;
+  margin-right: 11px;
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
 }
 .pointer-list__oval--gray {
   background-color: rgba(51, 51, 51, 0.3);
@@ -222,8 +370,11 @@ video {
 
 /* For desktop */
 @media only screen and (min-width: 960px) {
+  .carrousel-section {
+    margin-bottom: 90px;
+  }
+
   .button {
-    min-width: 320px;
     height: 60px;
     font-size: 22px;
     -webkit-transition-duration: 0.4s;
@@ -267,14 +418,13 @@ video {
   /* desktop carrousel */
   .container {
     max-width: 960px;
-    
   }
 
   .pointer-list__oval {
     margin-left: 11px;
     margin-right: 11px;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
   }
 
   /* Footer */
