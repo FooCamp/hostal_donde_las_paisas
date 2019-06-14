@@ -26,8 +26,7 @@
   flex-flow: row wrap;
   justify-content: center;
 }
-.gallery__items :nth-child(4),
-.gallery__items :nth-child(8) {
+.gallery__items :nth-child(4n) {
   margin-right: 0px;
 }
 .gallery-item {
@@ -104,8 +103,7 @@
   .gallery-item__overlay {
     display: none;
   }
-  .gallery__items :nth-child(4),
-  .gallery__items :nth-child(8) {
+  .gallery__items :nth-child(4n) {
     margin-right: 10px;
   }
 }
