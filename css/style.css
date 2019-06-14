@@ -135,7 +135,7 @@ video {
 	.main-nav {
 		height: 80px;
   }
-  
+
   .main-nav .container {
     padding: 0;
   }
@@ -164,7 +164,7 @@ video {
 		list-style-type: none;
 		overflow: hidden;
 	}
-	
+
 	.main-nav__menu-link {
 		margin: 0px 30px;
 		font-size: 22px;
@@ -248,8 +248,8 @@ video {
 
 .small-hero {
   height: 200px;
-  background-size: cover; 
-  position: relative; 
+  background-size: cover;
+  position: relative;
   padding: 0 20px;
 }
 
@@ -262,15 +262,15 @@ video {
   left: 0;
 }
 
-.small-hero__layer--darker {      
-  background-color: rgba(0, 0, 0, 0.3);  
+.small-hero__layer--darker {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .small-hero__title {
-  font-weight: bold;  
-  position: absolute;  
+  font-weight: bold;
+  position: absolute;
   font-size: 40px;
-  color: white; 
+  color: white;
   bottom: 50px;
   margin-bottom: 0;
 }
@@ -280,7 +280,8 @@ video {
 /* Carrousel */
 
 .carrousel-section {
-  margin: 20px;
+  margin: 0 0 70px;
+  padding: 0 20px;
 }
 
 .carrousel-container {
@@ -294,7 +295,7 @@ video {
 }
 
 .info-title {
-  width: 25px bold;
+  font-weight: bold;
 }
 
 .info-line {
@@ -370,6 +371,10 @@ video {
 
 /* For desktop */
 @media only screen and (min-width: 960px) {
+  .carrousel-section {
+    margin-bottom: 90px;
+  }
+
   .button {
     min-width: 320px;
     height: 60px;
@@ -415,7 +420,6 @@ video {
   /* desktop carrousel */
   .container {
     max-width: 960px;
-    padding: 88px 0;
   }
 
   .pointer-list__oval {
