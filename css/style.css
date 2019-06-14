@@ -371,7 +371,6 @@ video {
 /* For desktop */
 @media only screen and (min-width: 960px) {
   .button {
-    min-width: 320px;
     height: 60px;
     font-size: 22px;
     -webkit-transition-duration: 0.4s;
