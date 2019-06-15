@@ -1,13 +1,12 @@
 /*class for the section of gallery*/
-.container-componet {
-  padding: 60px 0;
-}
+
 .gallery {
   width: 635px;
   height: 88px;
   font-family: Roboto;
   font-size: 16px;
   color: black;
+  padding: 60px 0;
 }
 .gallery__info {
   top: 0;
