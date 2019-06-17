@@ -92,24 +92,24 @@
   .gallery__info {
     display: flex;
     flex-flow: row wrap;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 38px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
   }
   .gallery__items {
     max-width: 960px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 0px;
+    margin-left: 20px;
   }
   .gallery-item {
     flex-basis: 45%;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
   .gallery-item__overlay {
     display: none;
   }
   .gallery__items :nth-child(4n) {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 }
