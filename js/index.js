@@ -94,7 +94,7 @@ carrouselArrows.forEach(function (element) {
 /* Function about the arrow down or drop down wherever you want
 */
 function goDown() {
-  let lookdown = document.getElementById('hero-lookdown');//take the destini to scroll
+  let lookdown = document.getElementById('lookdown-scroll');//take the destini to scroll
   lookdown.scrollIntoView({block: "start", behavior: "smooth"});
   // end: go down and behavior is to go smooth
 }

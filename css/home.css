@@ -90,11 +90,21 @@
   bottom: 20px;
   right: 0;
   left: 0;
-  top: 402px;
+  width: 32px;
+  height: 40px;
+  position: absolute;
+  margin: auto;
+}
+
+.homepage-hero-scroll__lookdown{
+  bottom: 20px;
+  right: 0;
+  left: 0;
   width: 33px;
   height: 40px;
   position: absolute;
   margin: auto;
+  margin-bottom: 4.4%;
 }
 
 .homepage-hero__divider {
