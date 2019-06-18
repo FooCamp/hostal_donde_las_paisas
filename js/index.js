@@ -95,7 +95,7 @@ carrouselArrows.forEach(function (element) {
 */
 function goDown() {
   let lookdown = document.getElementById('hero-lookdown');//take the destini to scroll
-  lookdown.scrollIntoView({ block: "start", behavior: "smooth" });
+  lookdown.scrollIntoView({block: "start", behavior: "smooth"});
   // end: go down and behavior is to go smooth
 }
 function selectOval() {
