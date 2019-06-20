@@ -194,6 +194,14 @@
     max-width: 350px;
     height: 198px;
   }
+
+  .homepage-hero-scroll__lookdown{
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 23px;
+    position: absolute;
+  }
 }
 
 
