@@ -94,8 +94,8 @@ carrouselArrows.forEach(function (element) {
 /* Function about the arrow down or drop down wherever you want
 */
 function goDown() {
-  let lookdown = document.getElementById('lookdown-scroll');//take the destini to scroll
-  lookdown.scrollIntoView({block: "start", behavior: "smooth"});
+  let anchorElement = document.getElementById('lookdown-scroll');//take the destini to scroll
+  anchorElement.scrollIntoView({block: "start", behavior: "smooth"});
   // end: go down and behavior is to go smooth
 }
 function selectOval() {
@@ -129,5 +129,3 @@ document.getElementById('divBtn4').addEventListener('click', function () {
   selectOval();
 });
 document.getElementById('hero-lookdown').addEventListener('click', goDown);
-
-
