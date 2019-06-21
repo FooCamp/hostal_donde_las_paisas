@@ -97,14 +97,11 @@
 }
 
 .homepage-hero-scroll__lookdown{
-  bottom: 20px;
-  right: 0;
-  left: 0;
-  width: 33px;
-  height: 40px;
-  position: absolute;
-  margin: auto;
-  margin-bottom: 4.4%;
+  bottom: 0;
+    right: 0;
+    left: 0;
+    height: 75px;
+    position: absolute;
 }
 
 .homepage-hero__divider {
@@ -199,7 +196,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    height: 23px;
+    height: 80px;
     position: absolute;
   }
 }
