@@ -171,13 +171,29 @@ video {
 /* For desktop */
 @media only screen and (min-width: 960px) {
   
-  .button {
-    min-width: 320px;
-    height: 60px;
-    font-size: 22px;
+  .button {  
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
   }
+
+  .button--lg {
+    min-width: 320px;
+    height: 60px;
+    font-size: 22px;
+  }
+  
+  .button--md {
+    min-width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .button--sm {
+    min-width: 150px;
+    height: 30px;
+    font-size: 12px;
+  }
+  
 
   .button--primary:hover {
     background-color: #0086c3;
