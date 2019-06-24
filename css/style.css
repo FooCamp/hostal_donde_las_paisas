@@ -54,7 +54,12 @@ video {
 .main-nav__logo {
 	position: absolute;
 	top: 11px;
-	left: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.main-nav--colored .main-nav__logo{
+ opacity: 1;
 }
 
 .main-nav__logo__image {
