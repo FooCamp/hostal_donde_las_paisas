@@ -96,7 +96,7 @@
   margin: auto;
 }
 
-.homepage-hero-anchor {
+.homepage-hero__anchor {
   bottom: 0;
   right: 0;
   left: 0;
@@ -192,7 +192,7 @@
     height: 198px;
   }
 
-  .homepage-hero-anchor {
+  .homepage-hero__anchor {
     bottom: 0;
     right: 0;
     left: 0;

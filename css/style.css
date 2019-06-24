@@ -381,6 +381,12 @@ video {
     transition-duration: 0.4s;
   }
 
+  .button--sm {
+    min-width: 320px;
+    height: 60px;
+    font-size: 22px;
+  }
+
   .button--primary:hover {
     background-color: #0086c3;
   }
