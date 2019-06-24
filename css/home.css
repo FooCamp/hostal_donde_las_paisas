@@ -90,9 +90,18 @@
   bottom: 20px;
   right: 0;
   left: 0;
-  width: 33px;
+  width: 34px;
+  height: 40px;
   position: absolute;
   margin: auto;
+}
+
+.homepage-hero__anchor {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 75px;
+  position: absolute;
 }
 
 .homepage-hero__divider {
@@ -181,6 +190,14 @@
   .homepage-hero__logo {
     max-width: 350px;
     height: 198px;
+  }
+
+  .homepage-hero__anchor {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    position: absolute;
   }
 }
 
