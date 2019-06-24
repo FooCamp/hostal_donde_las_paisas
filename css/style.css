@@ -307,8 +307,9 @@ video {
 }
 
 .carrousel {
-  width: 100%;
+  margin-bottom: 20px;
   position: relative;
+  width: 100%;
 }
 
 .carrousel__img {
@@ -340,7 +341,7 @@ video {
 .pointer-list {
   border-radius: 50%;
   display: block;
-  margin: 10px;
+  margin-bottom: 53px;
   list-style-position: initial;
   list-style-type: disc;
 }
@@ -372,6 +373,32 @@ video {
 @media only screen and (min-width: 960px) {
   .carrousel-section {
     margin-bottom: 90px;
+  }
+
+  .carrousel {
+    margin-bottom: 33px;
+  }
+
+  .carrousel__arrow {
+    height: 62px;
+    width: 40px;
+  }
+
+  .carrousel__arrow--right {
+    right: 32px;
+  }
+
+  .carrousel__arrow--left {
+    left: 32px;
+  }
+
+  .pointer-list {
+    margin-bottom: 60px;
+  }
+
+  .pointer-list__oval {
+    margin-left: 14.6;
+    margin-right: 14.6;
   }
 
   .button {
