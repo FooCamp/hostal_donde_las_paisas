@@ -1,29 +1,30 @@
 /*class for the section of gallery*/
+
 .gallery-item::before {
   content: " ";
   display: block;
   padding-top: 100%;
 }
+
 .gallery {
-  font-family: Roboto;
   font-size: 16px;
   color: black;
-  padding-right: 20px;
+  padding: 30px 20px 20px 40px;
 }
+
 .gallery__info {
   display: flex;
   flex-flow: row wrap;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
+
 .gallery__items {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   min-width: 320px;
-  margin-left: 20px;
 }
+
 .gallery-item {
   background-position: center;
   position: relative;
@@ -34,6 +35,7 @@
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
 .gallery-item__images {
   width: 100%;
   height: 100%;
@@ -42,19 +44,23 @@
   top: 0;
   left: 0;
 }
+
 .gallery-item__overlay {
   display: none;
 }
+
 .gallery__items :nth-child(2n) {
   margin-right: 0;
 }
+
 /* start media queries */
+
 @media screen and (min-width: 960px) {
   .gallery {
     width: 635px;
-    height: 88px;
     padding: 60px 0;
   }
+
   .gallery__info {
     top: 0;
     left: 0;
@@ -62,23 +68,28 @@
     margin-left: 150px;
     margin-bottom: 17px;
   }
+
   .gallery__text {
     padding-bottom: 17px;
     margin-block-start: 0px;
     margin-block-end: 0px;
   }
+
   .gallery__items {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     max-width: 960px;
   }
+
   .gallery__items :nth-child(2n) {
     margin-right: 17px;
   }
+
   .gallery__items :nth-child(4n) {
     margin-right: 0px;
   }
+
   .gallery-item {
     background-position: center;
     background-size: cover;
@@ -90,13 +101,18 @@
     flex-basis: 21%;
     flex-grow: 1;
   }
+
   .gallery-item__images {
     transition: 0.1s;
     -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.9s ease; /* Firefox */
-    -o-transition: all 0.9s ease; /* IE 9 */
-    -ms-transition: all 0.9s ease; /* Opera */
+    -moz-transition: all 0.9s ease;
+    /* Firefox */
+    -o-transition: all 0.9s ease;
+    /* IE 9 */
+    -ms-transition: all 0.9s ease;
+    /* Opera */
   }
+
   .gallery-item:hover .gallery-item__images {
     -webkit-transform: scale(1.25);
     -moz-transform: scale(1.25);
@@ -104,8 +120,10 @@
     -o-transform: scale(1.25);
     transform: scale(1.25);
   }
+
   /* overlay gray for the images */
   .gallery-item__overlay {
+    display: block;
     position: absolute;
     bottom: 0%;
     left: 0%;
@@ -115,6 +133,7 @@
     overflow: hidden;
     vertical-align: middle;
   }
+
   .overlay__image {
     display: block;
     width: 50px;
@@ -122,6 +141,7 @@
     margin: auto;
     margin-top: 89px;
   }
+
   .gallery-item:hover .gallery-item__overlay {
     width: 227px;
     height: 227px;
