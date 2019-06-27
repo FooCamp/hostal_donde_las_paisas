@@ -285,9 +285,12 @@ video {
 }
 
 .carrousel-container {
-  width: 100%;
-  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
   text-align: center;
+  width: 100%;
 }
 
 .info {
@@ -307,9 +310,11 @@ video {
 }
 
 .carrousel {
-  margin-bottom: 20px;
-  position: relative;
-  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .carrousel__img {
@@ -318,15 +323,12 @@ video {
 }
 
 .carrousel__arrow {
-  font-size: 50px;
+  bottom: 0;
+  height: 32px;
+  margin: auto;
   position: absolute;
   top: 0;
-  bottom: 0;
-  margin: auto;
   width: 20px;
-  height: 32px;
-  font-weight: bold;
-  color: #fefefe;
 }
 
 .carrousel__arrow--right {
@@ -375,7 +377,7 @@ video {
     margin-bottom: 90px;
   }
 
-  .carrousel {
+  .carrousel-container {
     margin-bottom: 33px;
   }
 
