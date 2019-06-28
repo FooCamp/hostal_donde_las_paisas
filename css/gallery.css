@@ -58,7 +58,7 @@
 @media screen and (min-width: 960px) {
   .gallery {
     width: 635px;
-    padding: 60px 0;
+    padding: 60px 0 100px;
   }
 
   .gallery__info {
