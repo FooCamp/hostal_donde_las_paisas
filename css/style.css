@@ -366,6 +366,7 @@ video {
   align-items: center;
   justify-items: center;
 }
+
 /* End carrousel*/
 
 /* For desktop */
@@ -381,7 +382,7 @@ video {
     transition-duration: 0.4s;
   }
 
-  .button--sm {
+  .button--lg-desktop {
     min-width: 320px;
     height: 60px;
     font-size: 22px;
