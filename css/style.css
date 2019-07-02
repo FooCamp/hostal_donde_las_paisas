@@ -445,13 +445,6 @@ video {
     width: 227px;
     height: 24px;
     font-size: 20px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: var(--black);
     left: 0;
     right: 0;
     margin: auto;
@@ -460,15 +453,7 @@ video {
   .info-description {
     width: 428px;
     height: 38px;
-    font-family: Roboto;
     font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: var(--black);
     display: inline-block;
   }
 }
