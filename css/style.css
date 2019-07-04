@@ -188,6 +188,9 @@ video {
   overflow: hidden;
   color: white;
   border: 0;
+  text-align: center;
+  padding: 17px;
+  text-decoration: none;
 }
 .button:focus {
   outline: 0;
