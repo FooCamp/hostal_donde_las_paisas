@@ -294,7 +294,7 @@ video {
   margin-bottom: 18px;
 }
 
-.info-title {
+.info__title {
   font-weight: bold;
 }
 
@@ -441,7 +441,7 @@ video {
     text-align: center;
   }
   
-  .info-title {
+  .info__title {
     width: 227px;
     height: 24px;
     font-size: 20px;
@@ -450,7 +450,7 @@ video {
     margin: auto;
   }
   
-  .info-description {
+  .info__description {
     width: 428px;
     height: 38px;
     font-size: 16px;
