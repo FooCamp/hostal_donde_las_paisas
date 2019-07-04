@@ -177,6 +177,7 @@ const guideOptionValidation = showGuideOption => {
     guideOption.style.display = "block";
   }
 };
+
 /* Qouting tool logic should be placed here.*/
 /**
  * calculateCost calculates the value of the package that the user prefers

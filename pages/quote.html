@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
     <link rel="stylesheet" href="./../css/quotes.css" />
+    <link rel="stylesheet" href="./../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
@@ -17,16 +18,21 @@
   </head>
 
   <body>
+      <section class="small-hero small-hero__image--quote">
+          <div class="small-hero__layer"></div>
+          <div class="small-hero__layer small-hero__layer--darker"></div>
+          <h1 class="small-hero__title">Cotizar</h1>
+        </section>
     <nav>
       <!-- nav bar section -->
     </nav>
     <section>
       <form action="" class="form">
-        <!-- quote-->
-        <h1 class="form__title">Cotizar</h1>
+        <!-- quote-->       
         <p class="form__paragraph">
-          Cotiza todo lo que te gustaría incluir en tu estadía, para que tengas
-          la mejor experiencia.
+            Cotiza todo lo que te gustaría incluir  en tu estadía para que tengas la mejor experiencia.
+            Valor noche: 55.000 COP
+            
         </p>
         <div class="div__quote">
           <!--div__field-->
@@ -70,13 +76,14 @@
         <!-- details -->
         <div class="div__details">
           <h3 class="details">Detalles</h3>
+          
+          <div class="div__field">
           <input
             type="text"
             id="txtNumPeople"
             class="form__input"
             onblur="validationNumPerson(this)"
           />
-          <div class="div__field">
             <label for="" class="form__label">Número de huéspedes</label>
             <div id="personsNumber-error" class="error__description"></div>
           </div>
@@ -232,18 +239,21 @@
           </div>
           <!--option__tours-END-->
           <p class="form__paragraph-note">
-            Nota: los tours y las caminatas con excepción de la Coquerita
-            incluyen almuerzo.
+              Nota: los tours y las caminatas con excepción de la Coquerita incluyen almuerzo.
+              Cada noche incluye un impuesto de 3500 COP.
           </p>
         </div>
+        <label class="label-message">
+            Total cotización: 
+            $35.000 COP
+        </label>        
         <button
           id="btnCalculate"
-          class="button__calculate button__calculate-text"
+          class="button button--lg button--primary"
         >
-          Solicitar
+          Enviar a mi correo
         </button>
-      </form>
-    </section>
+      </form>   
     <!--quote-END-->
     <footer>
       <!-- footer section -->

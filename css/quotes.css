@@ -10,13 +10,6 @@ body {
   font-family: "Roboto-Bold", sans-serif;
 }
 
-.form__title {
-  font-size: 22px;
-  text-align: justify;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: rgba(0, 0, 0, 0.7);
-}
 
 .details {
   height: 35px;
@@ -47,7 +40,7 @@ body {
 */
 .form__input:focus {
   outline: 1px rgba(0, 0, 0, 0.7);
-  border-bottom: 1px solid #0086c3;
+  border-bottom: 2px solid #0086c3;
 }
 
 /*
@@ -157,31 +150,20 @@ body {
   font-size: 14px;
   font-weight: 300;
   margin-block-start: 35px;
-  margin-block-end: 63px;
+  margin-block-end: 40px;
 }
 
-.button__calculate-text {
-  font-size: 22px;
-  font-family: "Roboto";
-  text-align: center;
-  color: white;
-  width: 253px;
-  height: 25px;
-  font-size: 22px;
-  text-align: center;
-}
-
-.button__calculate {
-  margin-left: 10px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  background-color: #29b6f6;
-  border-radius: 2px;
-  border: 0;
-  margin-block-start: 63px;
-  height: 60px;
-  width: 320px;
+.label-message {
   display: block;
+    text-align: center;  
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+color: #000000;
+align-content: center;
+white-space: pre-line;
+margin-block-end: 66px;
+
 }
 
 .input__calendar {
@@ -197,7 +179,7 @@ body {
 
 .error__style {
   border: 0;
-  border-bottom: 1px solid #e00f2d;
+  border-bottom: 2px solid #e00f2d;
   font-size: 14px;
   font-weight: 300;
   margin-right: 5%;

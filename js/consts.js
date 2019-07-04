@@ -1,7 +1,6 @@
-/**
- *Qouting tool logic should be placed here.
- * they contain the cost of the night and the cost of transportation by boat and bus.
- */
+// Qouting tool logic should be placed here.
+//they contain the cost of the night and the cost of transportation by boat and bus.
+
 const PRICENIGTH = 55000;
 const BUSTRANS = 75000;
 const BOATTRANS = 75000;

@@ -1,13 +1,190 @@
 /* For mobile phones: */
 
+/* We should use a mobile first approach having out breack point at 960px */
+
+/* For mobile phones: */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.main-nav__container {
+  height: 100%;
+}
+
+/* =========== MAIN-NAV MOBILE ============ */
+.main-nav {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 75px;
+	overflow-x: hidden;
+	transition: all 0.5s;
+}
+
+.main-nav--colored {
+	background-color: rgba(0, 60, 143, 0.8);
+}
+
+.main-nav__logo {
+	position: absolute;
+	top: 11px;
+	left: 20px;
+}
+
+.main-nav__logo__image {
+	width: 89px;
+}
+
+.main-nav__burguer {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.main-nav__burguer-bar {
+	width: 40px;
+	height: 6px;
+  background-color: white;
+  border-radius: 1px;
+	transition: 0.5s;
+}
+
+.burguer__bar-1,
+.burguer__bar-2 {
+	margin-bottom: 8px;
+}
+
+.burguer-animation .burguer__bar-1 {
+	transform: translate(0px, 6px) rotate(-45deg);
+	transform-origin: center center;
+	margin: 0;
+}
+
+.burguer-animation .burguer__bar-2 {
+	opacity: 0;
+}
+
+.burguer-animation .burguer__bar-3 {
+	transform: translate(0px, -14px) rotate(45deg);
+	transform-origin: center center;
+}
+
+.main-nav__menu-items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.main-nav__menu-link {
+	color: white;
+	font-size: 30px;
+	line-height: 2;
+	text-decoration: none;
+}
+
+.main-nav--overlay {
+  height: 100%;
+  background-color: rgba(0, 60, 143, 0.8);
+}
+
+.main-nav__menu-items-animation {
+	height: 100vh;
+	opacity: 1;
+}
+
+/* =========== MAIN-NAV DESKTOP ============ */
+@media screen and (min-width: 960px) {
+	.main-nav {
+		height: 80px;
+  }
+
+  .main-nav .container {
+    padding: 0;
+  }
+
+	.main-nav__burguer {
+		display: none;
+	}
+
+	.main-nav__menu {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin-left: 100px;
+	}
+
+	.main-nav__menu-items {
+		flex-direction: row;
+		justify-content: flex-end;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0px 182px 0px 0px;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		list-style-type: none;
+		overflow: hidden;
+	}
+
+	.main-nav__menu-link {
+		margin: 0px 30px;
+		font-size: 22px;
+		line-height: 1;
+	}
+}
+
+.non-scroll {
+  overflow: hidden;
+}
+
+/* For mobile phones: */
 .button {
   font-family: Roboto-Regular, sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   padding-left: 20px;
   padding-right: 20px;
   max-width: 100%;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 4px;
   overflow: hidden;
   color: white;
   border: 0;
@@ -34,19 +211,19 @@
   font-size: 22px;
 }
 
-.color--primary {
+.button--primary {
   background-color: #29b6f6;
 }
 
-.color--primary-light {
+.button--primary-light {
   background-color: #73e8ff;
 }
 
-.color--primary-dark {
+.button--primary-dark {
   background-color: #0086c3;
 }
 
-.color--secondary {
+.button--secondary {
   background-color: #1565c0;
 }
 
@@ -54,25 +231,222 @@
   background-color: #5e92f3;
 }
 
-.color--secondary-dark {
+.button--secondary-dark {
   background-color: #003c8f;
 }
 
+/* Small hero */
+.small-hero__image--quote {
+  background: url("../assets/images/IMG_8453.JPG") no-repeat center;
+}
+.small-hero__image--contact {
+  background: url("../assets/images/IMG_8412.JPG") no-repeat center;
+}
+.small-hero__image--gallery {
+  background: url("../assets/images/IMG_8056.JPG") no-repeat center;
+}
+
+.small-hero {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  padding: 0 20px;
+}
+
+.small-hero__layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 60, 143, 0.5);
+  top: 0px;
+  left: 0;
+}
+
+.small-hero__layer--darker {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.small-hero__title {
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  bottom: 30px;
+  margin-bottom: 0;
+}
+
+/* End small hero */
+
+/* Carrousel */
+
+.carrousel-section {
+  margin: 0 0 70px;
+  padding: 0 20px;
+}
+
+.carrousel-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info {
+  margin-bottom: 18px;
+}
+
+.info-title {
+  font-weight: bold;
+}
+
+.info-line {
+  width: 90px;
+  height: 1px;
+  margin-left: 0;
+  background-color: #63ccff;
+  border: 0;
+}
+
+.carrousel {
+  width: 100%;
+  position: relative;
+}
+
+.carrousel__img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carrousel__arrow {
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 32px;
+  font-weight: bold;
+  color: #fefefe;
+}
+
+.carrousel__arrow--right {
+  transform: rotateY(180deg);
+  right: 10px;
+}
+
+.carrousel__arrow--left {
+  left: 10px;
+}
+
+.pointer-list {
+  border-radius: 50%;
+  display: block;
+  margin: 10px;
+  list-style-position: initial;
+  list-style-type: disc;
+}
+
+.pointer-list__oval {
+  border-radius: 50%;
+  margin-left: 11px;
+  margin-right: 11px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+.pointer-list__oval--gray {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.pointer-list__oval--black {
+  background-color: #333333;
+}
+
+.pointer-section {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+/* End carrousel*/
+
 /* For desktop */
 @media only screen and (min-width: 960px) {
-  .button {
+  
+  .button {  
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+
+  .button--lg {
     min-width: 320px;
     height: 60px;
     font-size: 22px;
-    font-family: Roboto-Regular, sans-serif;
-    font-weight: normal;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 100%;
-    display: inline-block;
-    border-radius: 4px;
-    overflow: hidden;
-    color: white;
-    border: 0;
+  }
+
+  .carrousel-section {
+    margin-bottom: 90px;
+  } 
+  
+  .button--md {
+    min-width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .button--sm {
+    min-width: 150px;
+    height: 30px;
+    font-size: 12px;
+  }
+  
+
+  .button--primary:hover {
+    background-color: #0086c3;
+  }
+
+  .button--primary-dark:hover {
+    background-color: #29b6f6;
+  }
+
+  .button--secondary:hover {
+    background-color: #003c8f;
+  }
+
+  .button--secondary-dark:hover {
+    background-color: #1565c0;
+  }
+
+  .button--primary-light:hover {
+    background-color: #5e92f3;
+  }
+
+  /* Small hero */
+  .small-hero__title {
+    font-size: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  .small-hero {
+    height: 300px;
+  }
+  /* End small hero */
+
+  /* desktop carrousel */
+  .container {
+    max-width: 960px;
+  }
+
+  .pointer-list__oval {
+    margin-left: 11px;
+    margin-right: 11px;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Footer */
+  .footer__icon {
+    margin: 19px;
   }
 }
