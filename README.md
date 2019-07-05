@@ -61,7 +61,7 @@ Our general DEV workflow should be the next:
 ## Colaborators ✒️
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/27802233?s=400&u=172450d19b7685357313b65d265cbe5c377484d1&v=4" width="100px;"/><br /><sub><b>Victor Florez</b></sub>](https://github.com/Sonny97)<br />[💻](https://github.com/rtsc8/hostal_donde_las_paisas/commits/develop "Code") [📋](#eventOrganizing-VictorFlorez "Event Organizing") [📖](https://github.com/rtsc8/hostal_donde_las_paisas/commits/develop "Documentation") [📢](#talk-VictorFlorez "Talkative") | <br />[💻]| <br />[💻]| <br />[💻]| <br />[💻] | <br />[💻] | <br />[💻] |
+| [<img src="https://avatars2.githubusercontent.com/u/27802233?s=400&u=172450d19b7685357313b65d265cbe5c377484d1&v=4" width="100px;"/><br /><sub><b>Victor Florez</b></sub>](https://github.com/Sonny97)<br />[💻](https://github.com/rtsc8/hostal_donde_las_paisas/commits/develop "Code") [📋](#eventOrganizing-VictorFlorez "Event Organizing") [📖](https://github.com/rtsc8/hostal_donde_las_paisas/commits/develop "Documentation") [📢](#talk-VictorFlorez "Talkative") | <br />[💻]|[<img src= "https://avatars0.githubusercontent.com/u/49324116?s=400&v=4" width="100px;"/><br /><sub><b> Sebastian Jaramillo</b></sub>](https://github.com/sjaramilloo) <br />[💻]| <br />[💻]| <br />[💻] | <br />[💻] | <br />[💻] |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
