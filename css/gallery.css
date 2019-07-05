@@ -9,7 +9,7 @@
 .gallery {
   font-size: 16px;
   color: black;
-  padding: 30px 20px 20px 40px;
+  padding: 30px 20px 40px;
 }
 
 .gallery__info {
@@ -22,7 +22,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  min-width: 320px;
 }
 
 .gallery-item {
@@ -207,7 +206,7 @@ html,body {
 @media screen and (min-width: 960px) {
   .gallery {
     width: 635px;
-    padding: 60px 0;
+    padding: 60px 0 100px;
   }
 
   .gallery__info {
