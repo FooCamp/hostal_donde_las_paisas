@@ -178,7 +178,6 @@ video {
 
 /* For mobile phones: */
 .button {
-  font-family: Roboto-Regular, sans-serif;
   font-weight: normal;
   padding-left: 20px;
   padding-right: 20px;
@@ -346,6 +345,7 @@ video {
   margin: 10px;
   list-style-position: initial;
   list-style-type: disc;
+  margin-bottom: 50px;
 }
 
 .pointer-list__oval {
