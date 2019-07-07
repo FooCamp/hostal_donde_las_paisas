@@ -340,12 +340,9 @@ video {
 }
 
 .pointer-list {
-  border-radius: 50%;
   display: block;
-  margin: 10px;
-  list-style-position: initial;
+  margin: 10px 10px 50px;
   list-style-type: disc;
-  margin-bottom: 50px;
 }
 
 .pointer-list__oval {
