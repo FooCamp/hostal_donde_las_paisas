@@ -46,12 +46,37 @@
 }
 
 .gallery-item__overlay {
-  display: none;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 0%;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0.541);
+  overflow: hidden;
+  vertical-align: middle;
 }
 
 .gallery__items :nth-child(2n) {
   margin-right: 0;
 }     
+
+.overlay__image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: 40%;
+  margin-bottom: 40%;
+}
+
+.gallery-item:hover .gallery-item__overlay {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  justify-content: center;
+}
+
 .wiggle {
   display:block;
   margin:0 auto;
