@@ -341,12 +341,24 @@ video {
 
 .pointer-list {
   display: block;
+  margin: 20px 0px 50px;
   list-style-type: disc;
+}
+
+.pointer-list__oval:first-child {
+  margin-right: 11px;
+  margin-left: 0;
+}
+
+.pointer-list__oval:last-child {
+  margin-left: 11px;
+  margin-right: 0;
 }
 
 .pointer-list__oval {
   border-radius: 50%;
-  margin: 20px 11px 50px;
+  margin-left: 11px;
+  margin-right: 11px;
   display: inline-block;
   width: 10px;
   height: 10px;
