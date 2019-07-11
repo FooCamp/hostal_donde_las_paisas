@@ -450,8 +450,23 @@ video {
     max-width: 960px;
   }
 
+  .pointer-list {
+    margin: 33px 0px 60px;
+  }
+
+  .pointer-list__oval:first-child {
+    margin-right: 14.6px;
+    margin-left: 0;
+  }
+
+  .pointer-list__oval:last-child {
+    margin-left: 14.6px;
+    margin-right: 0;
+  }
+
   .pointer-list__oval {
-    margin: 33px 14.6px 60px;
+    margin-left: 14.6px;
+    margin-right: 14.6px;
     width: 14px;
     height: 14px;
   }
