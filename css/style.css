@@ -345,20 +345,13 @@ video {
   list-style-type: disc;
 }
 
-.pointer-list__oval:first-child {
-  margin-right: 11px;
-  margin-left: 0;
-}
-
 .pointer-list__oval:last-child {
-  margin-left: 11px;
   margin-right: 0;
 }
 
 .pointer-list__oval {
   border-radius: 50%;
-  margin-left: 11px;
-  margin-right: 11px;
+  margin-right: 22px;
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -454,19 +447,12 @@ video {
     margin: 33px 0px 60px;
   }
 
-  .pointer-list__oval:first-child {
-    margin-right: 14.6px;
-    margin-left: 0;
-  }
-
   .pointer-list__oval:last-child {
-    margin-left: 14.6px;
     margin-right: 0;
   }
 
   .pointer-list__oval {
-    margin-left: 14.6px;
-    margin-right: 14.6px;
+    margin-right: 29.2px;
     width: 14px;
     height: 14px;
   }
