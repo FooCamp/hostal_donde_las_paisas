@@ -294,7 +294,7 @@ video {
   margin-bottom: 18px;
 }
 
-.info-title {
+.info__title {
   font-weight: bold;
 }
 
@@ -448,5 +448,30 @@ video {
   /* Footer */
   .footer__icon {
     margin: 19px;
+  }
+
+  .info {
+    margin-bottom: 18px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .info__title {
+    width: 227px;
+    height: 24px;
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .info__description {
+    width: 428px;
+    height: 38px;
+    font-size: 16px;
+    display: inline-block;
   }
 }
