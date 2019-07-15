@@ -1,4 +1,4 @@
-/*
+/**
  * This code validate the labels; if in the inputs there are one or more characters,
  * the label should stay in the position assigned by the class "fix-label".
  */
@@ -117,53 +117,6 @@ flatpickr("#txtNumNigth", {
   mode: "range",
   dateFormat: "F, d, Y "
 });
-//   minDate: "1920-01-01",
-//   locale: {
-//     firstDayOfWeek: 1,
-//     weekdays: {
-//       shorthand: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
-//       longhand: [
-//         "Domingo",
-//         "Lunes",
-//         "Martes",
-//         "Miércoles",
-//         "Jueves",
-//         "Viernes",
-//         "Sábado"
-//       ]
-//     },
-//     months: {
-//       shorthand: [
-//         "Ene",
-//         "Feb",
-//         "Mar",
-//         "Abr",
-//         "May",
-//         "Jun",
-//         "Jul",
-//         "Ago",
-//         "Sep",
-//         "Оct",
-//         "Nov",
-//         "Dic"
-//       ],
-//       longhand: [
-//         "Enero",
-//         "Febreo",
-//         "Мarzo",
-//         "Abril",
-//         "Mayo",
-//         "Junio",
-//         "Julio",
-//         "Agosto",
-//         "Septiembre",
-//         "Octubre",
-//         "Noviembre",
-//         "Diciembre"
-//       ]
-//     }
-//   }
-// });
 /**
  * This code show or hide option "include guide for hike".
  */
