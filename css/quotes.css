@@ -1,4 +1,4 @@
-/* For mobile phones: */
+/*For mobile phones: */
 body {
   margin: 0;
 }
@@ -10,7 +10,7 @@ body {
   font-family: "Roboto-Bold", sans-serif;
 }
 
-.form-details__title {
+.details {
   height: 35px;
   font-size: 24px;
   color: #000000;
@@ -86,15 +86,15 @@ body {
   margin-top: 40px;
 }
 
-.form__fields {
+.form {
   margin-bottom: 50px;
 }
 
-.form-checkbox__label input {
+.form-options__label input {
   display: none;
 }
 
-.form-checkbox__label {
+.form-options__label {
   display: block;
   padding-left: 35px;
   position: relative;
@@ -106,7 +106,7 @@ body {
   height: 25px;
 }
 
-.form-checkbox__label .form-checkbox__checkmark {
+.form-options__label .form-options__checkmark {
   display: inline-block;
   width: 17px;
   height: 17px;
@@ -119,9 +119,9 @@ body {
 
 /*
 * In this code i assign the background color to class
-* .form-checkbox__label inputs that are selected.
+* checkbox__container inputs that are selected.
 */
-.form-checkbox__label input:checked + .form-checkbox__checkmark {
+.form-options__label input:checked + .form-options__checkmark {
   background-color: #1565c0;
   border: solid 2px #1565c0;
 }
@@ -130,7 +130,7 @@ body {
 * In this code insert the figure "✓" after that a checkbox is selected; the figure is created
 * assigning attributes and properties to the content.
 */
-.form-checkbox__label input:checked + .form-checkbox__checkmark:after {
+.form-options__label input:checked + .form-options__checkmark:after {
   content: "";
   position: absolute;
   height: 3.7px;
@@ -161,7 +161,7 @@ body {
   color: #000000;
   align-content: center;
   white-space: pre-line;
-  margin-block-end: 30px;
+  margin-block-end: 66px;
 }
 
 .form-field__calendar {
@@ -193,7 +193,7 @@ body {
   background-size: 20px;
 }
 
-.form__message--error {
+.error__description {
   color: #e00f2d;
   position: relative;
   bottom: 15px;
@@ -206,21 +206,8 @@ body {
   font-weight: 300;
 }
 
-.form__message--success {
-  display: block;
-  text-align: center;
-  text-align: center;
-  color: #4bb543;
-  font-size: 14px;
-  margin-block-end: 20px;
-}
-
 .flatpickr-day.selected.endRange {
   border-radius: 50px 0 0 50px;
-}
-
-#btnCalculate {
-  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -228,4 +215,53 @@ body {
   .flatpickr-day.selected.endRange {
     border-radius: 0 50px 50px 0;
   }
+
+  .form__quote {
+    white-space: nowrap;
+  }
+
+  .paragraph {
+    width: 635px;
+    margin-top: 60px;
+  }
+
+  .ejemplo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .x {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .error__style {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form-field__input {
+    margin-left: 0;
+    margin-right: 0;
+    width: 309px;
+  }
+
+  .fields {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .opciones {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .form__disclaimer {
+    width: 635px;
+  }
+
 }
