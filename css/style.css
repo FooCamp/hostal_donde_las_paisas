@@ -285,9 +285,12 @@ video {
 }
 
 .carrousel-container {
-  width: 100%;
-  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
   text-align: center;
+  width: 100%;
 }
 
 .info {
@@ -307,8 +310,11 @@ video {
 }
 
 .carrousel {
-  width: 100%;
-  position: relative;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .carrousel__img {
@@ -317,15 +323,12 @@ video {
 }
 
 .carrousel__arrow {
-  font-size: 50px;
+  bottom: 0;
+  height: 32px;
+  margin: auto;
   position: absolute;
   top: 0;
-  bottom: 0;
-  margin: auto;
   width: 20px;
-  height: 32px;
-  font-weight: bold;
-  color: #fefefe;
 }
 
 .carrousel__arrow--right {
@@ -340,7 +343,7 @@ video {
 .pointer-list {
   border-radius: 50%;
   display: block;
-  margin: 10px;
+  margin-bottom: 53px;
   list-style-position: initial;
   list-style-type: disc;
 }
@@ -370,10 +373,36 @@ video {
 
 /* For desktop */
 @media only screen and (min-width: 960px) {
-  
-  .button {  
+
+  .button {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+  }
+
+  .carrousel-container {
+    margin-bottom: 33px;
+  }
+
+  .carrousel__arrow {
+    height: 62px;
+    width: 40px;
+  }
+
+  .carrousel__arrow--right {
+    right: 32px;
+  }
+
+  .carrousel__arrow--left {
+    left: 32px;
+  }
+
+  .pointer-list {
+    margin-bottom: 60px;
+  }
+
+  .pointer-list__oval {
+    margin-left: 14.6;
+    margin-right: 14.6;
   }
 
   .button--lg {
@@ -384,20 +413,20 @@ video {
 
   .carrousel-section {
     margin-bottom: 90px;
-  } 
-  
+  }
+
   .button--md {
     min-width: 200px;
     height: 40px;
     font-size: 16px;
   }
-  
+
   .button--sm {
     min-width: 150px;
     height: 30px;
     font-size: 12px;
   }
-  
+
 
   .button--primary:hover {
     background-color: #0086c3;
@@ -458,7 +487,7 @@ video {
     margin: auto;
     text-align: center;
   }
-  
+
   .info__title {
     width: 227px;
     height: 24px;
@@ -467,7 +496,7 @@ video {
     right: 0;
     margin: auto;
   }
-  
+
   .info__description {
     width: 428px;
     height: 38px;
