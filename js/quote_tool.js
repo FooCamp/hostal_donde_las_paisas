@@ -117,6 +117,56 @@ flatpickr("#txtNumNigth", {
   mode: "range",
   dateFormat: "F, d, Y "
 });
+<<<<<<< HEAD
+=======
+//   minDate: "1920-01-01",
+//   locale: {
+//     firstDayOfWeek: 1,
+//     weekdays: {
+//       shorthand: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+//       longhand: [
+//         "Domingo",
+//         "Lunes",
+//         "Martes",
+//         "Miércoles",
+//         "Jueves",
+//         "Viernes",
+//         "Sábado"
+//       ]
+//     },
+//     months: {
+//       shorthand: [
+//         "Ene",
+//         "Feb",
+//         "Mar",
+//         "Abr",
+//         "May",
+//         "Jun",
+//         "Jul",
+//         "Ago",
+//         "Sep",
+//         "Оct",
+//         "Nov",
+//         "Dic"
+//       ],
+//       longhand: [
+//         "Enero",
+//         "Febreo",
+//         "Мarzo",
+//         "Abril",
+//         "Mayo",
+//         "Junio",
+//         "Julio",
+//         "Agosto",
+//         "Septiembre",
+//         "Octubre",
+//         "Noviembre",
+//         "Diciembre"
+//       ]
+//     }
+//   }
+// });
+>>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
 /**
  * This code show or hide option "include guide for hike".
  */
@@ -137,7 +187,7 @@ const guideOptionValidation = showGuideOption => {
  * by giving a value of each one of the options selected by the user.
  */
 
-/** 
+/**
  The expected objet structure is:
 {
    numberOfPeople: integer,
@@ -146,7 +196,7 @@ const guideOptionValidation = showGuideOption => {
    tourOptions: object,
    hikeOptions: object,
   }
- 
+
   trasnport: {
    medNec: boolean,
    necCap: boolean,
@@ -172,11 +222,19 @@ const guideOptionValidation = showGuideOption => {
  * nights and then multiply the result by the heat of each night.
  */
 function calculateCost(form) {
+<<<<<<< HEAD
+=======
+  console.log("calclando");
+>>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
   let total = 0;
   let peopleAndNigth;
   peopleAndNigth = form.numberOfPeople * form.numberOfNigth;
   total += PRICENIGTH * peopleAndNigth;
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
   total += form.transport.medNec ? BUSTRANS * form.numberOfPeople : 0;
   total += form.transport.necCap ? BOATTRANS * form.numberOfPeople : 0;
   total += form.transport.capNec ? BOATTRANS * form.numberOfPeople : 0;
@@ -187,7 +245,11 @@ function calculateCost(form) {
 
   total += form.hike.elCieloEltrebol ? HIKEECET * form.numberOfPeople : 0;
   total += form.hike.elParaiso ? HIKEP * form.numberOfPeople : 0;
+<<<<<<< HEAD
   if (from.hike.laCoquerita.hike) {
+=======
+  if (form.hike.laCoquerita.hike) {
+>>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
     total += HIKECO * form.numberOfPeople;
     if (form.hike.laCoquerita.guide) {
       total += HIKEGUI * form.numberOfPeople;
@@ -196,3 +258,120 @@ function calculateCost(form) {
   total += INSURANCE * peopleAndNigth;
   return total;
 }
+<<<<<<< HEAD
+=======
+
+/* call the elements of from */
+const submitData = () => {
+  cleanErrors();
+  let form = {};
+  form.transport = {};
+  form.feeding = {};
+  form.tour = {};
+  form.hike = {};
+  form.hike.laCoquerita = {};
+
+  form.numberOfPeople = document.getElementById('txtNumPeople').value;
+  form.numberOfNigth = document.getElementById('txtNumNigth').value;
+
+  form.transport.medNec = document.getElementById('ts1').checked;
+  form.transport.necCap = document.getElementById('ts2').checked;
+  form.transport.capNec = document.getElementById('ts3').checked;
+  form.transport.necMed = document.getElementById('ts4').checked;
+
+  form.feeding.breakFast = document.getElementById('f1').checked;
+  form.feeding.dinner = document.getElementById('f2').checked;
+
+  form.tour.sapzurroLamiel = document.getElementById('t1').checked;
+  form.tour.aguacatePlayasoledad = document.getElementById('t2').checked;
+
+  form.hike.elCieloEltrebol = document.getElementById('h1').checked;
+  form.hike.elParaiso = document.getElementById('h2').checked;
+  form.hike.laCoquerita.hike = document.getElementById('h3').checked;
+
+  form.hike.laCoquerita.guide = document.getElementById('g1').checked;
+
+  // form.numberOfPeople = 5;
+  form.numberOfNigth = 1;
+
+  /*form.transport.medNec = true;
+  form.transport.necCap = true;
+  form.transport.capNec = true;
+  form.transport.necMed = true;
+
+  form.feeding.breakFast = false;
+  form.feeding.dinner = true;
+
+  form.tour.sapzurroLamiel = true;
+  form.tour.aguacatePlayasoledad = true;
+
+  form.hike.elCieloEltrebol = true;
+  form.hike.elParaiso = false;
+  form.hike.laCoquerita.hike = true;
+  form.hike.laCoquerita.guide = false;*/
+
+  //calculate error
+  var errorList = validateData(form);
+  // Sends the collected data to the calculateCost funtion
+  let finalPrice = calculateCost(form);
+  // Print the information whit the total cost
+  document.getElementById("txtResult").innerHTML = finalPrice;
+
+  if (errorList) {
+    document.getElementById("txtErrors").appendChild(errorList);
+  }
+}
+
+// validate the opted data to verify the number of tours and nights.
+const validateData = (form) => {
+  var errors = [];
+  if (form.numberOfNigth < (getTrues(form.tour) + getTrues(form.hike))) {
+    errors.push(
+      "el numero seleccionado de dias es poco para la suma de tours y o caminatas, cada evento toma un dia."
+    );
+    console.log("hay error");
+  }
+
+
+  if (errors.length > 0) {
+    var errorsContainer = [];
+    var divErrors = document.createElement("div");
+    divErrors.classList.add("list-of-errors");
+    var ulErrors = document.createElement("ul");
+    for (const error of errors) {
+      var liErrors = document.createElement("li");
+      var textLi = document.createTextNode(error);
+      liErrors.appendChild(textLi);
+      ulErrors.appendChild(liErrors);
+    }
+
+    divErrors.appendChild(ulErrors);
+  } else {
+    divErrors = false;
+  }
+  return divErrors;
+}
+
+const getTrues = (list) => {
+  const listValues = Object.values(list);
+  let count = 0;
+  for (let item of listValues) {
+    if (typeof item == "object") {
+      item = item.hike ? item.hike : item.tour;
+    }
+    if (item == true) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+const cleanErrors = () => {
+  let errosDiv = document.getElementById('txtErrors');
+  errosDiv.innerHTML = '';
+}
+
+//when you give the button to quote calls the function to fill the data
+var btncalculate = document.getElementById("btnCalculate");
+btncalculate.addEventListener("click", submitData);
+>>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
