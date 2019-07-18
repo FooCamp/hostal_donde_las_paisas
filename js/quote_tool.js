@@ -2,7 +2,7 @@
  * This code validate the labels; if in the inputs there are one or more characters,
  * the label should stay in the position assigned by the class "fix-label".
  */
-let inputs = document.getElementsByClassName("form__input");
+let inputs = document.getElementsByClassName("form-field__input");
 const fixLabel = inputs => {
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", function() {
@@ -117,62 +117,12 @@ flatpickr("#txtNumNigth", {
   mode: "range",
   dateFormat: "F, d, Y "
 });
-<<<<<<< HEAD
-=======
-//   minDate: "1920-01-01",
-//   locale: {
-//     firstDayOfWeek: 1,
-//     weekdays: {
-//       shorthand: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
-//       longhand: [
-//         "Domingo",
-//         "Lunes",
-//         "Martes",
-//         "Miércoles",
-//         "Jueves",
-//         "Viernes",
-//         "Sábado"
-//       ]
-//     },
-//     months: {
-//       shorthand: [
-//         "Ene",
-//         "Feb",
-//         "Mar",
-//         "Abr",
-//         "May",
-//         "Jun",
-//         "Jul",
-//         "Ago",
-//         "Sep",
-//         "Оct",
-//         "Nov",
-//         "Dic"
-//       ],
-//       longhand: [
-//         "Enero",
-//         "Febreo",
-//         "Мarzo",
-//         "Abril",
-//         "Mayo",
-//         "Junio",
-//         "Julio",
-//         "Agosto",
-//         "Septiembre",
-//         "Octubre",
-//         "Noviembre",
-//         "Diciembre"
-//       ]
-//     }
-//   }
-// });
->>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
 /**
  * This code show or hide option "include guide for hike".
  */
-document.getElementById("chcGuide").style.display = "none";
-let showGuideOption = document.getElementById("chcHikeLaCoquerita");
-let guideOption = document.getElementById("chcGuide");
+document.getElementById("g1").style.display = "none";
+let showGuideOption = document.getElementById("h1");
+let guideOption = document.getElementById("g1");
 const guideOptionValidation = showGuideOption => {
   if (guideOption.style.display === "block") {
     guideOption.style.display = "none";
@@ -222,19 +172,11 @@ const guideOptionValidation = showGuideOption => {
  * nights and then multiply the result by the heat of each night.
  */
 function calculateCost(form) {
-<<<<<<< HEAD
-=======
   console.log("calclando");
->>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
   let total = 0;
   let peopleAndNigth;
   peopleAndNigth = form.numberOfPeople * form.numberOfNigth;
   total += PRICENIGTH * peopleAndNigth;
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
   total += form.transport.medNec ? BUSTRANS * form.numberOfPeople : 0;
   total += form.transport.necCap ? BOATTRANS * form.numberOfPeople : 0;
   total += form.transport.capNec ? BOATTRANS * form.numberOfPeople : 0;
@@ -245,11 +187,7 @@ function calculateCost(form) {
 
   total += form.hike.elCieloEltrebol ? HIKEECET * form.numberOfPeople : 0;
   total += form.hike.elParaiso ? HIKEP * form.numberOfPeople : 0;
-<<<<<<< HEAD
   if (from.hike.laCoquerita.hike) {
-=======
-  if (form.hike.laCoquerita.hike) {
->>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
     total += HIKECO * form.numberOfPeople;
     if (form.hike.laCoquerita.guide) {
       total += HIKEGUI * form.numberOfPeople;
@@ -258,8 +196,6 @@ function calculateCost(form) {
   total += INSURANCE * peopleAndNigth;
   return total;
 }
-<<<<<<< HEAD
-=======
 
 /* call the elements of from */
 const submitData = () => {
@@ -374,4 +310,3 @@ const cleanErrors = () => {
 //when you give the button to quote calls the function to fill the data
 var btncalculate = document.getElementById("btnCalculate");
 btncalculate.addEventListener("click", submitData);
->>>>>>> 55f33f1cc584e294eb20d686c0c67b97b62fa2c3
