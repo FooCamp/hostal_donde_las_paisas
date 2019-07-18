@@ -213,43 +213,43 @@ const sumbitData = () => {
   form.hike = {};
   form.hike.laCoquerita = {};
 
-  // form.numberOfPeople = document.getElementById('txtNumPeople').value;
+  form.numberOfPeople = document.getElementById('txtNumPeople').value;
   // form.numberOfNigth = document.getElementById('txtNumNigth').value;
 
-  // form.transport.medNec = document.getElementById('chcMedNec').cheked;
-  // form.transport.necCap = document.getElementById('chcNecCap').cheked;
-  // form.transport.capNec = document.getElementById('chcCapNec').cheked;
-  // form.transport.necMed = document.getElementById('chcNecMed').cheked;
+  form.transport.medNec = document.getElementById('chcMedNec').cheked;
+  form.transport.necCap = document.getElementById('chcNecCap').cheked;
+  form.transport.capNec = document.getElementById('chcCapNec').cheked;
+  form.transport.necMed = document.getElementById('chcNecMed').cheked;
 
-  // form.feeding.breakFast = document.getElementById('chcBreackfast').cheked;
-  // form.feeding.dinner = document.getElementById('chcDinner').cheked;
+  form.feeding.breakFast = document.getElementById('chcBreackfast').cheked;
+  form.feeding.dinner = document.getElementById('chcDinner').cheked;
 
-  // form.tour.sapzurroLamiel = document.getElementById('chcTourSapLamiel').cheked;
-  // form.tour.aguacatePlayasoledad = document.getElementById('chcTourAguPlaSol').cheked;
+  form.tour.sapzurroLamiel = document.getElementById('chcTourSapLamiel').cheked;
+  form.tour.aguacatePlayasoledad = document.getElementById('chcTourAguPlaSol').cheked;
 
-  // form.hike.elCieloEltrebol = document.getElementById('chcHikeElCieEltre').cheked;
-  // form.hike.elParaiso = document.getElementById('chcHikeElParaiso').cheked;
-  // form.laCoquerita.hike = document.getElementById('chcHikeLaCoquerita').cheked;
-  // form.laCoquerita.guide = document.getElementById('chcGuide').cheked;
+  form.hike.elCieloEltrebol = document.getElementById('chcHikeElCieEltre').cheked;
+  form.hike.elParaiso = document.getElementById('chcHikeElParaiso').cheked;
+  form.laCoquerita.hike = document.getElementById('chcHikeLaCoquerita').cheked;
+  form.laCoquerita.guide = document.getElementById('chcGuide').cheked;
 
-  form.numberOfPeople = 5;
+  // form.numberOfPeople = 5;
   form.numberOfNigth = 2;
 
-  form.transport.medNec = true;
-  form.transport.necCap = true;
-  form.transport.capNec = true;
-  form.transport.necMed = true;
+  // form.transport.medNec = true;
+  // form.transport.necCap = true;
+  // form.transport.capNec = true;
+  // form.transport.necMed = true;
 
-  form.feeding.breakFast = false;
-  form.feeding.dinner = true;
+  // form.feeding.breakFast = false;
+  // form.feeding.dinner = true;
 
-  form.tour.sapzurroLamiel = true;
-  form.tour.aguacatePlayasoledad = true;
+  // form.tour.sapzurroLamiel = true;
+  // form.tour.aguacatePlayasoledad = true;
 
-  form.hike.elCieloEltrebol = true;
-  form.hike.elParaiso = false;
-  form.hike.laCoquerita.hike = true;
-  form.hike.laCoquerita.guide = false;
+  // form.hike.elCieloEltrebol = true;
+  // form.hike.elParaiso = false;
+  // form.hike.laCoquerita.hike = true;
+  // form.hike.laCoquerita.guide = false;
 
   //calculate error
   var errorList = validateData(form);
@@ -257,9 +257,12 @@ const sumbitData = () => {
   let finalPrice = calculateCost(form);
   // Print the information whit the total cost
   document.getElementById("txtResult").value = finalPrice;
+  console.log(finalPrice);
 
   if (errorList) {
     document.getElementById("txtErrors").appendChild(errorList);
+
+
   }
 };
 
