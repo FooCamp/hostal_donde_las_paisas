@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
-    <link rel="stylesheet" href="./../css/home.css" />
     <link rel="stylesheet" href="./../css/quotes.css" />
     <link rel="stylesheet" href="./../css/style.css" />
     <link
@@ -19,44 +18,46 @@
   </head>
 
   <body>
-    <nav>
-       <section id="main-nav" class="main-nav">
-    <div class="container main-nav__container">
-      <div id="main-nav__logo" class="main-nav__logo">
-        <img class="main-nav__logo__image" src="../assets/images/logo-hdlp.svg" alt="Hostal Donde Las Paisas">
-      </div>
-      <div id="main-nav__burguer" class="main-nav__burguer">
-        <div class="main-nav__burguer-bar burguer__bar-1"></div>
-        <div class="main-nav__burguer-bar burguer__bar-2"></div>
-        <div class="main-nav__burguer-bar burguer__bar-3"></div>
-      </div>
-      <div id="main-nav__menu" class="main-nav__menu">
-        <ul id="main-nav__menu-items" class="main-nav__menu-items">
-          <li><a class="main-nav__menu-link" href="#">Inicio</a></li>
-          <li><a class="main-nav__menu-link" href="#">Galería</a></li>
-          <li><a class="main-nav__menu-link" href="#">Cotizar</a></li>
-          <li><a class="main-nav__menu-link" href="#">Contáctanos</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-    </nav>
       <section class="small-hero small-hero__image--quote">
           <div class="small-hero__layer"></div>
           <div class="small-hero__layer small-hero__layer--darker"></div>
           <h1 class="small-hero__title">Cotizar</h1>
         </section>
+    <nav>
+      <section id="main-nav" class="main-nav">
+        <div class="container main-nav__container">
+          <div id="main-nav__logo" class="main-nav__logo">
+            <img class="main-nav__logo__image" src="../assets/images/logo-hdlp.svg" alt="Hostal Donde Las Paisas">
+          </div>
+          <div id="main-nav__burguer" class="main-nav__burguer">
+            <div class="main-nav__burguer-bar burguer__bar-1"></div>
+            <div class="main-nav__burguer-bar burguer__bar-2"></div>
+            <div class="main-nav__burguer-bar burguer__bar-3"></div>
+          </div>
+          <div id="main-nav__menu" class="main-nav__menu">
+            <ul id="main-nav__menu-items" class="main-nav__menu-items">
+              <li><a class="main-nav__menu-link" href="#">Inicio</a></li>
+              <li><a class="main-nav__menu-link" href="#">Galería</a></li>
+              <li><a class="main-nav__menu-link" href="#">Cotizar</a></li>
+              <li><a class="main-nav__menu-link" href="#">Contáctanos</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </nav>
     <section>
-      <!-- quote-->       
-        <div class="form__container">
-          <p class="paragraph">
+      <div action="" class="form__container">
+        <!-- quote-->
+        <div class="ejemplo">
+        <p class="paragraph">
             Cotiza todo lo que te gustaría incluir  en tu estadía para que tengas la mejor experiencia.
-            Valor noche: 55.000 COP            
-          </p>
+            Valor noche: 55.000 COP
+        </p>
+      </div>
         <form action="" class="form">
-        <div class="form__fields">
           <!--div__field-->
-          <div class="form__field">
+          <div class="x">
+          <div class="form-field">
             <input
               type="text"
               id="input-name"
@@ -64,9 +65,9 @@
               onblur="validationName(this)"
             />
             <label for="" class="form-field__label">Nombre</label>
-            <div id="name-error" class="form__message--error"></div>
+            <div id="name-error" class="form__error"></div>
           </div>
-          <div class="form__field">
+          <div class="form-field">
             <input
               type="email"
               id="input-email"
@@ -74,9 +75,9 @@
               onblur="validationEmail(this)"
             />
             <label for="" class="form-field__label">E-mail</label>
-            <div id="email-error" class="form__message--error"></div>
+            <div id="email-error" class="form__error"></div>
           </div>
-          <div class="form__field">
+          <div class="form-field">
             <input
               type="text"
               id="input-phone"
@@ -84,21 +85,20 @@
               onblur="validationPhone(this)"
             />
             <label for="" class="form-field__label">Teléfono</label>
-            <div id="phone-error" class="form__message--error"></div>
+            <div id="phone-error" class="form__error"></div>
           </div>
-          <!--form__field-END-->
-          <div class="form__ckeckbox">
-            <label class="form-checkbox__label">
-              <input type="checkbox" class="form-checkbox__checkbox" />
-              <span class="form-checkbox__checkmark"></span>
-              Apruebo el uso de mis datos con fines informativos.
-            </label>
         </div>
-        </div>
+          <!--div__field-END-->
+          <label class="form-options__label">
+            <input type="checkbox" class="checkbox__user-data-use" />
+            <span class="form-options__checkmark"></span>
+            Apruebo el uso de mis datos con fines informativos.
+          </label>
+        </form>
         <!-- details -->
-        <div class="form__details">
+        <div class="form-details__container">
           <h3 class="form-details__title">Detalles</h3>
-          
+<div class="fields">
           <div class="form__field">
           <input
             type="text"
@@ -107,8 +107,9 @@
             onblur="validationNumPerson(this)"
           />
             <label for="" class="form-field__label">Número de huéspedes</label>
-            <div id="personsNumber-error" class="form__message--error"></div>
+            <div id="personsNumber-error" class="form__error"></div>
           </div>
+          <div class="form-field">
           <input
             type="text"
             id="txtNumNigth"
@@ -116,51 +117,53 @@
           />
           <label for="" class="form-field__label">Número de noches</label>
         </div>
+      </div>
         <!--details-END-->
         <!--options__transport-->
+        <div class="opciones">
         <div class="form__options">
-          <h5 class="form-options-subtitle">Transporte</h5>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <h5 class="form-options__subtitle">Transporte</h5>
+          <div class="form-options__container"> <!--form-options__container-->
+            <label class="form-options__label"><!--checkbox__container-->
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcMedNec"
+                class="form-options__checkbox"
+                id="ts1"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span> <!--checkmark-->
               Medellín-Necoclí
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container"><!--div__chackbox-->
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcNecCap"
+                class="form-options__checkbox"
+                id="ts2"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Necoclí-Capurganá
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcCapNec"
+                class="form-options__checkbox"
+                id="ts3"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Capurganá-Necoclí
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcNecMed"
+                class="form-options__checkbox"
+                id="ts4"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Necoclí-Medellín
             </label>
           </div>
@@ -169,25 +172,25 @@
         <!--options_food-->
         <div class="form__options">
           <h5 class="form-options__subtitle">Alimentación</h5>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcBreackfast"
+                class="form-options__checkbox"
+                id="f1"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Desayuno
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcDinner"
+                class="form-options__checkbox"
+                id="f2"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Cena
             </label>
           </div>
@@ -196,112 +199,95 @@
         <!--options__tours-->
         <div class="form__options">
           <h5 class="form-options__subtitle">Tours</h5>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcTourSapLamiel"
+                class="form-options__checkbox"
+                id="t1"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Tour Sapzurro y La Miel (Panamá).
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcTourAguPlaSol"
+                class="checkbox__tours-options"
+                id="t2"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Tour Aguacate y Playa Soledad.
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcHikeElCiEltre"
+                class="checkbox__tours-options"
+                id="h1"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Caminata ecológica El cielo y El trébol.
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                class="form-checkbox__checkbox"
-                id="chcHikeElParaiso"
+                class="checkbox__tours-options"
+                id="h2"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Caminata ecológica El paraíso.
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label class="form-checkbox__label">
+          <div class="form-options__container">
+            <label class="form-options__label">
               <input
                 type="checkbox"
-                id="chcHikeLaCoquerita"
-                class="form-checkbox__checkbox"
+                id="h3"
+                class="checkbox__tours-options"
                 onclick="guideOptionValidation()"
               />
-              <span class="form-checkbox__checkmark"></span>
+              <span class="form-options__checkmark"></span>
               Caminata ecológica La Coquerita.
             </label>
           </div>
-          <div class="form-options__checkbox">
-            <label id="chcGuide" class="sub-option form-checkbox__label">
-              <input type="checkbox" class="form-checkbox__guide-option" />
-              <span class="form-checkbox__checkmark"></span>
+          <div class="form-options__container">
+            <label id="g1" class="sub-option form-options__label">
+              <input type="checkbox" class="checkbox__guide-option" />
+              <span class="form-options__checkmark"></span>
               Incluir guía para esta caminata.
             </label>
           </div>
           <!--option__tours-END-->
-          <p class="form__disclaimer">
+        </div>
+      </div>
+      <div class="form-disclaimer__container">
+          <p class="form__disclaimer"> <!--form__paragraph-note-->
               Nota: los tours y las caminatas con excepción de la Coquerita incluyen almuerzo.
               Cada noche incluye un impuesto de 3500 COP.
           </p>
         </div>
-        <div class="form__quote">
-            Total cotización: 
+        <div class="form__quote"><!--label-message-->
+            Total cotización:
             $35.000 COP
-        </div>   
-        <div class="form__message--success">Cotización enviada con éxito ✔</div>     
+        </div>
+        <div class="form__message--success">Cotización enviada con éxito ✔</div>
+        <div class="button__container">
         <button
           id="btnCalculate"
           class="button button--lg button--primary"
         >
           Enviar a mi correo
         </button>
-        </form>
+      </div>
       </div>
     <!--quote-END-->
-    <footer class="footer">
-      <div class="footer__text">
-        <p>
-          <strong>Hostal donde las paisas.</strong><br>
-          Plan Parejo, Capurgana, 278017 Capurganá, Colombia.
-          <br>
-          <br>WhatsApp: 3116306699
-        </p>
-      </div>
-      <div class="footer__icons-container">
-        <a class="footer__icon" href="https://www.facebook.com/Hostaldondelaspaisas/" target="_blank">
-          <img src="../assets/icons/facebook-logo-button.svg" width="50" height="50">
-        </a>
-        <a class="footer__icon" href="https://www.tripadvisor.co/Hotel_Review-g681277-d12696158-Reviews-Hostal_donde_las_Paisas-Capurgana_Choco_Department.html" target="_blank">
-          <img src="../assets/icons/tripadvisor-logotype.svg" width="50" height="50">
-        </a>
-        <a class="footer__icon" href="https://www.instagram.com/hostaldondelaspaisas/" target="_blank">
-          <img src="../assets/icons/instagram.svg" width="50" height="50">
-        </a>
-      </div>
-      <div class="footer__disclaimer">
-        <span>Web created by </span><a class="footer__footnote" href="https://github.com/rtsc8" target="_blank">RTSC8<a />
-      </div>
+    <footer>
+      <!-- footer section -->
     </footer>
     <!--  flatpickr  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

@@ -2,7 +2,7 @@
  * This code validate the labels; if in the inputs there are one or more characters,
  * the label should stay in the position assigned by the class "fix-label".
  */
-let inputs = document.getElementsByClassName("form__input");
+let inputs = document.getElementsByClassName("form-field__input");
 const fixLabel = inputs => {
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", function() {
@@ -120,9 +120,9 @@ flatpickr("#txtNumNigth", {
 /**
  * This code show or hide option "include guide for hike".
  */
-document.getElementById("chcGuide").style.display = "none";
-let showGuideOption = document.getElementById("chcHikeLaCoquerita");
-let guideOption = document.getElementById("chcGuide");
+document.getElementById("g1").style.display = "none";
+let showGuideOption = document.getElementById("h1");
+let guideOption = document.getElementById("g1");
 const guideOptionValidation = showGuideOption => {
   if (guideOption.style.display === "block") {
     guideOption.style.display = "none";
