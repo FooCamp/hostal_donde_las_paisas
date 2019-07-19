@@ -35,21 +35,21 @@ body {
 }
 
 /*
-* In this code, i assign properties like border and color to the focused element.
-*/
+ * In this code, i assign properties like border and color to the focused element.
+ */
 .form-field__input:focus {
   outline: 1px rgba(0, 0, 0, 0.7);
-  border-bottom: 2px solid #0086c3;
+  border-bottom: 2px solid #29b6f6;
 }
 
 /*
-* In this code, i assign properties to the element that is after to the class "form__input",
-* in this case the class "form__label".
-* Note: the order is established in the html.
-*/
+ * In this code, i assign properties to the element that is after to the class "form__input",
+ * in this case the class "form__label".
+ * Note: the order is established in the html.
+ */
 .form-field__input:focus + .form-field__label {
   margin-top: -65px;
-  color: #0086c3;
+  color: #29b6f6;
 }
 
 .form-field__input {
@@ -106,8 +106,8 @@ body {
 
 .form-options__label .form-options__checkmark {
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   left: 0;
   top: 0;
@@ -116,23 +116,23 @@ body {
 }
 
 /*
-* In this code i assign the background color to class
-* checkbox__container inputs that are selected.
-*/
+ * In this code i assign the background color to class
+ * checkbox__container inputs that are selected.
+ */
 .form-options__label input:checked + .form-options__checkmark {
   background-color: #1565c0;
   border: solid 2px #1565c0;
 }
 
 /*
-* In this code insert the figure "✓" after that a checkbox is selected; the figure is created
-* assigning attributes and properties to the content.
-*/
+ * In this code insert the figure "✓" after that a checkbox is selected; the figure is created
+ * assigning attributes and properties to the content.
+ */
 .form-options__label input:checked + .form-options__checkmark:after {
   content: "";
   position: absolute;
-  height: 3.7px;
-  width: 11px;
+  height: 7px;
+  width: 16px;
   border-left: 2px solid white;
   border-bottom: 2px solid white;
   top: 38%;
@@ -200,6 +200,15 @@ body {
   font-weight: 300;
 }
 
+.form__message--success {
+  display: block;
+  text-align: center;
+  text-align: center;
+  color: #4bb543;
+  font-size: 14px;
+  margin-block-end: 20px;
+}
+
 .flatpickr-day.selected.endRange {
   border-radius: 50px 0 0 50px;
 }
@@ -256,6 +265,16 @@ body {
 
   .form__disclaimer {
     width: 635px;
+    text-align: center;
   }
 
+  .form-disclaimer__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button__container {
+    display: flex;
+    justify-content: center;
+  }
 }
