@@ -7,7 +7,6 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   max-width: 90%;
-  font-family: "Roboto-Bold", sans-serif;
 }
 
 .details {
@@ -20,7 +19,6 @@ body {
 
 .form-options__subtitle {
   height: 29px;
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #000000;
   margin-bottom: 10px;
@@ -30,7 +28,6 @@ body {
 .paragraph {
   width: 320px;
   height: 77px;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
@@ -66,7 +63,6 @@ body {
 
 .form-field__label {
   font-size: 12px;
-  /* padding-left: 15px; */
   position: absolute;
   margin-top: -45px;
   z-index: -20;
@@ -143,7 +139,6 @@ body {
 .form__disclaimer {
   width: 320px;
   height: 32px;
-  font-family: "Roboto";
   font-size: 14px;
   font-weight: 300;
   margin-block-start: 35px;
@@ -153,7 +148,6 @@ body {
 .form__quote {
   display: block;
   text-align: center;
-  font-family: Roboto;
   font-size: 24px;
   font-weight: bold;
   color: #000000;
@@ -171,6 +165,11 @@ body {
 
 .sub-option {
   left: 20px;
+}
+
+.list-errors__container {
+  display: flex;
+  justify-content: center;
 }
 
 .error__style {
@@ -195,7 +194,6 @@ body {
   bottom: 15px;
   width: 321px;
   height: 13px;
-  font-family: "Roboto";
   font-size: 11px;
   font-weight: 300;
 }
@@ -224,18 +222,9 @@ body {
   }
 
   .paragraph {
+    margin: 60px auto 0;
     width: 635px;
-    margin-top: 60px;
-  }
-
-  .ejemplo {
-    display: flex;
-    justify-content: center;
-  }
-
-  .x {
-    display: flex;
-    justify-content: space-around;
+    display: block;
   }
 
   .error__style {
@@ -249,18 +238,8 @@ body {
     width: 309px;
   }
 
-  .fields {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .form-field {
     width: 100%;
-  }
-
-  .opciones {
-    display: flex;
-    justify-content: space-around;
   }
 
   .form__disclaimer {
@@ -276,5 +255,14 @@ body {
   .button__container {
     display: flex;
     justify-content: center;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+  }
+
+  .column {
+    flex-basis: calc(100% / 3);
   }
 }
