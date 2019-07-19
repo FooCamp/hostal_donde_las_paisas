@@ -10,6 +10,15 @@ body {
   font-family: "Roboto-Bold", sans-serif;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  flex-basis: calc(100%/3);
+}
+
 .details {
   height: 35px;
   font-size: 24px;
@@ -173,6 +182,11 @@ body {
   left: 20px;
 }
 
+.list-errors__container {
+  display: flex;
+  justify-content: center;
+}
+
 .error__style {
   border: 0;
   border-bottom: 2px solid #e00f2d;
@@ -224,18 +238,8 @@ body {
   }
 
   .paragraph {
-    width: 635px;
-    margin-top: 60px;
-  }
-
-  .ejemplo {
-    display: flex;
-    justify-content: center;
-  }
-
-  .x {
-    display: flex;
-    justify-content: space-around;
+    margin: 60px auto 0;
+    max-width: 635px;
   }
 
   .error__style {
