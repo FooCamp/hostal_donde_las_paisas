@@ -1,12 +1,8 @@
-// Qouting tool logic should be placed here.
-
-// Remember to import consts.js if you will use this file
-
-/*
+/**
  * This code validate the labels; if in the inputs there are one or more characters,
  * the label should stay in the position assigned by the class "fix-label".
  */
-let inputs = document.getElementsByClassName("form__input");
+let inputs = document.getElementsByClassName("form-field__input");
 const fixLabel = inputs => {
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", function() {
@@ -117,63 +113,37 @@ const validationNumPerson = personsNumEntered => {
 /*
  * This code assign the calendar to "txtNumNigth" and gives it a date format.
  */
-flatpickr("#txtNumNigth", {
-  mode: "range",
-  dateFormat: "F, d, Y "
-});
-//   minDate: "1920-01-01",
-//   locale: {
-//     firstDayOfWeek: 1,
-//     weekdays: {
-//       shorthand: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
-//       longhand: [
-//         "Domingo",
-//         "Lunes",
-//         "Martes",
-//         "Miércoles",
-//         "Jueves",
-//         "Viernes",
-//         "Sábado"
-//       ]
-//     },
-//     months: {
-//       shorthand: [
-//         "Ene",
-//         "Feb",
-//         "Mar",
-//         "Abr",
-//         "May",
-//         "Jun",
-//         "Jul",
-//         "Ago",
-//         "Sep",
-//         "Оct",
-//         "Nov",
-//         "Dic"
-//       ],
-//       longhand: [
-//         "Enero",
-//         "Febreo",
-//         "Мarzo",
-//         "Abril",
-//         "Mayo",
-//         "Junio",
-//         "Julio",
-//         "Agosto",
-//         "Septiembre",
-//         "Octubre",
-//         "Noviembre",
-//         "Diciembre"
-//       ]
-//     }
+// let numNigth;
+// flatpickr("#txtNumNigth", {
+//   mode: "range",
+//   dateFormat: "F, d, Y ",
+//   onChange: function(selectedDates) {
+//     let totalDays = Math.round(
+//       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
+//       );
+//     //  document.getElementById("numNigth").innerHTML = totalDays.value;
+//     console.log("Total days", totalDays);
+//     numNigth = totalDays;
 //   }
 // });
+let totalDays;
+flatpickr("#txtNumNigth", {
+  mode: "range",
+  dateFormat: "F, d, Y ",
+  onChange: function(selectedDates) {
+      totalDays = Math.round(
+      (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
+      );
+  }
+});
+
+  
 /**
  * This code show or hide option "include guide for hike".
  */
-document.getElementById("chcGuide").style.display = "none";
-let showGuideOption = document.getElementById("chcHikeLaCoquerita");
-let guideOption = document.getElementById("chcGuide");
+document.getElementById("g1").style.display = "none";
+let showGuideOption = document.getElementById("h1");
+let guideOption = document.getElementById("g1");
 const guideOptionValidation = showGuideOption => {
   if (guideOption.style.display === "block") {
     guideOption.style.display = "none";
@@ -182,53 +152,57 @@ const guideOptionValidation = showGuideOption => {
   }
 };
 
-/* Qouting tool logic should be placed here.*/
-/**
- * calculateCost calculates the value of the package that the user prefers
- * by giving a value of each one of the options selected by the user.
- */
+// Qouting tool logic should be placed here.
 
-/** 
- The expected objet structure is:
-{
-   numberOfPeople: integer,
-   numberOfNigth: integer,
-   trasnport: object,
-   tourOptions: object,
-   hikeOptions: object,
-  }
- 
-  trasnport: {
-   medNec: boolean,
-   necCap: boolean,
-   capNec: boolean,
-   necMed: boolean,
-  }
-  tourOptions: {
-   aguacatePlayasoledad: boolean,
-   sapzurroLamiel: boolean,
-  }
-  hikeOptions: {
-   elCieloEltrebol: boolean,
-   elParaiso: boolean,
-   laCoquerita: object,
-  }
-  laCoquerita: {
-   hike: boolean,
-   guide: boolean,
-  }
-  */
+// Remember to import consts.js if you will use this file
+
+/* calculateCost calculates the value of the package that the user prefers
+ * by giving a value of each one of the options selected by the user
+ *
+ * The expected objet structure is :
+ * {
+ *  numberOfPeople: integer,
+ *  numberOfNigth: integer,
+ *  trasnport: object,
+ *  tour: object,
+ *  feeding: object
+ *  hike: object,
+ * }
+ *
+ * trasnport: {
+ *  medNec: boolean,
+ *  necCap: boolean,
+ *  capNec: boolean,
+ *  necMed: boolean,
+ * }
+ * feeding{
+ *   breakfast: boolean;
+ *   dinner: boolean;
+ * }
+ * tour: {
+ *  aguacatePlayasoledad: boolean,
+ *  sapzurroLamiel: boolean,
+ * }
+ * hike: {
+ *  elCieloEltrebol: boolean,
+ *  elParaiso: boolean,
+ *  laCoquerita: object,
+ * }
+ * laCoquerita: {
+ *  hike: boolean,
+ *  guide: boolean,
+ * }
+ */
 /**
  * PeopleAndNigth It contains the number of people multiplied the number of
  * nights and then multiply the result by the heat of each night.
  */
 function calculateCost(form) {
-  console.log("calclando");
   let total = 0;
   let peopleAndNigth;
   peopleAndNigth = form.numberOfPeople * form.numberOfNigth;
   total += PRICENIGTH * peopleAndNigth;
-  
+
   total += form.transport.medNec ? BUSTRANS * form.numberOfPeople : 0;
   total += form.transport.necCap ? BOATTRANS * form.numberOfPeople : 0;
   total += form.transport.capNec ? BOATTRANS * form.numberOfPeople : 0;
@@ -259,47 +233,28 @@ const submitData = () => {
   form.hike = {};
   form.hike.laCoquerita = {};
 
-  form.numberOfPeople = document.getElementById('txtNumPeople').value;
-  form.numberOfNigth = document.getElementById('txtNumNigth').value;
+  form.numberOfPeople = document.getElementById("txtNumPeople").value;
+  form.numberOfNigth = totalDays;
 
-  form.transport.medNec = document.getElementById('ts1').checked;
-  form.transport.necCap = document.getElementById('ts2').checked;
-  form.transport.capNec = document.getElementById('ts3').checked;
-  form.transport.necMed = document.getElementById('ts4').checked;
+  form.transport.medNec = document.getElementById("ts1").checked;
+  form.transport.necCap = document.getElementById("ts2").checked;
+  form.transport.capNec = document.getElementById("ts3").checked;
+  form.transport.necMed = document.getElementById("ts4").checked;
 
-  form.feeding.breakFast = document.getElementById('f1').checked;
-  form.feeding.dinner = document.getElementById('f2').checked;
+  form.feeding.breakFast = document.getElementById("f1").checked;
+  form.feeding.dinner = document.getElementById("f2").checked;
 
-  form.tour.sapzurroLamiel = document.getElementById('t1').checked;
-  form.tour.aguacatePlayasoledad = document.getElementById('t2').checked;
+  form.tour.sapzurroLamiel = document.getElementById("t1").checked;
+  form.tour.aguacatePlayasoledad = document.getElementById("t2").checked;
 
-  form.hike.elCieloEltrebol = document.getElementById('h1').checked;
-  form.hike.elParaiso = document.getElementById('h2').checked;
-  form.hike.laCoquerita.hike = document.getElementById('h3').checked;
+  form.hike.elCieloEltrebol = document.getElementById("h1").checked;
+  form.hike.elParaiso = document.getElementById("h2").checked;
+  form.hike.laCoquerita.hike = document.getElementById("h3").checked;
 
-  form.hike.laCoquerita.guide = document.getElementById('g1').checked;
-  
-  // form.numberOfPeople = 5;
-  form.numberOfNigth = 1;
-
-  /*form.transport.medNec = true;
-  form.transport.necCap = true;
-  form.transport.capNec = true;
-  form.transport.necMed = true;
-
-  form.feeding.breakFast = false;
-  form.feeding.dinner = true;
-
-  form.tour.sapzurroLamiel = true;
-  form.tour.aguacatePlayasoledad = true;
-
-  form.hike.elCieloEltrebol = true;
-  form.hike.elParaiso = false;
-  form.hike.laCoquerita.hike = true;
-  form.hike.laCoquerita.guide = false;*/
+  form.hike.laCoquerita.guide = document.getElementById("g1").checked;
 
   //calculate error
-  var errorList = validateData(form);
+  let errorList = validateData(form);
   // Sends the collected data to the calculateCost funtion
   let finalPrice = calculateCost(form);
   // Print the information whit the total cost
@@ -308,27 +263,25 @@ const submitData = () => {
   if (errorList) {
     document.getElementById("txtErrors").appendChild(errorList);
   }
-}
+};
 
 // validate the opted data to verify the number of tours and nights.
-const validateData = (form) => {
-  var errors = [];
-  if (form.numberOfNigth < (getTrues(form.tour) + getTrues(form.hike))) {
+const validateData = form => {
+  let errors = [];
+  if (form.numberOfNigth < getTrues(form.tour) + getTrues(form.hike)) {
     errors.push(
       "el numero seleccionado de dias es poco para la suma de tours y o caminatas, cada evento toma un dia."
     );
-    console.log("hay error");
   }
 
-  
   if (errors.length > 0) {
-    var errorsContainer = [];
-    var divErrors = document.createElement("div");
+    let errorsContainer = [];
+    let divErrors = document.createElement("div");
     divErrors.classList.add("list-of-errors");
-    var ulErrors = document.createElement("ul");
+    let ulErrors = document.createElement("ul");
     for (const error of errors) {
-      var liErrors = document.createElement("li");
-      var textLi = document.createTextNode(error);
+      let liErrors = document.createElement("li");
+      let textLi = document.createTextNode(error);
       liErrors.appendChild(textLi);
       ulErrors.appendChild(liErrors);
     }
@@ -338,9 +291,9 @@ const validateData = (form) => {
     divErrors = false;
   }
   return divErrors;
-}
+};
 
-const getTrues = (list) => {
+const getTrues = list => {
   const listValues = Object.values(list);
   let count = 0;
   for (let item of listValues) {
@@ -352,13 +305,13 @@ const getTrues = (list) => {
     }
   }
   return count;
-}
+};
 
 const cleanErrors = () => {
-  let errosDiv = document.getElementById('txtErrors');
-  errosDiv.innerHTML = '';
-}
+  let errosDiv = document.getElementById("txtErrors");
+  errosDiv.innerHTML = "";
+};
 
 //when you give the button to quote calls the function to fill the data
-var btncalculate = document.getElementById("btnCalculate");
+let btncalculate = document.getElementById("btnCalculate");
 btncalculate.addEventListener("click", submitData);
