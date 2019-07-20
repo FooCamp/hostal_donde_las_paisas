@@ -134,9 +134,6 @@ flatpickr("#txtNumNigth", {
       totalDays = Math.round(
       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
       );
-    //  document.getElementById("numNigth").innerHTML = totalDays.value;
-    console.log("Total days", totalDays);
-
   }
 });
 
@@ -201,7 +198,6 @@ const guideOptionValidation = showGuideOption => {
  * nights and then multiply the result by the heat of each night.
  */
 function calculateCost(form) {
-  console.log("calclando");
   let total = 0;
   let peopleAndNigth;
   peopleAndNigth = form.numberOfPeople * form.numberOfNigth;
@@ -223,11 +219,8 @@ function calculateCost(form) {
       total += HIKEGUI * form.numberOfPeople;
     }
   }
-  console.log(total);
   total += INSURANCE * peopleAndNigth;
   return total;
-  console.log(total);
-  
 }
 
 /* call the elements of from */
@@ -260,24 +253,8 @@ const submitData = () => {
 
   form.hike.laCoquerita.guide = document.getElementById("g1").checked;
 
-  // form.numberOfPeople = 5;
-  //form.numberOfNigth = 1;
-
-  /*form.transport.medNec = true;
-  form.transport.necCap = true;
-  form.transport.capNec = true;
-  form.transport.necMed = true;
-  form.feeding.breakFast = false;
-  form.feeding.dinner = true;
-  form.tour.sapzurroLamiel = true;
-  form.tour.aguacatePlayasoledad = true;
-  form.hike.elCieloEltrebol = true;
-  form.hike.elParaiso = false;
-  form.hike.laCoquerita.hike = true;
-  form.hike.laCoquerita.guide = false;*/
-
   //calculate error
-  var errorList = validateData(form);
+  let errorList = validateData(form);
   // Sends the collected data to the calculateCost funtion
   let finalPrice = calculateCost(form);
   // Print the information whit the total cost
@@ -290,22 +267,21 @@ const submitData = () => {
 
 // validate the opted data to verify the number of tours and nights.
 const validateData = form => {
-  var errors = [];
+  let errors = [];
   if (form.numberOfNigth < getTrues(form.tour) + getTrues(form.hike)) {
     errors.push(
       "el numero seleccionado de dias es poco para la suma de tours y o caminatas, cada evento toma un dia."
     );
-    console.log("hay error");
   }
 
   if (errors.length > 0) {
-    var errorsContainer = [];
-    var divErrors = document.createElement("div");
+    let errorsContainer = [];
+    let divErrors = document.createElement("div");
     divErrors.classList.add("list-of-errors");
-    var ulErrors = document.createElement("ul");
+    let ulErrors = document.createElement("ul");
     for (const error of errors) {
-      var liErrors = document.createElement("li");
-      var textLi = document.createTextNode(error);
+      let liErrors = document.createElement("li");
+      let textLi = document.createTextNode(error);
       liErrors.appendChild(textLi);
       ulErrors.appendChild(liErrors);
     }
@@ -337,5 +313,5 @@ const cleanErrors = () => {
 };
 
 //when you give the button to quote calls the function to fill the data
-var btncalculate = document.getElementById("btnCalculate");
+let btncalculate = document.getElementById("btnCalculate");
 btncalculate.addEventListener("click", submitData);
