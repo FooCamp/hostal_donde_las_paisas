@@ -5,7 +5,7 @@ Transporte Necocli Capurgana = id = "ts2"
 Transporte Capurgana Necocli = id = "ts3"
 Transporte Necocli Medellin = id = "ts4"
 
-feeding = f
+food = f
 Breackfasrt = id = "f1"
 Diner = id = "f2"
 
@@ -18,5 +18,5 @@ elCieloEltrebol = id = "h1"
 elParaiso = id = "h2"
 laCoquerita = id = "h3"
 
-Guide = g
-laCoquerita = id = "g1"
+Guide = gu
+laCoquerita = id = "gu1"

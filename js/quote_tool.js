@@ -165,7 +165,7 @@ const guideOptionValidation = showGuideOption => {
  *  numberOfNigth: integer,
  *  trasnport: object,
  *  tour: object,
- *  feeding: object
+ *  food: object
  *  hike: object,
  * }
  *
@@ -175,7 +175,7 @@ const guideOptionValidation = showGuideOption => {
  *  capNec: boolean,
  *  necMed: boolean,
  * }
- * feeding{
+ * food{
  *   breakfast: boolean;
  *   dinner: boolean;
  * }
@@ -208,6 +208,9 @@ function calculateCost(form) {
   total += form.transport.capNec ? BOATTRANS * form.numberOfPeople : 0;
   total += form.transport.necMed ? BUSTRANS * form.numberOfPeople : 0;
 
+  total += form.food.breakFast ? BREAKFAST * peopleAndNigth : 0;
+  total += form.food.dinner ? DINNER * peopleAndNigth : 0;
+
   total += form.tour.aguacatePlayasoledad ? TOURAPS * form.numberOfPeople : 0;
   total += form.tour.sapzurroLamiel ? TOURSLM * form.numberOfPeople : 0;
 
@@ -228,7 +231,7 @@ const submitData = () => {
   cleanErrors();
   let form = {};
   form.transport = {};
-  form.feeding = {};
+  form.food = {};
   form.tour = {};
   form.hike = {};
   form.hike.laCoquerita = {};
@@ -241,8 +244,8 @@ const submitData = () => {
   form.transport.capNec = document.getElementById("ts3").checked;
   form.transport.necMed = document.getElementById("ts4").checked;
 
-  form.feeding.breakFast = document.getElementById("f1").checked;
-  form.feeding.dinner = document.getElementById("f2").checked;
+  form.food.breakFast = document.getElementById("f1").checked;
+  form.food.dinner = document.getElementById("f2").checked;
 
   form.tour.sapzurroLamiel = document.getElementById("t1").checked;
   form.tour.aguacatePlayasoledad = document.getElementById("t2").checked;
@@ -251,7 +254,7 @@ const submitData = () => {
   form.hike.elParaiso = document.getElementById("h2").checked;
   form.hike.laCoquerita.hike = document.getElementById("h3").checked;
 
-  form.hike.laCoquerita.guide = document.getElementById("g1").checked;
+  form.hike.laCoquerita.guide = document.getElementById("gu1").checked;
 
   //calculate error
   let errorList = validateData(form);
