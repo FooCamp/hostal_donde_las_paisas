@@ -113,17 +113,34 @@ const validationNumPerson = personsNumEntered => {
 /*
  * This code assign the calendar to "txtNumNigth" and gives it a date format.
  */
+// let numNigth;
+// flatpickr("#txtNumNigth", {
+//   mode: "range",
+//   dateFormat: "F, d, Y ",
+//   onChange: function(selectedDates) {
+//     let totalDays = Math.round(
+//       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
+//       );
+//     //  document.getElementById("numNigth").innerHTML = totalDays.value;
+//     console.log("Total days", totalDays);
+//     numNigth = totalDays;
+//   }
+// });
+let totalDays;
 flatpickr("#txtNumNigth", {
   mode: "range",
   dateFormat: "F, d, Y ",
   onChange: function(selectedDates) {
-    let totalDays = Math.round(
+      totalDays = Math.round(
       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
-    );
+      );
+    //  document.getElementById("numNigth").innerHTML = totalDays.value;
     console.log("Total days", totalDays);
+
   }
 });
 
+  
 /**
  * This code show or hide option "include guide for hike".
  */
@@ -206,8 +223,11 @@ function calculateCost(form) {
       total += HIKEGUI * form.numberOfPeople;
     }
   }
+  console.log(total);
   total += INSURANCE * peopleAndNigth;
   return total;
+  console.log(total);
+  
 }
 
 /* call the elements of from */
@@ -221,7 +241,7 @@ const submitData = () => {
   form.hike.laCoquerita = {};
 
   form.numberOfPeople = document.getElementById("txtNumPeople").value;
-  form.numberOfNigth = document.getElementById("txtNumNigth").value;
+  form.numberOfNigth = totalDays;
 
   form.transport.medNec = document.getElementById("ts1").checked;
   form.transport.necCap = document.getElementById("ts2").checked;
@@ -241,7 +261,7 @@ const submitData = () => {
   form.hike.laCoquerita.guide = document.getElementById("g1").checked;
 
   // form.numberOfPeople = 5;
-  form.numberOfNigth = 1;
+  //form.numberOfNigth = 1;
 
   /*form.transport.medNec = true;
   form.transport.necCap = true;
