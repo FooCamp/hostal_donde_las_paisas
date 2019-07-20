@@ -178,7 +178,6 @@ video {
 
 /* For mobile phones: */
 .button {
-  font-family: Roboto-Regular, sans-serif;
   font-weight: normal;
   padding-left: 20px;
   padding-right: 20px;
@@ -188,6 +187,9 @@ video {
   overflow: hidden;
   color: white;
   border: 0;
+  text-align: center;
+  padding: 17px;
+  text-decoration: none;
 }
 .button:focus {
   outline: 0;
@@ -341,21 +343,23 @@ video {
 }
 
 .pointer-list {
-  border-radius: 50%;
   display: block;
-  margin-bottom: 53px;
-  list-style-position: initial;
+  margin: 20px 0px 50px;
   list-style-type: disc;
+}
+
+.pointer-list__oval:last-child {
+  margin-right: 0;
 }
 
 .pointer-list__oval {
   border-radius: 50%;
-  margin-left: 11px;
-  margin-right: 11px;
+  margin-right: 22px;
   display: inline-block;
   width: 10px;
   height: 10px;
 }
+
 .pointer-list__oval--gray {
   background-color: rgba(51, 51, 51, 0.3);
 }
@@ -369,11 +373,11 @@ video {
   align-items: center;
   justify-items: center;
 }
+
 /* End carrousel*/
 
 /* For desktop */
 @media only screen and (min-width: 960px) {
-
   .button {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -426,8 +430,7 @@ video {
     height: 30px;
     font-size: 12px;
   }
-
-
+  
   .button--primary:hover {
     background-color: #0086c3;
   }
@@ -467,9 +470,12 @@ video {
     max-width: 960px;
   }
 
+  .pointer-list {
+    margin: 33px 0px 60px;
+  }
+
   .pointer-list__oval {
-    margin-left: 11px;
-    margin-right: 11px;
+    margin-right: 29.2px;
     width: 14px;
     height: 14px;
   }
