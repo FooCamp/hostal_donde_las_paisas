@@ -375,7 +375,6 @@ video {
 
 /* For desktop */
 @media only screen and (min-width: 960px) {
-
   .button {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -402,7 +401,6 @@ video {
     height: 30px;
     font-size: 12px;
   }
-
 
   .button--primary:hover {
     background-color: #0086c3;
@@ -445,10 +443,6 @@ video {
 
   .pointer-list {
     margin: 33px 0px 60px;
-  }
-
-  .pointer-list__oval:last-child {
-    margin-right: 0;
   }
 
   .pointer-list__oval {
