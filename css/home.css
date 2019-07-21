@@ -166,6 +166,8 @@
   right: 0;
   margin: auto;
   text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 /* END SERVICES */
@@ -192,6 +194,11 @@
 
   .service:not(:first-child) {
     margin-top: 0;
+  }
+
+  .quote-container {
+    margin-top: 90px;
+    margin-bottom: 60px;
   }
 
   .homepage-hero__logo {
