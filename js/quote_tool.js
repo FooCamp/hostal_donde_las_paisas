@@ -20,112 +20,103 @@ fixLabel(inputs);
  * done throught a regular expression that allow enter only letters and
  * letters whit special characters, besides it makes the field mandatory.
  */
-let inputNameFormat = /^([a-zA-Z áéíóúÁÉÍÓÚñÑ]{2,30})*$/;
-let nameEntered = document.getElementById("input-name");
-let nameError = document.getElementById("name-error");
-const validationName = nameEntered => {
-  if (!inputNameFormat.test(nameEntered.value)) {
-    nameEntered.classList.add("error__style");
+const validationName = function () {
+  if (!inputNameFormat.test(this.value)) {
+    this.classList.add("error__style");
     nameError.textContent = "El nombre ingresado no es correcto";
     return false;
-  } else if (nameEntered.value === "") {
-    nameEntered.classList.add("error__style");
+  } else if (this.value === "") {
+    this.classList.add("error__style");
     nameError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    nameEntered.classList.remove("error__style");
+    this.classList.remove("error__style");
     nameError.textContent = "";
     return false;
   }
 };
+let inputNameFormat = /^([a-zA-Z áéíóúÁÉÍÓÚñÑ]{2,30})*$/;
+let nameEntered = document.getElementById("input-name");
+nameEntered.addEventListener("blur",validationName);
+let nameError = document.getElementById("name-error");
 /**
  * This code validate the "input-email"; this validation is
  * done throught a regular expression that allow enter only characters
  * corresponding to an email, besides it makes the field mandatory.
  */
-let inputEmailFormat = /\w+@\w+\.+[a-z]/;
-let emailEntered = document.getElementById("input-email");
-let emailError = document.getElementById("email-error");
-const validationEmail = emailEntered => {
+const validationEmail = function () {
   if (
-    emailEntered.value.length >= 1 &&
-    !inputEmailFormat.test(emailEntered.value)
+    this.value.length >= 1 &&
+    !inputEmailFormat.test(this.value)
   ) {
-    emailEntered.classList.add("error__style");
+    this.classList.add("error__style");
     emailError.textContent = "El correo electrónico ingresado no es correcto";
     return false;
-  } else if (emailEntered.value === "") {
-    emailEntered.classList.add("error__style");
+  } else if (this.value === "") {
+    this.classList.add("error__style");
     emailError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    emailEntered.classList.remove("error__style");
+    this.classList.remove("error__style");
     emailError.textContent = "";
     return false;
   }
 };
+let inputEmailFormat = /\w+@\w+\.+[a-z]/;
+let emailEntered = document.getElementById("input-email");
+let emailError = document.getElementById("email-error");
+emailEntered.addEventListener("blur",validationEmail);
 /**
  * This code validate the "input-Phone"; this validation is
  * done throught a regular expression that allow enter only numbers,
  * besides it makes the field mandatory.
  */
-let inputPhoneFormat = /^([0-9]{7,10})*$/;
-let phoneEntered = document.getElementById("input-phone");
-let phoneError = document.getElementById("phone-error");
-const validationPhone = phoneEntered => {
-  if (!inputPhoneFormat.test(phoneEntered.value)) {
-    phoneEntered.classList.add("error__style");
+const validationPhone = function () {
+  if (!inputPhoneFormat.test(this.value)) {
+    this.classList.add("error__style");
     phoneError.textContent = "El teléfono ingresado no es correcto";
     return false;
-  } else if (phoneEntered.value === "") {
-    phoneEntered.classList.add("error__style");
+  } else if (this.value === "") {
+    this.classList.add("error__style");
     phoneError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    phoneEntered.classList.remove("error__style");
+    this.classList.remove("error__style");
     phoneError.textContent = "";
     return false;
   }
 };
+let inputPhoneFormat = /^([0-9]{7,10})*$/;
+let phoneEntered = document.getElementById("input-phone");
+let phoneError = document.getElementById("phone-error");
+phoneEntered.addEventListener("blur",validationPhone);
 /**
  * This code validate the "input__persons-number"; this validation is
  * done throught a regular expression that allow enter only numbers,
  * besides it makes the field mandatory.
  */
-let inputPersonsNumFormat = /^([0-9])*$/;
-let personsNumEntered = document.getElementById("txtNumPeople");
-let personsNumberError = document.getElementById("personsNumber-error");
-const validationNumPerson = personsNumEntered => {
-  if (!inputPersonsNumFormat.test(personsNumEntered.value)) {
-    personsNumEntered.classList.add("error__style");
+const validationNumPerson = function() {
+  if (!inputPersonsNumFormat.test(this.value)) {
+    this.classList.add("error__style");
     personsNumberError.textContent = "El dato ingresado no es un número";
     return false;
-  } else if (personsNumEntered.value === "") {
-    personsNumEntered.classList.add("error__style");
+  } else if (this.value === "") {
+    this.classList.add("error__style");
     personsNumberError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    personsNumEntered.classList.remove("error__style");
+    this.classList.remove("error__style");
     personsNumberError.textContent = "";
     return false;
   }
 };
+let inputPersonsNumFormat = /^([0-9])*$/;
+let personsNumEntered = document.getElementById("txtNumPeople");
+let personsNumberError = document.getElementById("personsNumber-error");
+personsNumEntered.addEventListener("blur",validationNumPerson)
 /*
  * This code assign the calendar to "txtNumNigth" and gives it a date format.
  */
-// let numNigth;
-// flatpickr("#txtNumNigth", {
-//   mode: "range",
-//   dateFormat: "F, d, Y ",
-//   onChange: function(selectedDates) {
-//     let totalDays = Math.round(
-//       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
-//       );
-//     //  document.getElementById("numNigth").innerHTML = totalDays.value;
-//     console.log("Total days", totalDays);
-//     numNigth = totalDays;
-//   }
-// });
 flatpickr("#txtNumNigth", {
   mode: "range",
   dateFormat: "F, d, Y ",
