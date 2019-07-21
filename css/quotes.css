@@ -1,12 +1,14 @@
 /*For mobile phones: */
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .form__container {
-  margin-left: 5%;
-  margin-right: 5%;
+  /* margin-left: 5%;
+  margin-right: 5%; */
   max-width: 90%;
+  padding: 0 20px 0 20px;
 }
 
 .details {
@@ -29,6 +31,7 @@ body {
   width: 320px;
   height: 77px;
   font-size: 16px;
+  margin-top: 30px;
 }
 
 /*
@@ -58,7 +61,7 @@ body {
   margin-block-start: 20px;
   margin-block-end: 20px;
   display: block;
-  width: 90%;
+  width: 100%;
 }
 
 .form-field__label {
