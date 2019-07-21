@@ -161,6 +161,13 @@
   width: 100%;
 }
 
+.quote-container {
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
 /* END SERVICES */
 
 /* START MEDIA QUERIES */
