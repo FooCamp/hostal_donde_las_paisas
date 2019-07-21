@@ -126,17 +126,25 @@ const validationNumPerson = personsNumEntered => {
 //     numNigth = totalDays;
 //   }
 // });
-let totalDays;
 flatpickr("#txtNumNigth", {
   mode: "range",
   dateFormat: "F, d, Y ",
   onChange: function(selectedDates) {
-      totalDays = Math.round(
+      let totalDays = Math.round(
       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
       );
+      document.getElementById("numNigth").value = totalDays;
+      activateBoton();
   }
 });
-
+function activateBoton(){
+  if (document.getElementById("numNigth").value >= 1){
+    document.getElementById("btnCalculate").disabled = false;
+  }
+  else{
+    document.getElementById("btnCalculate").disabled = true;
+  }
+};
   
 /**
  * This code show or hide option "include guide for hike".
@@ -237,7 +245,7 @@ const submitData = () => {
   form.hike.laCoquerita = {};
 
   form.numberOfPeople = document.getElementById("txtNumPeople").value;
-  form.numberOfNigth = totalDays;
+  form.numberOfNigth = document.getElementById("numNigth").value;
 
   form.transport.medNec = document.getElementById("ts1").checked;
   form.transport.necCap = document.getElementById("ts2").checked;
@@ -269,22 +277,23 @@ const submitData = () => {
 };
 
 // validate the opted data to verify the number of tours and nights.
-const validateData = form => {
-  let errors = [];
-  if (form.numberOfNigth < getTrues(form.tour) + getTrues(form.hike)) {
+const validateData = (form) => {
+  var errors = [];
+  if (form.numberOfNigth < (getTrues(form.tour) + getTrues(form.hike))) {
     errors.push(
       "el numero seleccionado de dias es poco para la suma de tours y o caminatas, cada evento toma un dia."
     );
   }
 
+
   if (errors.length > 0) {
-    let errorsContainer = [];
-    let divErrors = document.createElement("div");
+    var errorsContainer = [];
+    var divErrors = document.createElement("div");
     divErrors.classList.add("list-of-errors");
-    let ulErrors = document.createElement("ul");
+    var ulErrors = document.createElement("ul");
     for (const error of errors) {
-      let liErrors = document.createElement("li");
-      let textLi = document.createTextNode(error);
+      var liErrors = document.createElement("li");
+      var textLi = document.createTextNode(error);
       liErrors.appendChild(textLi);
       ulErrors.appendChild(liErrors);
     }
@@ -294,9 +303,9 @@ const validateData = form => {
     divErrors = false;
   }
   return divErrors;
-};
+}
 
-const getTrues = list => {
+const getTrues = (list) => {
   const listValues = Object.values(list);
   let count = 0;
   for (let item of listValues) {
@@ -308,13 +317,11 @@ const getTrues = list => {
     }
   }
   return count;
-};
-
+}
 const cleanErrors = () => {
   let errosDiv = document.getElementById("txtErrors");
   errosDiv.innerHTML = "";
 };
-
 //when you give the button to quote calls the function to fill the data
 let btncalculate = document.getElementById("btnCalculate");
 btncalculate.addEventListener("click", submitData);

@@ -366,6 +366,11 @@ video {
   align-items: center;
   justify-items: center;
 }
+
+.hide {
+  display: none;
+}
+
 /* End carrousel*/
 
 /* For desktop */
