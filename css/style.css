@@ -270,7 +270,7 @@ video {
   position: absolute;
   font-size: 40px;
   color: white;
-  bottom: 50px;
+  bottom: 30px;
   margin-bottom: 0;
 }
 
@@ -454,6 +454,7 @@ video {
     left: 0;
     right: 0;
     margin: auto;
+    bottom: 39px;
     text-align: center;
   }
 
