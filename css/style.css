@@ -296,7 +296,7 @@ video {
 }
 
 .info {
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 }
 
 .info__title {
@@ -486,12 +486,11 @@ video {
   }
 
   .info {
-    margin-bottom: 18px;
     width: 100%;
     left: 0;
     right: 0;
-    margin: auto;
     text-align: center;
+    margin-bottom: 60px;
   }
 
   .info__title {
