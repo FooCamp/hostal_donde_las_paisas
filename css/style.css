@@ -54,11 +54,8 @@ video {
 .main-nav__logo {
 	position: absolute;
 	top: 11px;
-	left: 20px;
-}
-
-.main-nav__logo__image {
-	width: 89px;
+  left: 20px;
+  width: 89px;
 }
 
 .main-nav__burguer {
@@ -273,7 +270,7 @@ video {
   position: absolute;
   font-size: 40px;
   color: white;
-  bottom: 50px;
+  bottom: 30px;
   margin-bottom: 0;
 }
 
@@ -457,6 +454,7 @@ video {
     left: 0;
     right: 0;
     margin: auto;
+    bottom: 39px;
     text-align: center;
   }
 
