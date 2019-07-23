@@ -2,14 +2,14 @@
 /*charge the images with backgroundImage */
 window.onload = function chargeImages() {
   const imagesGallery = [
-    "./../assets/images/gallery/1.jpg",
-    "./../assets/images/gallery/2.jpg",
-    "./../assets/images/gallery/3.jpg",
-    "./../assets/images/gallery/4.jpg",
-    "./../assets/images/gallery/5.jpg",
-    "./../assets/images/gallery/6.jpg",
-    "./../assets/images/gallery/7.jpg",
-    "./../assets/images/gallery/8.jpg"
+    "./../assets/images/gallery/1.JPG",
+    "./../assets/images/gallery/2.JPG",
+    "./../assets/images/gallery/3.JPG",
+    "./../assets/images/gallery/4.JPG",
+    "./../assets/images/gallery/5.JPG",
+    "./../assets/images/gallery/6.JPG",
+    "./../assets/images/gallery/7.JPG",
+    "./../assets/images/gallery/8.JPG"
   ];
   let div1 = document.getElementById("divImagesContainer").children;
   for (let i = 0; i < div1.length; i++) {
