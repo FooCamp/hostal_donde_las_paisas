@@ -20,10 +20,10 @@
   <link rel="icon" type="image/png" sizes="256x256" href="assets/icons/favicon/android-chrome-256x256.png">
 
 <body>
-  <section id="main-nav" class="main-nav">
+  <nav id="main-nav" class="main-nav">
     <div class="container main-nav__container">
       <div id="main-nav__logo" class="main-nav__logo">
-        <img class="main-nav__logo__image" src="./assets/images/logo-hdlp.svg" alt="Hostal Donde Las Paisas">
+        <img class="main-nav__logo-image" src="./assets/images/logo-hdlp.svg" alt="Hostal Donde Las Paisas">
       </div>
       <div id="main-nav__burguer" class="main-nav__burguer">
         <div class="main-nav__burguer-bar burguer__bar-1"></div>
@@ -32,14 +32,14 @@
       </div>
       <div id="main-nav__menu" class="main-nav__menu">
         <ul id="main-nav__menu-items" class="main-nav__menu-items">
-          <li><a class="main-nav__menu-link" href="#">Inicio</a></li>
-          <li><a class="main-nav__menu-link" href="#">Galería</a></li>
-          <li><a class="main-nav__menu-link" href="#">Cotizar</a></li>
-          <li><a class="main-nav__menu-link" href="#">Contáctanos</a></li>
+          <li><a class="main-nav__menu-link">Inicio</a></li>
+          <li><a class="main-nav__menu-link" href="./pages/gallery.html">Galería</a></li>
+          <li><a class="main-nav__menu-link" href="./pages/quote.html">Cotizar</a></li>
+          <li><a class="main-nav__menu-link" href="./pages/contact.html">Contáctanos</a></li>
         </ul>
       </div>
     </div>
-  </section>
+  </nav>
   <section class="homepage-hero">
     <!-- Hero section, the cover for the page -->
     <div class="homepage-hero__layer"></div>
@@ -56,8 +56,8 @@
 
     <div class="container">
       <div class="info">
-        <h1 class="info-title">Comodidades</h1>
-        <p class="info-description">
+        <h1 class="info__title">Comodidades</h1>
+        <p class="info__description">
           Nuestro hostal te ofrece todas las comodidades para que vivas la mejor experiencia.
         </p>
       </div>
@@ -75,8 +75,9 @@
           <div class="pointer-list__oval pointer-list__oval--gray" id="divBtn3"></div>
           <div class="pointer-list__oval pointer-list__oval--gray" id="divBtn4"></div>
         </div>
-        <button href="#" class="button button--medium button--secondary">Ver galeria</button>
+        <a class="button button--lg button--secondary" href="./pages/gallery.html">Ver Galería</a>
       </div>
+
     </div>
   </section>
   <section class="services-section">
@@ -87,12 +88,12 @@
             <img src="assets/icons/services/sunset.svg" alt="Sunset">
           </div>
           <p class="service__description">Zona de playa privada</p>
-          </div>
+        </div>
         <div class=" service">
-            <div class="service__icon">
-              <img src="assets/icons/services/cooking.svg" alt="Cooking">
-            </div>
-            <p class="service__description">Restaurante de cocina latinoamericana</p>
+          <div class="service__icon">
+            <img src="assets/icons/services/cooking.svg" alt="Cooking">
+          </div>
+          <p class="service__description">Restaurante de cocina latinoamericana</p>
         </div>
         <div class="service">
           <div class="service__icon">
@@ -107,24 +108,24 @@
     <div class="footer__text">
       <p>
         <strong>Hostal donde las paisas.</strong><br>
-        Plan Parejo, Capurgana, 278017 Capurganá, Colombia.
+          Sector Plan Parejo, Capurganá, Colombia.
         <br>
         <br>WhatsApp: 3116306699
       </p>
     </div>
     <div class="footer__icons-container">
-      <a class="footer__icon" href="" target="_blank">
+      <a class="footer__icon" href="https://www.facebook.com/Hostaldondelaspaisas/" target="_blank">
         <img src="assets/icons/facebook-logo-button.svg" width="50" height="50">
       </a>
-      <a class="footer__icon" href="" target="_blank">
+      <a class="footer__icon" href="https://www.tripadvisor.co/Hotel_Review-g681277-d12696158-Reviews-Hostal_donde_las_Paisas-Capurgana_Choco_Department.html" target="_blank">
         <img src="assets/icons/tripadvisor-logotype.svg" width="50" height="50">
       </a>
-      <a class="footer__icon" href="" target="_blank">
+      <a class="footer__icon" href="https://www.instagram.com/hostaldondelaspaisas/" target="_blank">
         <img src="assets/icons/instagram.svg" width="50" height="50">
       </a>
     </div>
     <div class="footer__disclaimer">
-      <span>Web created by </span><a class="footer__footnote" href="https://github.com/rtsc8" target="_blank">RTSC8<a />
+      <span>Web created by </span><a class="footer__footnote" href="https://github.com/rtsc8" target="_blank">RTSC8</a>
     </div>
   </footer>
   <script src="./js/index.js"></script>

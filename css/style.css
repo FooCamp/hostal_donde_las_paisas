@@ -54,11 +54,8 @@ video {
 .main-nav__logo {
 	position: absolute;
 	top: 11px;
-	left: 20px;
-}
-
-.main-nav__logo__image {
-	width: 89px;
+  left: 20px;
+  width: 89px;
 }
 
 .main-nav__burguer {
@@ -178,7 +175,6 @@ video {
 
 /* For mobile phones: */
 .button {
-  font-family: Roboto-Regular, sans-serif;
   font-weight: normal;
   padding-left: 20px;
   padding-right: 20px;
@@ -188,6 +184,9 @@ video {
   overflow: hidden;
   color: white;
   border: 0;
+  text-align: center;
+  padding: 17px;
+  text-decoration: none;
 }
 .button:focus {
   outline: 0;
@@ -271,7 +270,7 @@ video {
   position: absolute;
   font-size: 40px;
   color: white;
-  bottom: 50px;
+  bottom: 30px;
   margin-bottom: 0;
 }
 
@@ -285,16 +284,19 @@ video {
 }
 
 .carrousel-container {
-  width: 100%;
-  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
   text-align: center;
+  width: 100%;
 }
 
 .info {
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 }
 
-.info-title {
+.info__title {
   font-weight: bold;
 }
 
@@ -307,8 +309,11 @@ video {
 }
 
 .carrousel {
-  width: 100%;
-  position: relative;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .carrousel__img {
@@ -317,15 +322,12 @@ video {
 }
 
 .carrousel__arrow {
-  font-size: 50px;
+  bottom: 0;
+  height: 32px;
+  margin: auto;
   position: absolute;
   top: 0;
-  bottom: 0;
-  margin: auto;
   width: 20px;
-  height: 32px;
-  font-weight: bold;
-  color: #fefefe;
 }
 
 .carrousel__arrow--right {
@@ -338,21 +340,23 @@ video {
 }
 
 .pointer-list {
-  border-radius: 50%;
   display: block;
-  margin: 10px;
-  list-style-position: initial;
+  margin: 20px 0px 50px;
   list-style-type: disc;
+}
+
+.pointer-list__oval:last-child {
+  margin-right: 0;
 }
 
 .pointer-list__oval {
   border-radius: 50%;
-  margin-left: 11px;
-  margin-right: 11px;
+  margin-right: 22px;
   display: inline-block;
   width: 10px;
   height: 10px;
 }
+
 .pointer-list__oval--gray {
   background-color: rgba(51, 51, 51, 0.3);
 }
@@ -366,21 +370,64 @@ video {
   align-items: center;
   justify-items: center;
 }
+
 /* End carrousel*/
 
 /* For desktop */
 @media only screen and (min-width: 960px) {
-  .carrousel-section {
-    margin-bottom: 90px;
-  }
-
   .button {
-    height: 60px;
-    font-size: 22px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
   }
 
+  .carrousel-container {
+    margin-bottom: 33px;
+  }
+
+  .carrousel__arrow {
+    height: 62px;
+    width: 40px;
+  }
+
+  .carrousel__arrow--right {
+    right: 32px;
+  }
+
+  .carrousel__arrow--left {
+    left: 32px;
+  }
+
+  .pointer-list {
+    margin-bottom: 60px;
+  }
+
+  .pointer-list__oval {
+    margin-left: 14.6;
+    margin-right: 14.6;
+  }
+
+  .button--lg {
+    min-width: 320px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .carrousel-section {
+    margin-bottom: 90px;
+  }
+
+  .button--md {
+    min-width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .button--sm {
+    min-width: 150px;
+    height: 30px;
+    font-size: 12px;
+  }
+  
   .button--primary:hover {
     background-color: #0086c3;
   }
@@ -407,6 +454,7 @@ video {
     left: 0;
     right: 0;
     margin: auto;
+    bottom: 39px;
     text-align: center;
   }
 
@@ -420,9 +468,12 @@ video {
     max-width: 960px;
   }
 
+  .pointer-list {
+    margin: 33px 0px 60px;
+  }
+
   .pointer-list__oval {
-    margin-left: 11px;
-    margin-right: 11px;
+    margin-right: 29.2px;
     width: 14px;
     height: 14px;
   }
@@ -430,5 +481,29 @@ video {
   /* Footer */
   .footer__icon {
     margin: 19px;
+  }
+
+  .info {
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .info__title {
+    width: 227px;
+    height: 24px;
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .info__description {
+    width: 428px;
+    height: 38px;
+    font-size: 16px;
+    display: inline-block;
   }
 }
