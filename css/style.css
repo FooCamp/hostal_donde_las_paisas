@@ -236,13 +236,13 @@ video {
 
 /* Small hero */
 .small-hero__image--quote {
-  background: url("../assets/images/IMG_8453.JPG") no-repeat center;
+  background: url("../assets/images/homepage_hero.jpg") no-repeat center;
 }
 .small-hero__image--contact {
-  background: url("../assets/images/IMG_8412.JPG") no-repeat center;
+  background: url("../assets/images/hdlp_12.JPG") no-repeat center;
 }
 .small-hero__image--gallery {
-  background: url("../assets/images/IMG_8056.JPG") no-repeat center;
+  background: url("../assets/images/hdlp_11.JPG") no-repeat center;
 }
 
 .small-hero {
@@ -427,7 +427,7 @@ video {
     height: 30px;
     font-size: 12px;
   }
-  
+
   .button--primary:hover {
     background-color: #0086c3;
   }
