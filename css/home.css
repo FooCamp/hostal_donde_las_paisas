@@ -161,6 +161,11 @@
   width: 100%;
 }
 
+.quote-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
 /* END SERVICES */
 
 /* START MEDIA QUERIES */
@@ -185,6 +190,10 @@
 
   .service:not(:first-child) {
     margin-top: 0;
+  }
+
+  .quote-container {
+    margin-top: 90px;
   }
 
   .homepage-hero__logo {
