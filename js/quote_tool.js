@@ -272,7 +272,7 @@ const validateData = (form) => {
   var errors = [];
   if (form.numberOfNigth < (getTrues(form.tour) + getTrues(form.hike))) {
     errors.push(
-      "el numero seleccionado de dias es poco para la suma de tours y o caminatas, cada evento toma un dia."
+      "El número seleccionado de días es poco para la suma de tours y/o caminatas acumuladas, ten en cuenta que cada evento toma un día."
     );
   }
 

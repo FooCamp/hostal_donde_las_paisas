@@ -5,9 +5,7 @@ body {
 }
 
 .form__container {
-  /* margin-left: 5%;
-  margin-right: 5%; */
-  max-width: 90%;
+  max-width: 100%;
   padding: 0 20px 0 20px;
 }
 
@@ -87,7 +85,7 @@ body {
   margin-bottom: 50px;
 }
 
-.form-options__label input {
+.form-options__label .form-options__checkbox {
   display: none;
 }
 
