@@ -32,7 +32,7 @@ window.onload = function chargeImages() {
 };
 
 function closeModal() {
-  let closeModal = document.querySelector('.modal__close');
+  let closeModal = document.querySelector('.gallery-modal__close');
   let galleryModal = document.querySelector('#modal');
 
   closeModal.addEventListener('click', function () {
@@ -43,7 +43,7 @@ function closeModal() {
 function addListernersToGalleryItems() {
   let galleryModal = document.querySelector('#modal');
   let galleryItems = document.querySelectorAll('.gallery-item');
-  let modalImage = document.querySelector('.modal__image');
+  let modalImage = document.querySelector('.gallery-modal__image');
 
   for (const galleryItem of galleryItems) {
     galleryItem.addEventListener('click', function () {
