@@ -45,7 +45,7 @@
 }
 
 .homepage-hero {
-  background: url("../assets/images/frente1.JPG") no-repeat center;
+  background: url("../assets/images/homepage_hero.jpg") no-repeat center;
   background-size: cover;
   bottom: 0;
   font-family: "roboto", sans-serif;
@@ -161,6 +161,11 @@
   width: 100%;
 }
 
+.quote-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
 /* END SERVICES */
 
 /* START MEDIA QUERIES */
@@ -185,6 +190,10 @@
 
   .service:not(:first-child) {
     margin-top: 0;
+  }
+
+  .quote-container {
+    margin-top: 90px;
   }
 
   .homepage-hero__logo {
