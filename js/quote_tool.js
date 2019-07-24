@@ -122,10 +122,10 @@ flatpickr("#txtNumNigth", {
       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
     );
     document.getElementById("numNigth").value = totalDays;
-    activateBoton();
+    activateButton();
   }
 });
-function activateBoton() {
+function activateButton() {
   if (document.getElementById("numNigth").value >= 1) {
     document.getElementById("btnCalculate").disabled = false;
   } else {
