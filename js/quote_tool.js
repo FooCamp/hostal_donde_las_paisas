@@ -20,97 +20,96 @@ fixLabel(inputs);
  * done throught a regular expression that allow enter only letters and
  * letters whit special characters, besides it makes the field mandatory.
  */
-const validationName = function() {
-  if (!inputNameFormat.test(this.value)) {
-    this.classList.add("error__style");
+let inputNameFormat = /^([a-zA-Z áéíóúÁÉÍÓÚñÑ]{2,30})*$/;
+let nameEntered = document.getElementById("input-name");
+let nameError = document.getElementById("name-error");
+const validationName = nameEntered => {
+  if (!inputNameFormat.test(nameEntered.value)) {
+    nameEntered.classList.add("error__style");
     nameError.textContent = "El nombre ingresado no es correcto";
     return false;
-  } else if (this.value === "") {
-    this.classList.add("error__style");
+  } else if (nameEntered.value === "") {
+    nameEntered.classList.add("error__style");
     nameError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    this.classList.remove("error__style");
+    nameEntered.classList.remove("error__style");
     nameError.textContent = "";
     return false;
   }
 };
-let inputNameFormat = /^([a-zA-Z áéíóúÁÉÍÓÚñÑ]{2,30})*$/;
-let nameEntered = document.getElementById("input-name");
-nameEntered.addEventListener("blur", validationName);
-let nameError = document.getElementById("name-error");
 /**
  * This code validate the "input-email"; this validation is
  * done throught a regular expression that allow enter only characters
  * corresponding to an email, besides it makes the field mandatory.
  */
-const validationEmail = function() {
-  if (this.value.length >= 1 && !inputEmailFormat.test(this.value)) {
-    this.classList.add("error__style");
+let inputEmailFormat = /\w+@\w+\.+[a-z]/;
+let emailEntered = document.getElementById("input-email");
+let emailError = document.getElementById("email-error");
+const validationEmail = emailEntered => {
+  if (
+    emailEntered.value.length >= 1 &&
+    !inputEmailFormat.test(emailEntered.value)
+  ) {
+    emailEntered.classList.add("error__style");
     emailError.textContent = "El correo electrónico ingresado no es correcto";
     return false;
-  } else if (this.value === "") {
-    this.classList.add("error__style");
+  } else if (emailEntered.value === "") {
+    emailEntered.classList.add("error__style");
     emailError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    this.classList.remove("error__style");
+    emailEntered.classList.remove("error__style");
     emailError.textContent = "";
     return false;
   }
 };
-let inputEmailFormat = /\w+@\w+\.+[a-z]/;
-let emailEntered = document.getElementById("input-email");
-let emailError = document.getElementById("email-error");
-emailEntered.addEventListener("blur", validationEmail);
 /**
  * This code validate the "input-Phone"; this validation is
  * done throught a regular expression that allow enter only numbers,
  * besides it makes the field mandatory.
  */
-const validationPhone = function() {
-  if (!inputPhoneFormat.test(this.value)) {
-    this.classList.add("error__style");
+let inputPhoneFormat = /^([0-9]{7,10})*$/;
+let phoneEntered = document.getElementById("input-phone");
+let phoneError = document.getElementById("phone-error");
+const validationPhone = phoneEntered => {
+  if (!inputPhoneFormat.test(phoneEntered.value)) {
+    phoneEntered.classList.add("error__style");
     phoneError.textContent = "El teléfono ingresado no es correcto";
     return false;
-  } else if (this.value === "") {
-    this.classList.add("error__style");
+  } else if (phoneEntered.value === "") {
+    phoneEntered.classList.add("error__style");
     phoneError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    this.classList.remove("error__style");
+    phoneEntered.classList.remove("error__style");
     phoneError.textContent = "";
     return false;
   }
 };
-let inputPhoneFormat = /^([0-9]{7,10})*$/;
-let phoneEntered = document.getElementById("input-phone");
-let phoneError = document.getElementById("phone-error");
-phoneEntered.addEventListener("blur", validationPhone);
 /**
  * This code validate the "input__persons-number"; this validation is
  * done throught a regular expression that allow enter only numbers,
  * besides it makes the field mandatory.
  */
-const validationNumPerson = function() {
-  if (!inputPersonsNumFormat.test(this.value)) {
-    this.classList.add("error__style");
+let inputPersonsNumFormat = /^([0-9])*$/;
+let personsNumEntered = document.getElementById("txtNumPeople");
+let personsNumberError = document.getElementById("personsNumber-error");
+const validationNumPerson = personsNumEntered => {
+  if (!inputPersonsNumFormat.test(personsNumEntered.value)) {
+    personsNumEntered.classList.add("error__style");
     personsNumberError.textContent = "El dato ingresado no es un número";
     return false;
-  } else if (this.value === "") {
-    this.classList.add("error__style");
+  } else if (personsNumEntered.value === "") {
+    personsNumEntered.classList.add("error__style");
     personsNumberError.textContent = "Todos los campos son obligatorios";
     return false;
   } else {
-    this.classList.remove("error__style");
+    personsNumEntered.classList.remove("error__style");
     personsNumberError.textContent = "";
     return false;
   }
 };
-let inputPersonsNumFormat = /^([0-9])*$/;
-let personsNumEntered = document.getElementById("txtNumPeople");
-let personsNumberError = document.getElementById("personsNumber-error");
-personsNumEntered.addEventListener("blur", validationNumPerson);
 /*
  * This code assign the calendar to "txtNumNigth" and gives it a date format.
  */
@@ -121,17 +120,9 @@ flatpickr("#txtNumNigth", {
     let totalDays = Math.round(
       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
     );
-    document.getElementById("numNigth").value = totalDays;
-    activateButton();
+    console.log("Total days", totalDays);
   }
 });
-function activateButton() {
-  if (document.getElementById("numNigth").value >= 1) {
-    document.getElementById("btnCalculate").disabled = false;
-  } else {
-    document.getElementById("btnCalculate").disabled = true;
-  }
-}
 
 /**
  * This code show or hide option "include guide for hike".
@@ -160,7 +151,7 @@ const guideOptionValidation = showGuideOption => {
  *  numberOfNigth: integer,
  *  trasnport: object,
  *  tour: object,
- *  food: object
+ *  feeding: object
  *  hike: object,
  * }
  *
@@ -170,7 +161,7 @@ const guideOptionValidation = showGuideOption => {
  *  capNec: boolean,
  *  necMed: boolean,
  * }
- * food{
+ * feeding{
  *   breakfast: boolean;
  *   dinner: boolean;
  * }
@@ -193,6 +184,7 @@ const guideOptionValidation = showGuideOption => {
  * nights and then multiply the result by the heat of each night.
  */
 function calculateCost(form) {
+  console.log("calclando");
   let total = 0;
   let peopleAndNigth;
   peopleAndNigth = form.numberOfPeople * form.numberOfNigth;
@@ -202,9 +194,6 @@ function calculateCost(form) {
   total += form.transport.necCap ? BOATTRANS * form.numberOfPeople : 0;
   total += form.transport.capNec ? BOATTRANS * form.numberOfPeople : 0;
   total += form.transport.necMed ? BUSTRANS * form.numberOfPeople : 0;
-
-  total += form.food.breakFast ? BREAKFAST * peopleAndNigth : 0;
-  total += form.food.dinner ? DINNER * peopleAndNigth : 0;
 
   total += form.tour.aguacatePlayasoledad ? TOURAPS * form.numberOfPeople : 0;
   total += form.tour.sapzurroLamiel ? TOURSLM * form.numberOfPeople : 0;
@@ -226,21 +215,21 @@ const submitData = () => {
   cleanErrors();
   let form = {};
   form.transport = {};
-  form.food = {};
+  form.feeding = {};
   form.tour = {};
   form.hike = {};
   form.hike.laCoquerita = {};
 
   form.numberOfPeople = document.getElementById("txtNumPeople").value;
-  form.numberOfNigth = document.getElementById("numNigth").value;
+  form.numberOfNigth = document.getElementById("txtNumNigth").value;
 
   form.transport.medNec = document.getElementById("ts1").checked;
   form.transport.necCap = document.getElementById("ts2").checked;
   form.transport.capNec = document.getElementById("ts3").checked;
   form.transport.necMed = document.getElementById("ts4").checked;
 
-  form.food.breakFast = document.getElementById("f1").checked;
-  form.food.dinner = document.getElementById("f2").checked;
+  form.feeding.breakFast = document.getElementById("f1").checked;
+  form.feeding.dinner = document.getElementById("f2").checked;
 
   form.tour.sapzurroLamiel = document.getElementById("t1").checked;
   form.tour.aguacatePlayasoledad = document.getElementById("t2").checked;
@@ -249,10 +238,26 @@ const submitData = () => {
   form.hike.elParaiso = document.getElementById("h2").checked;
   form.hike.laCoquerita.hike = document.getElementById("h3").checked;
 
-  form.hike.laCoquerita.guide = document.getElementById("gu1").checked;
+  form.hike.laCoquerita.guide = document.getElementById("g1").checked;
+
+  // form.numberOfPeople = 5;
+  form.numberOfNigth = 1;
+
+  /*form.transport.medNec = true;
+  form.transport.necCap = true;
+  form.transport.capNec = true;
+  form.transport.necMed = true;
+  form.feeding.breakFast = false;
+  form.feeding.dinner = true;
+  form.tour.sapzurroLamiel = true;
+  form.tour.aguacatePlayasoledad = true;
+  form.hike.elCieloEltrebol = true;
+  form.hike.elParaiso = false;
+  form.hike.laCoquerita.hike = true;
+  form.hike.laCoquerita.guide = false;*/
 
   //calculate error
-  let errorList = validateData(form);
+  var errorList = validateData(form);
   // Sends the collected data to the calculateCost funtion
   let finalPrice = calculateCost(form);
   // Print the information whit the total cost
@@ -268,8 +273,9 @@ const validateData = form => {
   var errors = [];
   if (form.numberOfNigth < getTrues(form.tour) + getTrues(form.hike)) {
     errors.push(
-      "El número seleccionado de días es poco para la suma de tours y/o caminatas acumuladas, ten en cuenta que cada evento toma un día."
+      "el numero seleccionado de dias es poco para la suma de tours y o caminatas, cada evento toma un dia."
     );
+    console.log("hay error");
   }
 
   if (errors.length > 0) {
@@ -304,10 +310,12 @@ const getTrues = list => {
   }
   return count;
 };
+
 const cleanErrors = () => {
   let errosDiv = document.getElementById("txtErrors");
   errosDiv.innerHTML = "";
 };
+
 //when you give the button to quote calls the function to fill the data
-let btncalculate = document.getElementById("btnCalculate");
+var btncalculate = document.getElementById("btnCalculate");
 btncalculate.addEventListener("click", submitData);
