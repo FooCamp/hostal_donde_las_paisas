@@ -39,10 +39,10 @@ function carrousel() {
 }
 /*Array about images */
 const image = [
-  "assets/images/IMG_8056.JPG",
-  "assets/images/IMG_8453.JPG",
-  "assets/images/IMG_7977.JPG",
-  "assets/images/IMG_7968.JPG"
+  "assets/images/hdlp_2.JPG",
+  "assets/images/hdlp_10.JPG",
+  "assets/images/hdlp_5.JPG",
+  "assets/images/hdlp_11.JPG"
 ];
 /*count the positions of the array to know what is the previus or next depend of button*/
 let currentPosition = 0;

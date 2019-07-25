@@ -54,11 +54,8 @@ video {
 .main-nav__logo {
 	position: absolute;
 	top: 11px;
-	left: 20px;
-}
-
-.main-nav__logo__image {
-	width: 89px;
+  left: 20px;
+  width: 89px;
 }
 
 .main-nav__burguer {
@@ -239,13 +236,13 @@ video {
 
 /* Small hero */
 .small-hero__image--quote {
-  background: url("../assets/images/IMG_8453.JPG") no-repeat center;
+  background: url("../assets/images/homepage_hero.jpg") no-repeat center;
 }
 .small-hero__image--contact {
-  background: url("../assets/images/IMG_8412.JPG") no-repeat center;
+  background: url("../assets/images/hdlp_12.JPG") no-repeat center;
 }
 .small-hero__image--gallery {
-  background: url("../assets/images/IMG_8056.JPG") no-repeat center;
+  background: url("../assets/images/hdlp_11.JPG") no-repeat center;
 }
 
 .small-hero {
@@ -296,7 +293,7 @@ video {
 }
 
 .info {
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 }
 
 .info__title {
@@ -434,7 +431,7 @@ video {
     height: 30px;
     font-size: 12px;
   }
-  
+
   .button--primary:hover {
     background-color: #0086c3;
   }
@@ -461,6 +458,7 @@ video {
     left: 0;
     right: 0;
     margin: auto;
+    bottom: 39px;
     text-align: center;
   }
 
@@ -490,12 +488,11 @@ video {
   }
 
   .info {
-    margin-bottom: 18px;
     width: 100%;
     left: 0;
     right: 0;
-    margin: auto;
     text-align: center;
+    margin-bottom: 60px;
   }
 
   .info__title {
