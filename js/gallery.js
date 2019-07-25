@@ -11,9 +11,10 @@ window.onload = function chargeImages() {
     "./../assets/images/hdlp_7.JPG",
     "./../assets/images/hdlp_8.JPG"
   ];
+  let fullGalleryItems = '';
   let imagesContainer = document.querySelector('#divImagesContainer');
   imagesGallery.forEach(image => {
-    imagesContainer.innerHTML += `<div class="gallery-item">
+    fullGalleryItems += `<div class="gallery-item">
     <div class="gallery-item__images" style="background-image: url(${image})"></div>
     <div class="gallery-item__overlay">
       <img
@@ -24,6 +25,8 @@ window.onload = function chargeImages() {
     </div>
   </div> `;
   });
+
+  imagesContainer.innerHTML = fullGalleryItems;
   addListernersToGalleryItems();
   closeModal();
 };
