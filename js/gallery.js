@@ -11,13 +11,10 @@ window.onload = function chargeImages() {
     "./../assets/images/hdlp_7.JPG",
     "./../assets/images/hdlp_8.JPG"
   ];
-  let div1 = document.getElementById("divImagesContainer").children;
   let imagesContainer = document.querySelector('#divImagesContainer');
-
-  for (let i = 0; i < imagesGallery.length; i++) {
-    imagesContainer.innerHTML += `
-  <div class="gallery-item">
-    <div class="gallery-item__images" style="background-image: url(${imagesGallery[i]})"></div>
+  imagesGallery.forEach(image => {
+    imagesContainer.innerHTML += `<div class="gallery-item">
+    <div class="gallery-item__images" style="background-image: url(${image})"></div>
     <div class="gallery-item__overlay">
       <img
         src="./../assets/images/gallery/expand_icon.svg"
@@ -25,8 +22,8 @@ window.onload = function chargeImages() {
         alt=""
       />
     </div>
-  </div>`;
-  }
+  </div> `;
+  });
   addListernersToGalleryItems();
   closeModal();
 };
