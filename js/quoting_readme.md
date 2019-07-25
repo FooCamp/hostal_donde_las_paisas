@@ -9,15 +9,15 @@
  * *_Transporte Necocli Medellin_* = `<id>` = "ts4"
 
 **food = f** 🍔
- * *_Breackfasrt_* = `<id>` = "f1"
- * *_Diner_* = `<id>` = "f2"
+ * *_Breackfast_* = `<id>` = "f1"
+ * *_Dinner_* = `<id>` = "f2"
 
 **Tour = t** 🌍
  * *_sapzurroLamiel_* = `<id>` = "t1"
  * *_aguacatePlayasoledad_* = `<id>` = "t2"
 
 **Hike = h** ‍‍🚶‍
- * *_elCieloEltrebol_* = `<id>` = "h1" 
+ * *_elCieloEltrebol_* = `<id>` = "h1"
  * *_elParaiso_* = `<id>` = "h2"
  * *_laCoquerita_* = `<id>` = "h3"
 

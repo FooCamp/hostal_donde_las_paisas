@@ -263,6 +263,7 @@ const submitData = () => {
   if (errorList) {
     document.getElementById("txtErrors").appendChild(errorList);
   }
+  showMessage();
 };
 
 // validate the opted data to verify the number of tours and nights.
@@ -306,10 +307,18 @@ const getTrues = list => {
   }
   return count;
 };
+
 const cleanErrors = () => {
   let errosDiv = document.getElementById("txtErrors");
   errosDiv.innerHTML = "";
 };
+
+let successMessage = document.getElementById("successMessage");
+
+const showMessage = () => {
+  successMessage.classList.remove('hide');
+}
+
 //when you give the button to quote calls the function to fill the data
 let btncalculate = document.getElementById("btnCalculate");
 btncalculate.addEventListener("click", submitData);
