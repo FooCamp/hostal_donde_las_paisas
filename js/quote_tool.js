@@ -114,7 +114,9 @@ personsNumEntered.addEventListener("blur", validationNumPerson);
 /*
  * This code assign the calendar to "txtNumNigth" and gives it a date format.
  */
+
 flatpickr("#txtNumNigth", {
+  minDate: "today",
   mode: "range",
   dateFormat: "F, d, Y ",
   onChange: function(selectedDates) {
