@@ -18,3 +18,6 @@ const HIKECO = 5000;
 const HIKEGUI = 10000;
 //Mandatory insurance cost per night per person.
 const INSURANCE = 3500;
+
+const DINNER = 20000;
+const BREAKFAST = 15000;
