@@ -127,7 +127,8 @@ flatpickr("#txtNumNigth", {
     );
     document.getElementById("numNigth").value = totalDays;
     validateButton();
-  }
+  },
+  locale: "es"
 });
 function validateButton() {
   if (document.getElementById("numNigth").value && personsNumEntered.value  >= 1) {
