@@ -17,6 +17,8 @@ body {
   margin-block-start: 20px;
 }
 
+
+
 .paragraph {
   width: 320px;
   height: 77px;
@@ -202,6 +204,11 @@ body {
 
 .flatpickr-day.selected.endRange {
   border-radius: 50px 0 0 50px;
+}
+
+.button[disabled] {
+  color: gray;
+  background-color: #b4b3b3;
 }
 
 @media only screen and (min-width: 960px) {
