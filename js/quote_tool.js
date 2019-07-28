@@ -111,6 +111,8 @@ let inputPersonsNumFormat = /^([0-9])*$/;
 let personsNumEntered = document.getElementById("txtNumPeople");
 let personsNumberError = document.getElementById("personsNumber-error");
 personsNumEntered.addEventListener("blur", validationNumPerson);
+personsNumEntered.addEventListener("input", validateButton);
+
 /*
  * This code assign the calendar to "txtNumNigth" and gives it a date format.
  */
@@ -124,11 +126,11 @@ flatpickr("#txtNumNigth", {
       (selectedDates[1] - selectedDates[0]) / (1000 * 60 * 60 * 24)
     );
     document.getElementById("numNigth").value = totalDays;
-    activateButton();
+    validateButton();
   }
 });
-function activateButton() {
-  if (document.getElementById("numNigth").value >= 1) {
+function validateButton() {
+  if (document.getElementById("numNigth").value && personsNumEntered.value  >= 1) {
     document.getElementById("btnCalculate").disabled = false;
   } else {
     document.getElementById("btnCalculate").disabled = true;
