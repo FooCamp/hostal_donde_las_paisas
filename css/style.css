@@ -60,7 +60,7 @@ video {
   width: 89px;
 }
 
-.main-nav--colored .main-nav__logo {
+.main-nav__logo.main-nav__logo--visible {
   opacity: 1;
 }
 
