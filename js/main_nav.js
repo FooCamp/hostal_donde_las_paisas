@@ -19,6 +19,19 @@ if (logoElement) {
   let logoOffsetTop = logoElement.offsetTop;
 
   logoScrollOffset = logoHeight + logoOffsetTop;
+
+  /*
+ * This function recalculates the values of logo's height and
+ * the space between logo and the very top of the viewport
+ * when a user makes resize of the window
+ */
+window.addEventListener("resize", function() {
+  logoHeight = logoElement.offsetHeight;
+  logoOffsetTop = logoElement.offsetTop;
+  window.scrollY >= logoHeight + logoOffsetTop
+    ? overlay.classList.add("main-nav--colored")
+    : overlay.classList.remove("main-nav--colored");
+});
 }
 
 navBurguer.addEventListener("click", function() {
@@ -32,18 +45,7 @@ navBurguer.addEventListener("click", function() {
   }
 });
 
-/*
- * This function recalculates the values of logo's height and
- * the space between logo and the very top of the viewport
- * when a user makes resize of the window
- */
-window.addEventListener("resize", function() {
-  logoHeight = logoElement.offsetHeight;
-  logoOffsetTop = logoElement.offsetTop;
-  window.scrollY >= logoHeight + logoOffsetTop
-    ? overlay.classList.add("main-nav--colored")
-    : overlay.classList.remove("main-nav--colored");
-});
+
 
 /*
  *This function makes the navbar's logo appears
