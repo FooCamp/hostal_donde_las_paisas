@@ -166,6 +166,13 @@
   margin-top: 50px;
 }
 
+.home__container-button {
+  width: 280px;
+  left: 0;
+  right: 0px;
+  margin: auto;
+}
+
 /* END SERVICES */
 
 /* START MEDIA QUERIES */
