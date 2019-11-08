@@ -90,3 +90,20 @@ let inputPhoneFormat = /^([0-9]{7,10})*$/;
 let phoneEntered = document.getElementById("input-phone");
 let phoneError = document.getElementById("phone-error");
 phoneEntered.addEventListener("blur", validationPhone);
+
+// only allows to enter numbers
+
+
+function validateNumbers(e){
+  let key = window.Event ? e.which : e.keyCode;
+  
+  let onlyNumbers = !(/[\d]/.test(String.fromCharCode(key)));
+  let controlV = (e.ctrlKey && key === 86);
+  let backspace = (key !== 8);
+  let keyNumbers =( e.keyCode < 96 || e.keyCode > 105); 
+  
+  if ((onlyNumbers && keyNumbers && backspace ) || controlV ) {
+    e.preventDefault();
+  }
+}
+phoneEntered.addEventListener("keydown", validateNumbers, false)

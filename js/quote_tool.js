@@ -24,6 +24,23 @@ let personsNumberError = document.getElementById("personsNumber-error");
 personsNumEntered.addEventListener("blur", validationNumPerson);
 personsNumEntered.addEventListener("input", validateButton);
 
+// only allows to enter numbers
+
+
+const numbers = function validateNumbers(e){
+  let key = window.Event ? e.which : e.keyCode;
+  
+  let onlyNumbers = !(/[\d]/.test(String.fromCharCode(key)));
+  let controlV = (e.ctrlKey && key === 86);
+  let backspace = (key !== 8);
+  let keyNumbers =( e.keyCode < 96 || e.keyCode > 105); 
+  
+  if ((onlyNumbers && keyNumbers && backspace ) || controlV ) {
+    e.preventDefault();
+  }
+}
+personsNumEntered.addEventListener("keydown", numbers, false);
+
 /*
  * This code assign the calendar to "txtNumNigth" and gives it a date format.
  */
